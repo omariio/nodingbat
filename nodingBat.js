@@ -2,19 +2,29 @@ if (Meteor.isClient) {
   // counter starts at 0
   Session.setDefault('counter', 0);
 
-  Template.hello.helpers({
-    counter: function () {
-      return Session.get('counter');
+var myEditor;
+
+Template.hello.helpers({
+
+    renderEditor: function () {
+    return function(editor) {
+      myEditor = editor;
     }
-  });
+  }
+
+});
+
 
   Template.hello.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set('counter', Session.get('counter') + 1);
+    "some event": function(e, t) {
+        var code = t.find("jcode").value;
+        alert(code);
     }
-  });
+
+});
 }
+
+
 
 if (Meteor.isServer) {
   Meteor.startup(function () {
