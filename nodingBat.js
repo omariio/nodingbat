@@ -4,6 +4,13 @@ if (Meteor.isClient) {
 
 var myEditor;
 
+warmup1 = function(n) {
+  if (n <= 21)
+    return 21 - n;
+  else
+    return (n - 21) * 2;
+} 
+
 Template.hello.helpers({
   "editorOptions": function() {
         return {
@@ -19,15 +26,15 @@ Template.hello.helpers({
 });
 
 
-Template.hello.rendered = function () {
-  Session.set("varName", "diff21 = function(n) {\n" +
-      "\tif (n <= 21)\n" +
-      "\t\treturn 21 - n;\n" + 
-      "\telse\n" + 
-      "\t\treturn (n - 21) * 2;\n" + 
-      "} \n\n");
-      // "console.log(diff21(19));");
-}
+// Template.hello.rendered = function () {
+//   Session.set("varName", "diff21 = function(n) {\n" +
+//       "\tif (n <= 21)\n" +
+//       "\t\treturn 21 - n;\n" + 
+//       "\telse\n" + 
+//       "\t\treturn (n - 21) * 2;\n" + 
+//       "} \n\n");
+//       // "console.log(diff21(19));");
+// }
 
 
 Template.hello.events({
@@ -38,8 +45,8 @@ Template.hello.events({
   'click button': function(){
       var obj = eval("(" + Session.get("varName") + ")");
       for(i = 0; i < 5; i++){
-        if(obj(i) == diff21(i))
-          console.log("great success! (obj: ", obj(i), "==  diff21: ", diff21(i),")");
+        if(obj(i) == warmup1(i))
+          console.log("great success! (obj: ", obj(i), "==  diff21: ", warmup1(i),")");
         else 
           console.log("nice try");
       }
@@ -63,13 +70,6 @@ Template.hello.events({
 });
 
 }
-
-var diff21 = function(n) {
-  if (n <= 21)
-    return 21 - n;
-  else
-    return (n - 21) * 2;
-} 
 
 
 if (Meteor.isServer) {
