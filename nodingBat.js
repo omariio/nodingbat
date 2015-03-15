@@ -46,7 +46,7 @@ Template.hello.events({
       var obj = eval("(" + Session.get("varName") + ")");
       for(i = 0; i < 5; i++){
         if(obj(i) == warmup1(i))
-          console.log("great success! (obj: ", obj(i), "==  diff21: ", warmup1(i),")");
+          console.log("great success! ( obj: ", obj(i), "==  diff21: ", warmup1(i),")");
         else 
           console.log("nice try");
       }
