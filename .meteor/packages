@@ -7,4 +7,5 @@
 meteor-platform
 autopublish
 insecure
-ewall:foundation
+perak:codemirror
+bootstrap

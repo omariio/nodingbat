@@ -7,112 +7,135 @@
 </body>
 
 <template name="hello">
-       
+   <!-- Add your site or application content here -->
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a ng-href="#">Home</a></li>
+          <li><a ng-href="#/about">About</a></li>
+          <li><a ng-href="#">Contact</a></li>
+        </ul>
+        <h3 class="text-muted">Noding
+        <img src="bat-web.jpg" alt="<3">
+        Bat
+        </h3>
+      </div>
+      <div ng-view=""></div>
+      <div class="footer">
+        <p><span class="glyphicon glyphicon-heart"></span> Omari Labs</p>
+      </div>
+    </div>
 
-      <div class="row">
-        <div class="large-12 columns">
-          <div class="nav-bar right">
-           <ul class="button-group">
-             <li><a href="#" class="button">Link 1</a></li>
-             <li><a href="#" class="button">Link 2</a></li>
-             <li><a href="#" class="button">Link 3</a></li>
-             <li><a href="#" class="button">Link 4</a></li>
-            </ul>
-          </div>
-          <h1>Blog <small>This is my blog. It's awesome.</small></h1>
-          <hr/>
+     <!-- Page Content -->
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Blog Entries Column -->
+            <div class="col-md-8">
+                <!-- First Blog Post -->
+                <h1>
+                  <a href="#">Warmup-1</a>
+                </h1>
+                <h2>sleep_in</h2>
+                <p>Given an int n, return the absolute difference between n and 21, 
+                except return double the absolute difference if n is over 21.
+                </p>
+                <pre><code>
+var diff21 = function(n) {
+    <!-- if (n <= 21) -->
+      return 21 - n;
+    else
+      return (n - 21) * 2
+  }
+  console.log(diff21(19));
+                </code></pre>
+                <hr>
+                <h2>diff21</h2>
+                <p>Given an int n, return the absolute difference between n and 21, 
+                except return double the absolute difference if n is over 21.
+                </p>
+                <pre><code>
+var diff21 = function(n) {
+  <!-- if (n <= 21) -->
+    return 21 - n;
+  else
+    return (n - 21) * 2
+}
+console.log(diff21(19));
+                </code></pre>
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    <li class="previous">
+                        <a href="#">&larr; Older</a>
+                    </li>
+                    <li class="next">
+                        <a href="#">Newer &rarr;</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+                <!-- Side Widget Well -->
+                <div class="well">
+                    <h4>Welcome.</h4>
+                    <p>Each exercise is a javascript
+                    version from the wonderful <a href="http://codingbat.com/">Coding Bat
+                    </a>.</p>
+                </div>
+
+                <!-- Blog Search Well -->
+                <div class="well">
+                    <h4>Search Problem</h4>
+                    <div class="input-group">
+                        <input type="text" class="form-control">
+                        <span class="input-group-btn">
+                            <button class="btn btn-default" type="button">
+                                <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                        </span>
+                    </div>
+                    <!-- /.input-group -->
+                </div>
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Python</h4>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Warm-up 1</a>
+                                </li>
+                                <li><a href="#">Warm-up 2</a>
+                                </li>
+                                <li><a href="#">String-1</a>
+                                </li>
+                                <li><a href="#">List-1</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                        <div class="col-lg-6">
+                            <ul class="list-unstyled">
+                                <li><a href="#">Logic-1</a>
+                                </li>
+                                <li><a href="#">Logic-2</a>
+                                </li>
+                                <li><a href="#"></a>
+                                </li>
+                                <li><a href="#"></a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                </div>
+            </div>
+  </div>
         </div>
-      </div>
-     
-       
-     
-     
-       
-     
-      <div class="row">
-     
-         
-        <div class="large-9 columns" role="content">
-     
-          <article>
-     
-            <h3><a href="#">Blog Post Title</a></h3>
-            <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-     
-            <div class="row">
-              <div class="large-6 columns">
-                <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-                <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-              </div>
-              <div class="large-6 columns">
-                <img src="http://placehold.it/400x240&text=[img]"/>
-              </div>
-            </div>
-     
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-     
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-     
-          </article>
-     
-          <hr/>
-     
-          <article>
-     
-            <h3><a href="#">Blog Post Title</a></h3>
-            <h6>Written by <a href="#">John Smith</a> on August 12, 2012.</h6>
-     
-            <div class="row">
-              <div class="large-6 columns">
-                <p>Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa.</p>
-                <p>Boudin aliqua adipisicing rump corned beef. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-              </div>
-              <div class="large-6 columns">
-                <img src="http://placehold.it/400x240&text=[img]"/>
-              </div>
-            </div>
-     
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-     
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow. Nulla corned beef sunt ball tip, qui bresaola enim jowl. Capicola short ribs minim salami nulla nostrud pastrami.</p>
-     
-          </article>
-     
-        </div>      
-       <aside class="large-3 columns">
-     
-          <h5>Categories</h5>
-          <ul class="side-nav">
-            <li><a href="#">News</a></li>
-            <li><a href="#">Code</a></li>
-            <li><a href="#">Design</a></li>
-            <li><a href="#">Fun</a></li>
-            <li><a href="#">Weasels</a></li>
-          </ul>
-     
-          <div class="panel">
-            <h5>Featured</h5>
-            <p>Pork drumstick turkey fugiat. Tri-tip elit turducken pork chop in. Swine short ribs meatball irure bacon nulla pork belly cupidatat meatloaf cow.</p>
-            <a href="#">Read More →</a>
-          </div>
-        </aside>
-      </div>
-      <footer class="row">
-        <div class="large-12 columns">
-          <hr/>
-          <div class="row">
-            <div class="large-6 columns">
-              <p>© Copyright no one at all. Go to town.</p>
-            </div>
-            <div class="large-6 columns">
-              <ul class="inline-list right">
-                <li><a href="#">Link 1</a></li>
-                <li><a href="#">Link 2</a></li>
-                <li><a href="#">Link 3</a></li>
-                <li><a href="#">Link 4</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </template>
+        <!-- /.row -->
+        </template>
