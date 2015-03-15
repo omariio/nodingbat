@@ -20,7 +20,6 @@ Template.hello.helpers({
         var code = t.find("jcode").value;
         alert(code);
     }
-
 });
 }
 
