@@ -6,7 +6,6 @@ binary-heap@1.0.2
 blaze@2.0.4
 blaze-tools@1.0.2
 boilerplate-generator@1.0.2
-bootstrap@1.0.1
 callback-hook@1.0.2
 check@1.0.4
 coffeescript@1.0.5
@@ -15,6 +14,7 @@ deps@1.0.6
 ejson@1.0.5
 fastclick@1.0.2
 follower-livedata@1.0.3
+fourseven:scss@2.0.1_2
 geojson-utils@1.0.2
 handlebars@1.0.2
 html-tools@1.0.3
@@ -50,6 +50,7 @@ spacebars@1.0.5
 spacebars-compiler@1.0.4
 templating@1.0.11
 tracker@1.0.5
+twbs:bootstrap@3.3.4
 ui@1.0.5
 underscore@1.0.2
 url@1.0.3
