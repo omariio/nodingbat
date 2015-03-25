@@ -1,5 +1,5 @@
 <head>
-  <title>nodingBat</title>
+  <title>Noding Bat</title>
 </head>
 <body>
   {{> hello}}
@@ -12,11 +12,12 @@
         <ul class="nav nav-pills pull-right">
           <!-- <li class="active"><a ng-href="#">Home</a></li>
           <li><a ng-href="#/about">About</a></li> -->
-          <li><a ng-href="http://omari.io/"><img src="/omariplace.jpg" height="50%" width="50%"></a></li>
+          <li><a href="http://omari.io/"><img src="/omariplace.jpg" height="50%" width="50%"></a></li>
         </ul>
-        <h3 class="text-muted">Noding
+        <h3 class="text-muted"><a href="/"> Noding
         <img src="/bat-web.jpg" alt="<3">
         Bat
+        </a>
         </h3>
       </div>
       <div ng-view=""></div>
@@ -33,16 +34,160 @@
             <div class="col-md-8">
                 <!-- First exercise -->
                 <h1>
-                  <a href="#">Warmup-1</a>
+                  <a id="Warm-up1">Warmup-1</a>
                 </h1>
-                <h2>sleep_in</h2>
-                <p>Given an int n, return the absolute difference between n and 21, 
-                except return double the absolute difference if n is over 21.
-                </p>
-                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
-                <button type="submit">Submit</button>
+                <h2>sleepIn</h2>
+                    <p>The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.</p>
 
+                    <p>
+                        sleepIn(False, False) → True
+                        sleepIn(True, False) → False<br>
+                        sleepIn(False, True) → True<br>
+                    </p>
+
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
                 <hr>
+
+                <h2>diff21</h2>                                
+                    <p>Given an int n, return the absolute difference between n and 21, 
+                    except return double the absolute difference if n is over 21.
+                    </p>
+
+                    <p>
+                        diff21(19) → 2<br>
+                        diff21(10) → 11<br>
+                        diff21(21) → 0
+                    </p>
+
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>nearHundred</h2>                                
+                    <p>Given an int n, return True if it is within 10 of 100 or 200. Note: abs(num) computes the absolute value of a number.</p>
+
+                    <p>nearHundred(93) → True<br>
+                    nearHundred(90) → True<br>
+                    nearHundred(89) → False</p>
+                
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>missingChar</h2>                                
+                    <p> Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).</p>
+
+                    <p>missingChar('kitten', 1) → 'ktten'<br>
+                    missingChar('kitten', 0) → 'itten'<br>
+                    missingChar('kitten', 4) → 'kittn'</p>
+                
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>monkeyTrouble</h2>                                
+                    <p> Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).</p>
+
+                    <p>monkeyTrouble(True, True) → True<br>
+                    monkeyTrouble(False, False) → True<br>
+                    monkeyTrouble(True, False) → False</p>
+                    
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>parrotTrouble</h2>
+                    <p>We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return True if we are in trouble.
+                    </p>
+
+                    <p>parrotTrouble(True, 6) → True<br>
+                    parrotTrouble(True, 7) → False<br>
+                    parrotTrouble(False, 6) → False
+                    </p>
+
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>posNeg</h2>
+                    <p>Given 2 int values, return True if one is negative and one is positive. Except if the parameter "negative" is True, then return True only if both are negative.</p>
+
+                    <p>posNeg(1, -1, False) → True<br>
+                        posNeg(-1, 1, False) → True<br>
+                        posNeg(-4, -5, True) → True
+                    </p>
+
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>frontBack</h2>
+                    <p>Given a string, return a new string where the first and last chars have been exchanged.</p>
+
+                    <p>frontBack('code') → 'eodc'<br>
+                        frontBack('a') → 'a'<br>
+                        frontBack('ab') → 'ba'
+                    </p>
+
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>sumDouble</h2>
+                    <p>Given two int values, return their sum. Unless the two values are the same, then return double their sum. </p>
+
+                    <p>sumDouble(1, 2) → 3<br>
+                        sumDouble(3, 2) → 5<br>
+                        sumDouble(2, 2) → 8
+                    </p>
+
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>makes10</h2>
+                    <p>Given 2 ints, a and b, return True if one if them is 10 or if their sum is 10.</p>
+
+                    <p>makes10(9, 10) → True<br>
+                        makes10(9, 9) → False<br>
+                        makes10(1, 9) → True
+                    </p>
+
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>notString</h2>
+                    <p>
+                        Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged.
+                    </p>
+
+                    <p>
+                        not_string('candy') → 'not candy'<br>
+                        not_string('x') → 'not x'<br>
+                        not_string('not bad') → 'not bad'
+                    </p>
+
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
+                <h2>front3</h2>
+                    <p>
+                        Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front. 
+                    </p>
+
+                    <p>
+                        front3('Java') → 'JavJavJav'<br>
+                        front3('Chocolate') → 'ChoChoCho'<br>
+                        front3('abc') → 'abcabcabc
+                    </p>
+
+                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <button type="submit">Run</button>
+                <hr>
+
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="previous">
@@ -78,7 +223,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <ul class="list-unstyled">
-                               <li><a href="#">Warm-up 1</a>
+                               <li><a href="#Warm-up1">Warm-up 1</a>
                                 </li>
                                 <li><a href="#">Warm-up 2</a>
                                 </li>
