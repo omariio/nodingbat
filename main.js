@@ -1,4 +1,3 @@
-
 if (Meteor.isClient) {
 Template.hello.helpers({
   editorOptions: function() {
