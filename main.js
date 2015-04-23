@@ -14,13 +14,8 @@ Template.hello.helpers({
 });
 
 Template.hello.rendered = function () {
-  Session.set("varName", "diff21 = function(n) {\n" +
-      "\tif (n <= 21)\n" +
-      "\t\treturn 21 - n;\n" + 
-      "\telse\n" + 
-      "\t\treturn (n - 21) * 2;\n" + 
-      "}");
-      // "console.log(diff21(19));");
+  var REMOVEME_MICHAEL = "sleepIn"
+  Session.set("varName", data[REMOVEME_MICHAEL].setup);
 }
 
 
@@ -30,13 +25,18 @@ Template.hello.events({
   },
 
   'click button': function(){
-      var obj = eval("(" + Session.get("varName") + ")");
-      for(i = 0; i < 5; i++){
-        if(obj(i) == warmup1(i))
-          console.log("great success! ( obj: ", obj(i), "==  diff21: ", warmup1(i),")");
-        else 
-          console.log("nice try");
-      }
+    // var obj = eval("(" + Session.get("varName") + ")");
+    var REMOVEME_MICHAEL = "sleepIn";
+
+    _.forEach(data["sleepIn"].inputs, function(input){
+      eval(data[REMOVEME_MICHAEL].divineFunction);
+      var divineAnswer = eval("divine" + input);
+      var mortalString = new String(Session.get("varName"));
+      eval(mortalString)
+      // console.log(sleepIn(true, true));
+      var mortalAnswer = eval(REMOVEME_MICHAEL + input);
+      console.log(divineAnswer === mortalAnswer)
+    });
   }
       // console.log(obj);
       // console.log(v);
