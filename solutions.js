@@ -374,7 +374,6 @@ var notString = function(str){
 // Given a string, we'll say that the front is the first 3 chars of the string. 
 // If the string length is less than 3, the front is whatever is there. 
 // Return a new string which is 3 copies of the front. 
-
 var front3 = function(str){
 	front = "";
 	if (str.length >= 3){
@@ -385,6 +384,60 @@ var front3 = function(str){
 	}
 	return front + front + front;
 }
-console.log(front3("Java"));
-console.log(front3("Chocolate"));
-console.log(front3("abc"));
+// console.log(front3("Java"));
+// console.log(front3("Chocolate"));
+// console.log(front3("abc"));
+
+// Java > Warmup-1 > front22
+// Given a string, take the first 2 chars and return the string with the 2 chars added at both the 
+// front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever 
+// chars are there.
+var front22 = function(str){
+	take = 2;
+	if(take > str.length){
+		take = str.length;
+	}
+	front = str.substring(0,take);
+	return front + str + front;
+}
+// console.log(front22("kitten"));
+// console.log(front22("Ha"));
+// console.log(front22("abc"));
+
+// Java > Warmup-1 > in1020
+// Given 2 int values, return true if either of them is in the range 10..20 inclusive. 
+var in1020 = function(a,b){
+	if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)){
+		return true;
+	}
+	else {
+		return false;
+	}
+}
+// console.log(in1020(12,99));
+// console.log(in1020(21,12));
+// console.log(in1020(8,99));
+
+// Java > Warmup-1 > delDel
+// Given a string, if the string "del" appears starting at index 1, return a string where that "del" 
+// has been deleted. Otherwise, return the string unchanged. 
+var delDel = function(str){
+	output = "";
+	front = str.substring(0);
+	// if(str.substring(1,4).localeCompare("del")){
+	// 	output = str.substring(0); //+ str.substring(4,str.length);
+	// 	return output;
+	// }
+	// else {
+	// 	return str;
+	// }
+	if(str.substring(1,4).localeCompare("del")) {
+		output = substring(4);
+		return front + output;
+	}
+}
+// console.log(delDel("adelbc"));
+// console.log(delDel("adelHello"));
+// console.log(delDel("adebc"));
+
+
