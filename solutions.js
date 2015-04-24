@@ -5,7 +5,9 @@
 // We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble.
 // Given two int values, return their sum. Unless the two values are the same, then return double their sum.
 
-var sleepIn = function(weekday, vacation) {
+solutions = {}
+
+solutions.sleepIn = function(weekday, vacation) {
 	if (weekday == true || vacation == true){
 		return true;
 	}
@@ -250,14 +252,15 @@ var icyHot = function(temp1, temp2){
 // Java > Warm-up1 > loneTeen
 // We'll say that a number is "teen" if it is in the range 13..19 inclusive.
 // Given 2 int values, return true if one or the other is teen, but not both.
-// var loneTeen = function(a, b){
-// 	if ((a >= 13 || a <= 19){
-// 		return true;
-// 		}
-// 	else{
-// 		return false;
-// 	}
-// }
+var loneTeen = function(a, b){
+	if (a >= 13 || a <= 19){
+		return true;
+		}
+	else{
+		return false;
+	}
+}
+
 // console.log(loneTeen(13, 99));
 // console.log(loneTeen(21, 19));
 // console.log(loneTeen(13, 13));
@@ -282,7 +285,7 @@ var startOz = function(str){
 // console.log(startOz("oxx"));
 
 
-
+// Java > Warmup-1 > intTener
 //Given 2 ints, a and b, return True if one of them is 10 or if their sum is 10.
 // var intTener = function(a, b) {
 //   if (a === 10 || b === 10 || a + b === 10){
@@ -295,12 +298,6 @@ var startOz = function(str){
 // console.log(intTener(9, 10));
 // console.log(intTener(9, 9));
 // console.log(intTener(1, 9));
-
-
-
-
-
-
 
 // Java > Warmup-1 > in3050
 // Given 2 int values, return true if they are both in the range 30..40 inclusive,
@@ -422,8 +419,9 @@ var in1020 = function(a,b){
 // Given a string, if the string "del" appears starting at index 1, return a string where that "del" 
 // has been deleted. Otherwise, return the string unchanged. 
 var delDel = function(str){
-	output = "";
-	front = str.substring(0);
+	output = str.substring(1,4);
+	return output;
+	// front = str.substring(0);
 	// if(str.substring(1,4).localeCompare("del")){
 	// 	output = str.substring(0); //+ str.substring(4,str.length);
 	// 	return output;
@@ -431,13 +429,73 @@ var delDel = function(str){
 	// else {
 	// 	return str;
 	// }
-	if(str.substring(1,4).localeCompare("del")) {
-		output = substring(4);
-		return front + output;
-	}
+	// if(str.substring(1,4).localeCompare("del")) {
+	// 	output = substring(4);
+	// 	return front + output;
+	// }
 }
 // console.log(delDel("adelbc"));
 // console.log(delDel("adelHello"));
 // console.log(delDel("adebc"));
+
+// Java > Warmup-1 > intMax
+// Given three int values, a b c, return the largest. 
+var intMax = function(a,b,c){
+	max = 0;
+	if ( a > b){
+		max = a;
+	} else {
+		max = b;
+	}
+	if ( c > max ){
+		max = c;
+	}
+	return max;
+}
+// console.log(intMax(1,2,3));
+// console.log(intMax(1,3,2));
+// console.log(intMax(3,2,1));
+
+// Java > Warmup-1 > max1020
+// Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, 
+// or return 0 if neither is in that range. 
+var max1020 = function(a,b){
+	if (b > a) {
+		temp = a;
+		a = b;
+		b = temp;
+	}
+	if(a >=10 && a <= 20){
+		return a;
+	}
+	if (a >=10 && a <= 20){
+		return b;
+	return 0;	
+	}
+}
+// console.log(max1020(11,19));
+// console.log(max1020(19,11));
+// console.log(max1020(11,9));
+
+// Java > Warmup-1 > endUp
+// Given a string, return a new string where the last 3 chars are now in upper case. If the string has 
+// less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase
+// version of a string. 
+var endUp = function(str){
+	if(str.length <= 3){
+		return str.toUpperCase();
+	}
+	cut = str.length - 3;
+	front = str.substring(0,cut);
+	back = str.substring(cut);
+
+	return front + back.toUpperCase();
+}
+// console.log(endUp("Hello"));
+// console.log(endUp("hi there"));
+// console.log(endUp("hi"));
+
+
+
 
 

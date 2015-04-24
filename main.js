@@ -25,17 +25,21 @@ Template.hello.events({
   },
 
   'click button': function(){
-    // var obj = eval("(" + Session.get("varName") + ")");
+    var obj = eval(Session.get("varName"));
     var REMOVEME_MICHAEL = "sleepIn";
 
     _.forEach(data["sleepIn"].inputs, function(input){
-      eval(data[REMOVEME_MICHAEL].divineFunction);
-      var divineAnswer = eval("divine" + input);
-      var mortalString = new String(Session.get("varName"));
-      eval(mortalString)
-      // console.log(sleepIn(true, true));
-      var mortalAnswer = eval(REMOVEME_MICHAEL + input);
-      console.log(divineAnswer === mortalAnswer)
+      console.log(eval(REMOVEME_MICHAEL + input));
+      var output = eval("solutions." + REMOVEME_MICHAEL + input);
+      console.log(output);
+      
+      // eval(data[REMOVEME_MICHAEL].divineFunction);
+      // var divineAnswer = eval("divine" + input);
+      // var mortalString = new String(Session.get("varName"));
+      // eval(mortalString)
+      // // console.log(sleepIn(true, true));
+      // var mortalAnswer = eval(REMOVEME_MICHAEL + input);
+      // console.log(divineAnswer === mortalAnswer)
     });
   }
       // console.log(obj);
@@ -50,6 +54,10 @@ Template.hello.events({
   //     alert(code);
   //   }
 });
+
+var enclose = function(functionString){
+  return eval(functionString);
+}
 // Coding Bat Answers for warmup-1
 // The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.
 // We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble. 
