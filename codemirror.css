@@ -24,7 +24,7 @@
 
 .CodeMirror-gutters {
   border-right: 1px solid #ddd;
-  background-color: #f7f7f7;
+  background-color: #333333;
   white-space: nowrap;
 }
 .CodeMirror-linenumbers {}
@@ -92,29 +92,30 @@ div.CodeMirror-overwrite div.CodeMirror-cursor {}
 
 /* DEFAULT THEME */
 
-.cm-s-default .cm-keyword {color: #708;}
-.cm-s-default .cm-atom {color: #219;}
-.cm-s-default .cm-number {color: #164;}
-.cm-s-default .cm-def {color: #00f;}
-.cm-s-default .cm-variable,
+.cm-s-default .cm-keyword {color: #ff007f;} /* */
+.cm-s-defualt .cm-keyword-return {color: #ff007f;}
+.cm-s-default .cm-atom {color: #c48cff;}
+.cm-s-default .cm-number {color: #c48cff;}
+.cm-s-default .cm-def {color: #fd963f;}
+.cm-s-default .cm-variable{color: #fff;}
 .cm-s-default .cm-punctuation,
-.cm-s-default .cm-property,
-.cm-s-default .cm-operator {}
-.cm-s-default .cm-variable-2 {color: #05a;}
-.cm-s-default .cm-variable-3 {color: #085;}
-.cm-s-default .cm-comment {color: #a50;}
-.cm-s-default .cm-string {color: #a11;}
-.cm-s-default .cm-string-2 {color: #f50;}
-.cm-s-default .cm-meta {color: #555;}
-.cm-s-default .cm-qualifier {color: #555;}
-.cm-s-default .cm-builtin {color: #30a;}
-.cm-s-default .cm-bracket {color: #997;}
-.cm-s-default .cm-tag {color: #170;}
-.cm-s-default .cm-attribute {color: #00c;}
+.cm-s-default .cm-property{color: #a6da27;}
+.cm-s-default .cm-operator {color: #ff007f;}
+.cm-s-default .cm-variable-2 {color: #fff;}
+.cm-s-default .cm-variable-3, /*{color: #085;}*/
+.cm-s-default .cm-comment {color: #8c8c8c;}
+.cm-s-default .cm-string {color: #ece47e;}
+.cm-s-default .cm-string-2 {color: #ece47e;}
+.cm-s-default .cm-meta {color: #a7ec21;}
+.cm-s-default .cm-qualifier {color: #a7ec21;}
+.cm-s-default .cm-builtin, /*{color: #30a;}*/
+.cm-s-default .cm-bracket {color: #f9faf4;}
+.cm-s-default .cm-tag {color: #ff007f;}
+.cm-s-default .cm-attribute {color: #a7ec21;}
 .cm-s-default .cm-header {color: blue;}
 .cm-s-default .cm-quote {color: #090;}
 .cm-s-default .cm-hr {color: #999;}
-.cm-s-default .cm-link {color: #00c;}
+.cm-s-default .cm-link {color: #a7ec21;}
 
 .cm-negative {color: #d44;}
 .cm-positive {color: #292;}
@@ -129,8 +130,16 @@ div.CodeMirror-overwrite div.CodeMirror-cursor {}
 .CodeMirror-composing { border-bottom: 2px solid; }
 
 /* Default styles for common addons */
+.cm-matchhighlight {
+  background-color: #00CCFF;
+  color: #242424;
+}
 
-div.CodeMirror span.CodeMirror-matchingbracket {color: #0f0;}
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: #a7ec21;
+    font-weight: bold;
+}
 div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
 .CodeMirror-matchingtag { background: rgba(255, 150, 0, .3); }
 .CodeMirror-activeline-background {background: #e8f2ff;}
@@ -155,6 +164,8 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
   height: 100%;
   outline: none; /* Prevent dragging from highlighting the element */
   position: relative;
+  background-color: #242424;
+  color: #fff;
 }
 .CodeMirror-sizer {
   position: relative;
@@ -323,3 +334,9 @@ div.CodeMirror-cursors {
 
 /* Help users use markselection to safely style text background */
 span.CodeMirror-selectedtext { background: none; }
+
+span.cm-keyword{ color: #ff007f;  }
+
+
+
+

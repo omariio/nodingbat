@@ -1088,7 +1088,7 @@ body {
   font-size: 15px;
   line-height: 1.42857143;
   color: #ffffff;
-  background-color: #222222;
+  background-color: #242424;
 }
 input,
 button,
@@ -1099,12 +1099,12 @@ textarea {
   line-height: inherit;
 }
 a {
-  color: #0ce3ac;
+  color: #92e7f7;
   text-decoration: none;
 }
 a:hover,
 a:focus {
-  color: #0ce3ac;
+  color: #92e7f7;
   text-decoration: underline;
 }
 a:focus {
@@ -3309,7 +3309,7 @@ fieldset[disabled] .btn-danger.active {
   background-color: #ffffff;
 }
 .btn-link {
-  color: #0ce3ac;
+  color: #92e7f7;
   font-weight: normal;
   border-radius: 0;
 }
@@ -3330,7 +3330,7 @@ fieldset[disabled] .btn-link {
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #0ce3ac;
+  color: #92e7f7;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3905,7 +3905,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav .open > a:hover,
 .nav .open > a:focus {
   background-color: #303030;
-  border-color: #0ce3ac;
+  border-color: #92e7f7;
 }
 .nav .nav-divider {
   height: 1px;
@@ -4912,7 +4912,7 @@ a.badge:focus {
 a.thumbnail:hover,
 a.thumbnail:focus,
 a.thumbnail.active {
-  border-color: #0ce3ac;
+  border-color: #92e7f7;
 }
 .thumbnail .caption {
   padding: 9px;
@@ -5154,7 +5154,7 @@ a.thumbnail.active {
   border-bottom-left-radius: 4px;
 }
 a.list-group-item {
-  color: #0ce3ac;
+  color: #92e7f7;
 }
 a.list-group-item .list-group-item-heading {
   color: #0bcb9a;
@@ -5162,7 +5162,7 @@ a.list-group-item .list-group-item-heading {
 a.list-group-item:hover,
 a.list-group-item:focus {
   text-decoration: none;
-  color: #0ce3ac;
+  color: #92e7f7;
   background-color: transparent;
 }
 .list-group-item.disabled,
