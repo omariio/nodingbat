@@ -9,78 +9,49 @@
    <!-- Add your site or application content here -->
     <div class="container">
       <div class="header">
-        <!-- <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img alt="Brand" src="...">
-      </a>
-    </div>
-  </div>
-</nav> -->
-
-
-
         <ul class="nav nav-pills pull-right">
           <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
           <li><a ng-href="#"><span class="glyphicon glyphicon-user"></span></a></li>
           <li><a ng-href="#"><span class="glyphicon glyphicon-minus"></span></a></li>
           <!-- <li><img src="/omariplace.jpg" height="50%" width="50%"></a></li> -->
         </ul>
-        <h3 class="text-muted"><a href="/">Noding Bat</a></h3>
+        <h1 class="text-muted"><a href="/">Noding Bat</a></h1>
         <!-- <img src="/bat-web.jpg" alt="<3"> -->
       </div>
-
-
       <div ng-view=""></div>
-      <div class="footer">
+      <hr>
         <p><span class="glyphicon glyphicon-heart"></span> Omari Labs</p>
-      </div>
     </div>
      <!-- Page Content -->
     <div class="container">
-
         <div class="row">
-
             <!-- Blog Entries Column -->
-            <div class="col-md-8">
+            <div class="col-md-8 scrollit">
                 <!-- First exercise -->
-                <h1>
-                  <a id="Warm-up1">Warmup-1</a>
-                </h1>
-                <h2>sleepIn</h2>
-                    <p>The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.</p>
-
-                    <p>
-                        sleepIn(False, False) → True
-                        sleepIn(True, False) → False<br>
-                        sleepIn(False, True) → True<br>
-                    </p>
-
+                <h3>
+                  <a id="Warm-up1">Warmup-1</a> ><a href=""> sleepIn</a>
+                </h3>
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <div>
                     <div id="solution"></div>
                     <div id="userSolution"></div>
                     <div id="color"></div>
                 </div>
-                <button type="submit">Run</button>
-                <hr>
+                <button type="submit" class="btn btn-default">R.</button>
 
-                <h2>diff21</h2>                                
+                <hr>
+                <!-- <h2>diff21</h2>                                
                     <p>Given an int n, return the absolute difference between n and 21, 
                     except return double the absolute difference if n is over 21.
                     </p>
-
                     <p>
                         diff21(19) → 2<br>
                         diff21(10) → 11<br>
                         diff21(21) → 0
                     </p>
-
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit">Run</button>
                 <hr>
-
                 <h2>nearHundred</h2>                                
                     <p>Given an int n, return True if it is within 10 of 100 or 200. Note: abs(num) computes the absolute value of a number.</p>
 
@@ -91,7 +62,6 @@
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit">Run</button>
                 <hr>
-
                 <h2>missingChar</h2>                                
                     <p> Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).</p>
 
@@ -102,18 +72,15 @@
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit">Run</button>
                 <hr>
-
                 <h2>monkeyTrouble</h2>                                
                     <p> Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).</p>
 
                     <p>monkeyTrouble(True, True) → True<br>
                     monkeyTrouble(False, False) → True<br>
-                    monkeyTrouble(True, False) → False</p>
-                    
+                    monkeyTrouble(True, False) → False</p>    
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit">Run</button>
                 <hr>
-
                 <h2>parrotTrouble</h2>
                     <p>We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23. We are in trouble if the parrot is talking and the hour is before 7 or after 20. Return True if we are in trouble.
                     </p>
@@ -122,11 +89,9 @@
                     parrotTrouble(True, 7) → False<br>
                     parrotTrouble(False, 6) → False
                     </p>
-
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit">Run</button>
                 <hr>
-
                 <h2>posNeg</h2>
                     <p>Given 2 int values, return True if one is negative and one is positive. Except if the parameter "negative" is True, then return True only if both are negative.</p>
 
@@ -134,35 +99,27 @@
                         posNeg(-1, 1, False) → True<br>
                         posNeg(-4, -5, True) → True
                     </p>
-
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit">Run</button>
                 <hr>
-
                 <h2>frontBack</h2>
                     <p>Given a string, return a new string where the first and last chars have been exchanged.</p>
-
                     <p>frontBack('code') → 'eodc'<br>
                         frontBack('a') → 'a'<br>
                         frontBack('ab') → 'ba'
                     </p>
-
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit">Run</button>
                 <hr>
-
                 <h2>sumDouble</h2>
-                    <p>Given two int values, return their sum. Unless the two values are the same, then return double their sum. </p>
-
+                    <p>Given two int values, return their sum. Unless the two values are the same,then return double their sum. </p>
                     <p>sumDouble(1, 2) → 3<br>
                         sumDouble(3, 2) → 5<br>
                         sumDouble(2, 2) → 8
                     </p>
-
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit">Run</button>
                 <hr>
-
                 <h2>makes10</h2>
                     <p>Given 2 ints, a and b, return True if one if them is 10 or if their sum is 10.</p>
 
@@ -203,22 +160,26 @@
 
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit">Run</button>
-                <hr>
+                <hr> -->
 
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="previous">
-                        <a href="#">&larr; Older</a>
+                        <a href="#">
+                        <i class="fa fa-angle-left fa-2x"></i>
+                        </a>
                     </li>
                     <li class="next">
-                        <a href="#">Newer &rarr;</a>
+                        <a href="#">
+                        <i class="fa fa-angle-right fa-2x"></i>
+
+                        </a>
                     </li>
                 </ul>
 
             </div>
-
             <!-- Blog Sidebar Widgets Column -->
-            <div class="col-md-4">
+            <div class="col-md-4 fixed">
                 <div class="well">
                     <h4>Welcome.</h4>
                     <p>Each exercise is a javascript
@@ -226,7 +187,7 @@
                     </a>.</p>
                 </div>
 
-
+            <!-- <div class="col-md-4"> -->          
                 <!-- Search Well -->
                 <div class="well">
                     <h4>Search problems</h4>
@@ -274,14 +235,6 @@
                     </div>
                     <!-- /.row -->
                 </div>
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Welcome.</h4>
-                    <p>Each exercise is a javascript
-                    version from the wonderful <a href="http://codingbat.com/">Coding Bat
-                    </a>.</p>
-                </div>
-            </div>
         </div>
         <!-- /.row -->
         <hr>
@@ -296,4 +249,6 @@
             <!-- /.row -->
         </footer>
     </div>
+    </div>
+    <!-- </div> -->
 </template>
