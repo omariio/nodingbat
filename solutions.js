@@ -8,7 +8,7 @@
 solutions = {}
 
 solutions.sleepIn = function(weekday, vacation) {
-	if (weekday == true || vacation == true){
+	if (!weekday || vacation){
 		return true;
 	}
 	return false;
