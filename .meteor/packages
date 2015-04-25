@@ -13,3 +13,4 @@ jquery
 twbs:bootstrap
 fourseven:scss
 fortawesome:fontawesome
+iron:router
