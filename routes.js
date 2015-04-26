@@ -3,10 +3,12 @@
 //   this.render('ShowItem', {data: item});
 // });
 
+Router.route("/splash", function() {
+	this.render("splash");
+});
 Router.route("/", function() {
 	this.render("exercise");
 });
-
 Router.configure({
   layoutTemplate: 'hello'
 });

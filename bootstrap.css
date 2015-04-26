@@ -11,7 +11,10 @@
   padding-right: 40px;
   padding-top: 20px;
 }
-
+.main-wrapper{
+  height: auto;
+  width: auto;
+}
 
 html {
   font-family: sans-serif;
