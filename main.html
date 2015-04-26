@@ -2,38 +2,44 @@
   <title>Noding Bat</title>
 </head>
 <body>
-  {{> hello}}
+<!--   {{> hello}} -->
 </body>
- 
+
 <template name="hello">
-   <!-- Add your site or application content here -->
-    <div class="container">
       <div class="header">
+      <div class="row">
+      <!-- <div class="col-md-8 scrollit"> -->
         <ul class="nav nav-pills pull-right">
           <li><a href="#"><span class="glyphicon glyphicon-home"></span></a></li>
           <li><a ng-href="#"><span class="glyphicon glyphicon-user"></span></a></li>
           <li><a ng-href="#"><span class="glyphicon glyphicon-minus"></span></a></li>
           <!-- <li><img src="/omariplace.jpg" height="50%" width="50%"></a></li> -->
         </ul>
+        <!-- </div> -->
         <!-- <h1 class="text-muted"><a href="/">Noding Bat</a></h1> -->
         <img src="/noding_bat_v2.png" alt="<3">
+        </div>
       </div>
-      <div ng-view=""></div>
-      <hr>
-        <p><span class="glyphicon glyphicon-heart"></span> Omari Labs</p>
-    </div>
      <!-- Page Content -->
     <div class="container">
         <div class="row">
             <!-- Blog Entries Column -->
             <div class="col-md-8 scrollit">
-                <!-- First exercise -->
+                  <!-- <a id="Warm-up1">Warmup-1</a> ><a href=""> sleepIn</a> -->
                 <h3>
-                  <a id="Warm-up1">Warmup-1</a> ><a href=""> sleepIn</a>
+                  <ol class="breadcrumb">
+                  <li><a href="#">michaelFlops</a></li>
+                  <li><a href="#">Warmup-1</a></li>
+                  <li class="active">sleepIn</li>
+                </ol>
                 </h3>
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
-                <button type="submit" class="btn btn-default">Run.</button>
-                <hr>
+                <button type="submit" class="btn btn-primary">
+                    <!-- <div class="pull-right"> -->
+                        Run
+                    <!-- </div> -->
+                </button>
+                <!-- <hr> -->
                 <!-- Pager -->
                 <ul class="pager">
                     <li class="previous">
@@ -99,7 +105,6 @@
                         </div>
                         <!-- /.col-lg-6 -->
                     </div>
-
                     <!-- /.row -->
                 </div>
         </div>
