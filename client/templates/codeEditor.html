@@ -1,12 +1,13 @@
 <template name ="codeEditor">
     <div class="container">
         <div class="row">
+          {{#with author}}
             <div class="col-md-8">
                 <h3>
                   <ol class="breadcrumb">
-                      <li><a href="#">michaelFlops</a></li>
-                      <li><a href="#">Warmup-1</a></li>
-                      <li class="active">{{name}}</li>
+                      <li><a href="#">{{_id}}</a></li>
+                      <li><a href="#">exercises</a></li>
+                      <li class="active">{{sleepIn.name}}</li>
                   </ol>
                 </h3>
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
@@ -15,6 +16,7 @@
                 </button>
                 <hr>
             </div>
+          {{/with}}
         </div>
     </div>
 </template>

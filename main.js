@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
 Template.codeEditor.helpers({
-  editorOptions: function() {
+    editorOptions: function() {
         return {
             lineNumbers: true,
             mode: "javascript"
@@ -8,6 +8,10 @@ Template.codeEditor.helpers({
     },
     editorCode: function() {
         return "Code to show in editor";
+    },
+    author: function(){
+      var p = Posts.findOne();
+      return p;
     }
 });
 
