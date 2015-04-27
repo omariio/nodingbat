@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-Template.codeEditor.helpers({
+Template.postItem.helpers({
     editorOptions: function() {
         return {
             lineNumbers: true,
@@ -13,21 +13,20 @@ Template.codeEditor.helpers({
       var p = Posts.findOne();
       return p;
     }
+    // name: function(){
+    //   var x = Posts.findOne(name);
+    //   return x;
+    // }
 });
 
-Template.splash.helpers({
-  posts: function() {
-    return Posts.find();
-  }
-});
-
-Template.layout.rendered = function () {
+Template.postItem.rendered = function () {
+  console.log(this);
   var REMOVEME_MICHAEL = "sleepIn"
   Session.set("varName", data[REMOVEME_MICHAEL].setup);
 }
 
 
-Template.codeEditor.events({
+Template.postItem.events({
   "getEditorText": function() {
       return Session.get("varName"); // "varName" is variable name you provided to reactiveVar 
   },

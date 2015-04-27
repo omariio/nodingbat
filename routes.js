@@ -1,13 +1,11 @@
-// Router.route('/solutions/:_id', function () {
-//   var item = Items.findOne({_id: this.params._id});
-//   this.render('ShowItem', {data: item});
-// });
-
-Router.route("/splash", function() {
-	this.render("splash");
+Router.route('/:_name', function () {
+  var item = Posts.findOne({name: this.params._name});
+  console.log(item);
+  this.render('postItem', {data: item});
 });
+
 Router.route("/", function() {
-	this.render("codeEditor");
+	this.render("postList");
 });
 Router.configure({
   layoutTemplate: 'layout'
