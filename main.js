@@ -1,25 +1,29 @@
 if (Meteor.isClient) {
-Template.hello.helpers({
+Template.codeEditor.helpers({
   editorOptions: function() {
         return {
             lineNumbers: true,
             mode: "javascript"
         }
     },
-
     editorCode: function() {
         return "Code to show in editor";
     }
-
 });
 
-Template.hello.rendered = function () {
+Template.splash.helpers({
+  posts: function() {
+    return Posts.find();
+  }
+});
+
+Template.layout.rendered = function () {
   var REMOVEME_MICHAEL = "sleepIn"
   Session.set("varName", data[REMOVEME_MICHAEL].setup);
 }
 
 
-Template.hello.events({
+Template.codeEditor.events({
   "getEditorText": function() {
       return Session.get("varName"); // "varName" is variable name you provided to reactiveVar 
   },
@@ -99,3 +103,6 @@ Accounts.ui.config({
   passwordSignupFields: "USERNAME_ONLY"
 });
 }
+
+
+

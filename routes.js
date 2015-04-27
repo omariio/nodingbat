@@ -7,8 +7,8 @@ Router.route("/splash", function() {
 	this.render("splash");
 });
 Router.route("/", function() {
-	this.render("exercise");
+	this.render("codeEditor");
 });
 Router.configure({
-  layoutTemplate: 'hello'
+  layoutTemplate: 'layout'
 });

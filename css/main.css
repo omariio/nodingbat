@@ -1,3 +1,13 @@
+#side-bar{
+  position: fixed;
+  margin: 115px 0 0 0;
+  right: 1%;
+  /*z-index: 1000;*/
+  /*margin: auto;*/
+  top: 1%;
+
+}
+
 .cm-s-sublime-text-like.CodeMirror {
   background-color: #242424;
   color: #fff;
