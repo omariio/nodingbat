@@ -15,6 +15,7 @@ if (Meteor.isServer) {
       });
     
         Posts.insert({
+            "section":"warm-up1",          
           	"name":"diff21",
               "inputs":[
                 "(true, true)", 
