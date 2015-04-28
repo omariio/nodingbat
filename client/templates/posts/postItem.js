@@ -7,20 +7,19 @@ Template.postItem.helpers({
     },
     editorCode: function() {
         return "Code to show in editor";
-    },
-    author: function(){
-      var p = Posts.findOne();
-      // Session.get("varName", this.data.setup);
-      return p;
     }
 });
 
 Template.postItem.rendered = function () {
   console.log("rendered");
   // var REMOVEME_MICHAEL = "sleepIn"
+    console.log(this); 
+  console.log(this.data);
+  console.log(Session.get("varName"));
   Session.set("varName", this.data.setup);
+  console.log(Session.get("varName"));
+  console.log(this);
 
-  console.log(this); 
 }
 
 
