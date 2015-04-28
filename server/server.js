@@ -10,7 +10,7 @@ if (Meteor.isServer) {
                 "(false, true)",
                 "(false, false)"
                 ],
-          "setup":"/*The parameter weekday is True if it is a weekday, and the parameter vacation*/ \n var sleepIn = function(weekday, vacation){ }",
+          "setup":"/*The parameter weekday is True if it is a weekday, and the parameter*/\n /*vacation*/ \n var sleepIn = function(weekday, vacation){ }",
           "divineFunction":"var divine = function(weekday, vacation){ return !weekday || vacation; }"
       });
     

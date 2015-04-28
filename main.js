@@ -20,9 +20,9 @@ Template.postItem.helpers({
 });
 
 Template.postItem.rendered = function () {
-  console.log(this);
-  var REMOVEME_MICHAEL = "sleepIn"
-  Session.set("varName", data[REMOVEME_MICHAEL].setup);
+  console.log("rendered");
+  // var REMOVEME_MICHAEL = "sleepIn"
+  Session.set("varName", this.data.setup);
 }
 
 
@@ -33,57 +33,27 @@ Template.postItem.events({
 
   'click button': function(){
     var obj = eval(Session.get("varName"));
-    var REMOVEME_MICHAEL = "sleepIn";
     var userSolutionArr = [];
     var solutionArray = [];
-    var colorArr = []
+    var colorArr = [];
+    var index = 1;
 
-    var container = $('<div id="container">');
-    $('div#color').append(container);
+    var self = this;
+    _.forEach(self.inputs, function(input){
+      console.log(index);
+      var userOutput = eval(self.name + input);
+      var output = eval("solutions." + self.name + input);
 
-
-    _.forEach(data["sleepIn"].inputs, function(input){
-      var userOutput = eval(REMOVEME_MICHAEL + input);
-      var output = eval("solutions." + REMOVEME_MICHAEL + input);
-
-      userSolutionArr.push(userOutput)
-      solutionArray.push(output);
-
-      if(output == userOutput)
-        colorArr.push("green" );
-      else
-        colorArr.push("red");
-
-    //    var hue = 'rgb(140, 100,300)';
-
-    //    $('#color').css('color', hue)
-    // $('<div class="child">').css('background-color', hue).appendTo(container);
-
-      
-      
-
-      // console.log(output);
-
-
-
-      // var solutionBox = document.getElementById('solution');
-      // console.log(solutionBox.innerHTML);
-
-
-
-      
-      // eval(data[REMOVEME_MICHAEL].divineFunction);
-      // var divineAnswer = eval("divine" + input);
-      // var mortalString = new String(Session.get("varName"));
-      // eval(mortalString)
-      // // console.log(sleepIn(true, true));
-      // var mortalAnswer = eval(REMOVEME_MICHAEL + input);
-      // console.log(divineAnswer === mortalAnswer)
+      if(output == userOutput){
+        console.log("green");
+        $("div.colors:nth-child("+index+")").css("background-color", "green");
+      }
+      else{
+        console.log("red");
+        $("div.colors:nth-child("+index+")").css("background-color", "red");
+      }
+      index=index+1;
     });
-    $("#userSolution").text(userSolutionArr);
-    $("#solution").text(solutionArray);
-    $("#color").text(colorArr);
-
   }
       // console.log(obj);
       // console.log(v);

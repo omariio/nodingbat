@@ -1,3 +1,13 @@
+#color{
+  display: flex;
+  flex-direction: column;
+}
+
+.colors{
+  padding: 0px 20px 0px 20px;
+}
+
+
 #side-bar{
   position: fixed;
   margin: 115px 0 0 0;

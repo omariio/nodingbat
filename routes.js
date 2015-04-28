@@ -1,5 +1,6 @@
 Router.route('/:_name', function () {
   var item = Posts.findOne({name: this.params._name});
+  console.log("route");
   console.log(item);
   this.render('postItem', {data: item});
 });
