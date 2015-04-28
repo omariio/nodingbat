@@ -11,5 +11,8 @@ Router.route("/", function() {
 	this.render("postList");
 });
 Router.configure({
-  layoutTemplate: 'layout'
+  layoutTemplate: 'layout',
+  loadingTemplate: 'loading',
+  waitOn: function() { return Meteor.subscribe('posts'); }
+
 });
