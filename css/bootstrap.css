@@ -7,15 +7,6 @@
  * Based on Bootstrap
 */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
-.pull-right{
-  padding-right: 40px;
-  padding-top: 20px;
-}
-.main-wrapper{
-  height: auto;
-  width: auto;
-}
-
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -38,14 +29,6 @@ nav,
 section,
 summary {
   display: block;
-}
-.fixed {
-        position: fixed;
-        width: 25%;
-}
-.scrollit {
-        float: left;
-        width: 71%
 }
 audio,
 canvas,

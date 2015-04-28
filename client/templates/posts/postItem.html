@@ -3,13 +3,13 @@
         <div class="row">
           {{#with author}}
             <div class="col-md-8">
-                <h3>
+                <h4>
                   <ol class="breadcrumb">
                       <li><a href="/">Home</a></li>
                       <li><a href="/">{{section}}</a></li>
                       <li class="active">{{name}}</li>
                   </ol>
-                </h3>
+                </h4>
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 <button type="submit" class="btn btn-primary">
                         Run

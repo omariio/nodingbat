@@ -1,3 +1,40 @@
+
+#footFix{
+  padding-bottom: 30px;
+}
+
+.breadcrumb{
+  background-color: rgba(70, 69, 69, 0.28);
+}
+
+#spoogScroll{
+  overflow: scroll;
+  height: 476px;
+}
+body{
+  position: fixed;
+}
+
+.pull-right{
+  padding-top: 20px;
+}
+.main-wrapper{
+  height: auto;
+  width: auto;
+}
+.fixed {
+  position: fixed;
+  width: 25%;
+}
+.scrollit {
+  float: left;
+  width: 71%
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  height: 60px;
+}
 #color{
   display: flex;
   flex-direction: column;

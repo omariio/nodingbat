@@ -11,18 +11,17 @@ Template.postItem.helpers({
     },
     author: function(){
       var p = Posts.findOne();
+      // Session.get("varName", this.data.setup);
       return p;
     }
-    // name: function(){
-    //   var x = Posts.findOne(name);
-    //   return x;
-    // }
 });
 
 Template.postItem.rendered = function () {
   console.log("rendered");
   // var REMOVEME_MICHAEL = "sleepIn"
   Session.set("varName", this.data.setup);
+
+  console.log(this); 
 }
 
 
@@ -40,7 +39,8 @@ Template.postItem.events({
 
     var self = this;
     _.forEach(self.inputs, function(input){
-      console.log(index);
+      // console.log("poopydick");
+      // console.log(varName);
       var userOutput = eval(self.name + input);
       var output = eval("solutions." + self.name + input);
 
