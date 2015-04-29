@@ -1,4 +1,4 @@
-if (Meteor.isServer) {
+  if (Meteor.isServer) {
   // Meteor.startup(function () {
       if (Posts.find().count() === 0) {
         Posts.insert({
