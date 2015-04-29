@@ -39,8 +39,4 @@ Accounts.ui.config({
     }]
 });
 
-
 }
-
-
-
