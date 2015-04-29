@@ -7,19 +7,13 @@
 <template name = "layout">
       <div class="header">
           <div class="row">
-          <!-- <div class="col-md-8 scrollit"> -->
-            <ul class="nav nav-pills pull-right">
-              <li><a href="/"><span class="glyphicon glyphicon-home"></span></a></li>
-              <!-- <li><a ng-href="#">{{> loginButtons}}</a></li> -->
-              <li>
-                <span class="glyphicon glyphicon-user">
-                  <div class="fixTitms">{{> loginButtons align="left"}}</div>
-                </span>
 
-              </li>
-              <li></li>
+             <ul class="nav nav-pills pull-right">
+<!--               <li>
+                  <div class="fixTit">{{> loginButtons align="right"}}</div>
+              </li> -->
+                {{> loginButtons align="left"}}
             </ul>
-            <!-- </div> -->
             <a href="/"><img src="/noding_bat_v2.png" alt="<3"></a>
           </div>
       </div>
