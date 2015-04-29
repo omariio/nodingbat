@@ -36,19 +36,25 @@ Template.postItem.events({
     var index = 1;
 
     var self = this;
+
     _.forEach(self.inputs, function(input){
-      // console.log("poopydick");
-      // console.log(varName);
       var userOutput = eval(self.name + input);
+      console.log(userOutput);
       var output = eval("solutions." + self.name + input);
 
       if(output == userOutput){
-        console.log("green");
-        $("div.colors:nth-child("+index+")").css("background-color", "green");
+        var currentDiv = $("div.colors:nth-child("+index+")");
+        currentDiv.css("background-color", "green");
+        console.log(userOutput);
+
+        currentDiv.html("userOutput: RIGHT " + userOutput);
       }
       else{
-        console.log("red");
-        $("div.colors:nth-child("+index+")").css("background-color", "red");
+        var currentDiv = $("div.colors:nth-child("+index+")");
+        currentDiv.css("background-color", "red");
+        console.log(userOutput);
+
+        currentDiv.html("userOutput: WRONG " + userOutput);
       }
       index=index+1;
     });
