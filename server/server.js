@@ -10,7 +10,7 @@ if (Meteor.isServer) {
                 "(false, true)",
                 "(false, false)"
                 ],
-            "parameters": "sleepIn(weekday, vacation)", 
+            "parameters": "sleepIn(weekday, vacation)- ", 
             "setup":"/*The parameter weekday is True if it is a weekday, and the parameter*/\n /*vacation*/ \n var sleepIn = function(weekday, vacation){ }",
             "divineFunction":"var divine = function(weekday, vacation){ return !weekday || vacation; }"
       });
@@ -19,23 +19,23 @@ if (Meteor.isServer) {
             "section":"warm-up1",          
           	"name":"diff21",
               "inputs":[
-                "(true, true)", 
-                "(true, false)", 
-                "(false, true)",
-                "(false, false)"
+                "(19)", 
+                "(10)", 
+                "(21)",
                 ],
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
+            "parameters": "diff21(n)- ", 
+          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21 = function(n){ \n}",
           "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
         });
         Posts.insert({
             "section":"warm-up1",          
             "name":"nearHundred",
               "inputs":[
-                "(true, true)", 
-                "(true, false)", 
-                "(false, true)",
-                "(false, false)"
+                "(93)", 
+                "(90)", 
+                "(89)",
                 ],
+                "parameters": "nearHundred(n)- ", 
           "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
           "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
         });
