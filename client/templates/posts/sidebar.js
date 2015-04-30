@@ -11,5 +11,11 @@ Template.sidebar.helpers({
 	},
   postForum: function(){
     return Session.get('postForum');
-  }
+  },
+	success: function(){
+		return Session.get('success');
+	},
+	failure: function(){
+		return Session.get('failure')
+	}
 });
