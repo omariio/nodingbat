@@ -11,6 +11,9 @@
                 </div>
                 <div class="well">
                     <div class="panel panel-primary">
+                        {{#if postForum}}
+                            {{> postHelp}}
+                        {{/if}}
                         <div id="solution"></div>
                         <div id="userSolution"></div>
                         <div id="color">

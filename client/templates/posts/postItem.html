@@ -10,8 +10,11 @@
                   </ol>
                 </h4>
                 {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-primary" id="run">
                         Run
+                </button>
+                <button class="btn btn-default" id="help">
+                        <a href="{{pathFor 'postHelp'}}">Help</a>
                 </button>
                 <hr>
             </div>

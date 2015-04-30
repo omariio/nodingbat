@@ -1,0 +1,29 @@
+<template name = "postHelp">
+<div class="row">
+    <div class="col-md-4" id="side-bar">
+        <div class="well">
+            <h4>Help Forum</h4>    
+                <div class="panel panel-primary">
+                {{#if currentUser}}
+                <div id="chat-log">
+                    {{#each chatLog}}
+                        <div>
+                            <span class="chat-username-column">{{userName}}</span>
+                            <span class="chat-body-column">{{body}}</span>
+                        </div>
+                    {{/each}}
+                </div>
+                <div>
+                  <div id="chat-wrapper">
+                    <input id="chat-box" type="text" style="text-align:center;" placeholder="Chat..." />
+                  </div>
+                    <button id="chat-send-button"> Send </button>
+                </div>
+              {{else}}
+                Log in!
+              {{/if}}
+                </div>
+        </div>
+    </div>
+</div>
+</template>

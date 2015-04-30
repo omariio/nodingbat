@@ -1,5 +1,23 @@
   if (Meteor.isServer) {
-  // Meteor.startup(function () {
+    Meteor.startup(function () {
+        Meteor.methods({
+        newMessage: function(body, ceID){
+        if(!Meteor.user())
+          return;
+
+        var messageObject = {
+          body:body,
+          modalID:ceID,   
+          user:Meteor.user(),
+          timestamp:(new Date()).getTime()
+        }
+
+        Chatter.insert(messageObject);
+
+        }
+      })
+    });
+    // database of each coding bat exercise
       if (Posts.find().count() === 0) {
         Posts.insert({
             "section":"warm-up1",
@@ -10,9 +28,9 @@
                 "(false, true)",
                 "(false, false)"
                 ],
-            "parameters": "sleepIn(weekday, vacation)- ", 
-            "setup":"/*The parameter weekday is True if it is a weekday, and the parameter*/\n /*vacation*/ \n var sleepIn = function(weekday, vacation){ }",
-            "divineFunction":"var divine = function(weekday, vacation){ return !weekday || vacation; }"
+            "parameters": "sleepIn(weekday, vacation) ", 
+            "setup":"/* The parameter weekday is True if it is a weekday, and the parameter */\n/* vacation is True if we are on vacation. We sleep in if it is not a weekday */\n/* or we're on vacation. Return True if we sleep in. */\n\nvar sleepIn = function(weekday, vacation){ \n\n}"
+            // "divineFunction":"var divine = function(weekday, vacation){ return !weekday || vacation; }"
       });
     
         Posts.insert({
@@ -23,9 +41,8 @@
                 "(10)", 
                 "(21)",
                 ],
-            "parameters": "diff21(n)- ", 
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21 = function(n){ \n}",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
+            "parameters": "diff21(n) ", 
+          "setup":"/* Given an int n, return the absolute difference between n and 21, */\n/* except return double the absolute difference if n is over 21. */\nvar diff21 = function(n){ \n\n}"
         });
         Posts.insert({
             "section":"warm-up1",          
@@ -36,8 +53,8 @@
                 "(89)",
                 ],
                 "parameters": "nearHundred(n)- ", 
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
+          "setup":"/* Given an int n, return True if it is within 10 of 100 or 200. */\n/* Note: abs(num) computes the absolute value of a number. */\nnearhundred = function(n){ \n\n}",
+          "divineFunction":"var nearHundred = function(n) {if (Math.abs(100) - n <= 10 || Math.abs(200) - n <= 10){return true;}else{return false;}}"
         });
         Posts.insert({
             "section":"warm-up1",          
@@ -160,5 +177,4 @@
           "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
         });
        }
-        // });
 }

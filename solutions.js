@@ -2,8 +2,6 @@
 
 // Java > Warmup-1 > sleepIn
 // The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.
-// We have two monkeys, a and b, and the parameters a_smile and b_smile indicate if each is smiling. We are in trouble if they are both smiling or if neither of them is smiling. Return True if we are in trouble.
-// Given two int values, return their sum. Unless the two values are the same, then return double their sum.
 
 solutions = {}
 
@@ -17,21 +15,24 @@ solutions.sleepIn = function(weekday, vacation) {
 // Java > Warm-up1 > diff21
 // Given an int n, return the absolute difference between n and 21,
 // except return double the absolute difference if n is over 21.
-var diff21 = function(n) {
-  if (n <= 21)
+solutions.diff21 = function(n) {
+  if (n <= 21){
     return 21 - n;
-  else
+  }
+  else{
     return (n - 21) * 2;
+    }
 }
 
 // Java > Warm-up1 > nearHundred
-// Given an int n, return True if it is within 10 of 100 or 200.
-//Note: abs(num) computes the absolute value of a number.
-var nearHundred = function(n) {
+// Given an int n, return True if it is within 10 of 100 or 200. 
+// Note: abs(num) computes the absolute value of a number.
+solutions.nearHundred = function(n) {
   if (Math.abs(100) - n <= 10 || Math.abs(200) - n <= 10){
     return true;
-  }
+  } else {
     return false;
+  }  
 }
 // console.log(nearHundred(93));
 // console.log(nearHundred(90));
@@ -41,7 +42,7 @@ var nearHundred = function(n) {
 //Given a non-empty string and an int n, return a new string where the char at
 //index n has been removed. The value of n will be a valid index of a char in the
 //original string (i.e. n will be in the range 0..str.length()-1 inclusive).
-var missingChar = function(str, n) {
+solutions.missingChar = function(str, n) {
 	front = str.substring(0,n);
 	back = str.substring(n+1, str.length);
 	return front + back;
