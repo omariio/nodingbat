@@ -11,21 +11,13 @@ Template.postItem.helpers({
 });
 
 Template.postItem.rendered = function () {
-  console.log("rendered");
-  // var REMOVEME_MICHAEL = "sleepIn"
-  //   console.log(this); 
-  // console.log(this.data);
-  // console.log(Session.get("varName"));
   Session.set("varName", this.data.setup);
-  // console.log(Session.get("varName"));
-  // console.log(this);
-
 }
 
 
 Template.postItem.events({
   "getEditorText": function() {
-      return Session.get("varName"); // "varName" is variable name you provided to reactiveVar 
+      return Session.get("varName"); // "varName" is variable name you provided to reactiveVar
   },
 
   'click #run': function(){
@@ -38,23 +30,26 @@ Template.postItem.events({
     var self = this;
 
     _.forEach(self.inputs, function(input){
-      var userOutput = eval(self.name + input);
-      console.log(userOutput);
-      var output = eval("solutions." + self.name + input);
 
+      // var parameters = input.parameters;
+      // console.log(parameters)
+      var userOutput = eval(self.name + input);
+      var output = eval("solutions." + self.name + input);
+      // output.attr('style', 'color: #222222"')
       if(output == userOutput){
         var currentDiv = $("div.colors:nth-child("+index+")");
         currentDiv.css("background-color", "green");
-        console.log(userOutput);
 
-        currentDiv.html("userOutput: RIGHT " + userOutput);
+        currentDiv.html(self.parameters+"<i class='fa fa-long-arrow-right'></i>"+ output +"  <i class='fa fa-smile-o'></i> "+ userOutput );
+
       }
       else{
         var currentDiv = $("div.colors:nth-child("+index+")");
         currentDiv.css("background-color", "red");
-        console.log(userOutput);
 
-        currentDiv.html("userOutput: WRONG " + userOutput);
+        currentDiv.html(self.parameters+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-frown-o'></i> "+ userOutput );
+
+        // curentDiv.html(a+b+c)
       }
       index=index+1;
     });
