@@ -13,12 +13,18 @@ Template.postItem.helpers({
 Template.postItem.rendered = function () {
   console.log("rendered");
   // var REMOVEME_MICHAEL = "sleepIn"
+<<<<<<< HEAD
     console.log(this);
   console.log(this.data);
   console.log(Session.get("varName"));
+=======
+  //   console.log(this); 
+  // console.log(this.data);
+  // console.log(Session.get("varName"));
+>>>>>>> 9318c07b81d8c0411442187afe3a918b74931472
   Session.set("varName", this.data.setup);
-  console.log(Session.get("varName"));
-  console.log(this);
+  // console.log(Session.get("varName"));
+  // console.log(this);
 
 }
 
@@ -28,7 +34,7 @@ Template.postItem.events({
       return Session.get("varName"); // "varName" is variable name you provided to reactiveVar
   },
 
-  'click button': function(){
+  'click #run': function(){
     var obj = eval(Session.get("varName"));
     var userSolutionArr = [];
     var solutionArray = [];
@@ -61,6 +67,13 @@ Template.postItem.events({
       }
       index=index+1;
     });
+  },
+  'click #help': function(){
+    p = Posts.findOne();
+    Session.set("postForum", p._id);
+    console.log("help me");
+
+
   }
 });
 
