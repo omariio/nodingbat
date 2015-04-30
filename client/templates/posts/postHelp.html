@@ -13,15 +13,15 @@
                       {{/each}}
                   </div>
                   <div>
-                    <div id="inputBox">
-                      <input id="chat-box" type="text" style="text-align:center;" placeholder="Chat..." />
-                      <button id="close" class="success"> Close </button>
-                      <button id="chat-send-button"> Send </button>
+                    <div id="inputBox" class="input-group">
+                      <input id="chat-box" type="text" class="form-control" style="text-align:center;" placeholder="Chat..." />
+                      <button id="chat-send-button" class="btn btn-info"> Send </button>
+                      <button id="close" class="btn btn-danger"> x </button>
                     </div>
                   </div>
-                {{else}}
-                  Log in!
-                {{/if}}
+                  {{else}}
+                    Log in!
+                  {{/if}}
                   </div>
           </div>
       </div>
