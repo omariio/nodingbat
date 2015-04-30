@@ -55,10 +55,7 @@ Template.postItem.events({
     });
   },
   'click #help': function(){
-    p = Posts.findOne();
-    Session.set("postForum", p._id);
-    console.log("help me");
-
+    Session.set("postForum", this._id);
 
   }
 });

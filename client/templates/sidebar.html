@@ -1,19 +1,11 @@
 <template name = "sidebar">
+  <div class ="container">
 <div class="row">
 {{#with post}}
             <div class="col-md-4" id="side-bar">
+              <!-- <div class="row"> -->
                 <div class="well">
-                    <h4>Welcome.</h4>
-                    <p>Each exercise is a javascript
-                    version from the wonderful <a href="http://codingbat.com/">Coding Bat
-                    </a>.</p>
-                    <div class="panel panel-primary"></div>
-                </div>
-                <div class="well">
-                    <div class="panel panel-primary">
-                        {{#if postForum}}
-                            {{> postHelp}}
-                        {{/if}}
+                    <div class="panel">
                         <div id="solution"></div>
                         <div id="userSolution"></div>
                         <div id="flexContainer">
@@ -22,7 +14,7 @@
                           </div>
 
                         </div>
-                        <div id="color">
+                        <div id="color" >
                             <div class="colors"></div>
                             <div class="colors"></div>
                             <div class="colors"></div>
@@ -32,34 +24,17 @@
                 </div>
                 <!-- Blog Categories Well -->
                 <div class="well">
-                    <div class="row">
-                    <!-- <div class="row"> -->
-                        <div id="exerciseContainer">
-                          {{#each exerciseLink}}
-                             <div class="exerciseName">
-                               <a href="/{{name}}" id="exColor"><i class="fa fa-circle-thin"></i>&nbsp;{{name}}&nbsp;</a>
-                             </div>
-                          {{/each}}
-                        </div>
-                        <!-- /.col-lg-6 -->
-                        <div class="col-lg-6">
-                        <!--     <ul class="list-unstyled">
-                                <li><a href="#">Logic-1</a>
-                                </li>
-                                <li><a href="#">Logic-2</a>
-                                </li>
-                                <li><a href="#"></a>
-                                </li>
-                                <li><a href="#"></a>
-                                </li>
-                            </ul> -->
-                        </div>
-                        <!-- /.col-lg-6 -->
-                    <!-- </div> -->
-                    <!-- /.row -->
-                </div>
-                </div>
+                  <div class="">
+                    <h4 align="center">Help Chat</h4>
+
+                    {{#if postForum}}
+                        {{> postHelp}}
+                    {{/if}}
+                  </div>
+                  </div>
+                <!-- </div> -->
             </div>
             {{/with}}
+</div>
 </div>
 </template>

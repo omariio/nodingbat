@@ -10,6 +10,26 @@ a#exColor:hover{
 
 }
 
+
+#buttonContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#headerContainer{
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+}
+
+.imageHeader{
+  text-align:center;
+  flex-grow:2;
+  padding-top:15px;
+}
+
 #flexContainer{
   display: flex;
   flex-direction: row;
@@ -20,7 +40,26 @@ a#exColor:hover{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.chat-body-column{
+  float: right;
+}
+
+#chat-log{
+  height: 100px;
+  overflow-y: scroll;
+
+}
+#inputBox{
+  /*position: absolute;*/
+}
+
+.chatContainer{
+  height:400px;
+    /*position: fixed;*/
+
 }
 
 .exerciseName{

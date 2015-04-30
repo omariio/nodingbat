@@ -4,7 +4,7 @@ Router.route('/:_name', function () {
   console.log(item);
   if(!item)
   	this.render('notFound');
-  else 
+  else
   	this.render('postItem', {data: item});
 });
 

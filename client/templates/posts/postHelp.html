@@ -1,29 +1,35 @@
 <template name = "postHelp">
-<div class="row">
-    <div class="col-md-4" id="side-bar">
-        <div class="well">
-            <h4>Help Forum</h4>    
-                <div class="panel panel-primary">
-                {{#if currentUser}}
-                <div id="chat-log">
-                    {{#each chatLog}}
-                        <div>
-                            <span class="chat-username-column">{{userName}}</span>
-                            <span class="chat-body-column">{{body}}</span>
-                        </div>
-                    {{/each}}
-                </div>
-                <div>
-                  <div id="chat-wrapper">
-                    <input id="chat-box" type="text" style="text-align:center;" placeholder="Chat..." />
+  <div class="row">
+      <div class="chatContainer" id="">
+          <div class="">
+                  <div class="panel" id="">
+                  {{#if currentUser}}
+                  <div id="chat-log">
+                      {{#each chatLog}}
+                          <div>
+                              <span class="chat-username-column">{{userName}}</span>
+                              <span class="chat-body-column">{{body}}</span>
+                          </div>
+                      {{/each}}
                   </div>
-                    <button id="chat-send-button"> Send </button>
-                </div>
-              {{else}}
-                Log in!
-              {{/if}}
-                </div>
-        </div>
-    </div>
-</div>
+                  <div>
+                    <div id="inputBox">
+                      <input id="chat-box" type="text" style="text-align:center;" placeholder="Chat..." />
+                      <button id="close" class="success"> Close </button>
+                      <button id="chat-send-button"> Send </button>
+
+                    </div>
+
+                  </div>
+                {{else}}
+                  Log in!
+                {{/if}}
+                  </div>
+          </div>
+      </div>
+  </div>
+  <div id="chatBox">
+    <span class="chat-username-column">{{userName}}</span>
+    <span class="chat-body-column">{{body}}</span>
+  </div>
 </template>
