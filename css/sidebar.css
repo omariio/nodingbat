@@ -1,0 +1,32 @@
+i.fa-circle-o-notch{
+  font-size:14px;
+}
+
+i.fa-circle-thin{
+  font-size:10px;
+}
+
+a#exColor:hover{
+
+}
+
+#flexContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+}
+#exerciseContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.exerciseName{
+
+}
+
+#color-title{
+  /*flex-grow: 1;*/
+}

@@ -4,5 +4,9 @@ Template.sidebar.helpers({
 		var name = Router.current().params._name;
 		var post = Posts.findOne({name:name});
 		return post;
+	},
+	exerciseLink: function(){
+		var exercises = Posts.find().fetch();
+		return exercises;
 	}
 });
