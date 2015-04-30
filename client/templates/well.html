@@ -1,0 +1,30 @@
+<template name = "well">
+  <div style="right:0px;">
+    <!-- {{> sidebar}} -->
+    <div class="col-md-4" id="side-bar">
+        <div class="well">
+            <h4>Welcome.</h4>
+            <p>Each exercise is a javascript
+            version from the wonderful <a href="http://codingbat.com/">Coding Bat
+            </a>.</p>
+            <div class="panel panel-primary"></div>
+        </div>
+        <div class="">
+          <div class="well">
+            <div id="exerciseContainer">
+              {{#each exerciseLink}}
+                 <div class="exerciseName">
+                   <a href="/{{name}}" id="exColor">&nbsp;{{name}}&nbsp;</a>
+                 </div>
+              {{/each}}
+          </div>
+          </div>
+        </div>
+        <div class="well" id="buttonContainer">
+            <button class="btn btn-success">Subscribe</button>
+            <button class="btn btn-default">Github&nbsp;<i class="fa fa-github"></i></button>
+            <button class="btn btn-danger">Donate&nbsp;<i class="fa fa-heart"></i></button>
+        </div>
+      </div>
+  </div>
+</template>
