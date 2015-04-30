@@ -11,21 +11,7 @@ Template.postItem.helpers({
 });
 
 Template.postItem.rendered = function () {
-  console.log("rendered");
-  // var REMOVEME_MICHAEL = "sleepIn"
-<<<<<<< HEAD
-    console.log(this);
-  console.log(this.data);
-  console.log(Session.get("varName"));
-=======
-  //   console.log(this); 
-  // console.log(this.data);
-  // console.log(Session.get("varName"));
->>>>>>> 9318c07b81d8c0411442187afe3a918b74931472
   Session.set("varName", this.data.setup);
-  // console.log(Session.get("varName"));
-  // console.log(this);
-
 }
 
 
