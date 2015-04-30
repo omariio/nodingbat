@@ -1,4 +1,5 @@
 <template name = "postHelp">
+<<<<<<< HEAD
   <div class="row">
       <div class="chatContainer" id="">
           <div class="">
@@ -11,6 +12,25 @@
                               <span class="chat-body-column">{{body}}</span>
                           </div>
                       {{/each}}
+=======
+<div class="row">
+    <div class="col-md-4" id="side-bar">
+        <div class="well">
+            <h4>Help Forum</h4>    
+                <div class="panel panel-primary">
+                {{#if currentUser}}
+                <div id="chat-log">
+                    {{#each chatLog}}
+                        <div>
+                            <span class="chat-username-column">{{user.userName}}</span>
+                            <span class="chat-body-column">{{body}}</span>
+                        </div>
+                    {{/each}}
+                </div>
+                <div>
+                  <div id="chat-wrapper">
+                    <input id="chat-box" type="text" style="text-align:center;" placeholder="Chat..." />
+>>>>>>> 9b69d2a0a6590f4a83a38811aa2bffc9586b4a41
                   </div>
                   <div>
                     <div id="inputBox">
