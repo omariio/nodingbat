@@ -10,7 +10,6 @@ a#exColor:hover{
 
 }
 
-
 #buttonContainer{
   display: flex;
   flex-direction: row;
@@ -48,24 +47,16 @@ justify-content: center;
 }
 
 #chat-log{
-  height: 100px;
+  max-height: 100px;
   overflow-y: scroll;
 
 }
+.well{}
 #inputBox{
-  /*position: absolute;*/
+  display: flex;
+  flex-direction: row;
 }
 
 .chatContainer{
   height:400px;
-    /*position: fixed;*/
-
-}
-
-.exerciseName{
-
-}
-
-#color-title{
-  /*flex-grow: 1;*/
 }
