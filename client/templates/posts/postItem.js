@@ -25,6 +25,7 @@ Template.postItem.events({
     var userSolutionArr = [];
     var solutionArray = [];
     var colorArr = [];
+    var solutionIndex = 1;
     var index = 1;
 
     var self = this;
@@ -39,6 +40,7 @@ Template.postItem.events({
       if(output == userOutput){
         var currentDiv = $("div.colors:nth-child("+index+")");
         currentDiv.css("background-color", "green");
+        solutionIndex++;
 
         currentDiv.html(self.parameters+"<i class='fa fa-long-arrow-right'></i>"+ output +"  <i class='fa fa-smile-o'></i> "+ userOutput );
 
@@ -51,8 +53,19 @@ Template.postItem.events({
 
         // curentDiv.html(a+b+c)
       }
-      index=index+1;
+      index=index+1
     });
+    console.log(index);
+    console.log(solutionIndex);
+
+    if (solutionIndex == index){
+      Session.set('failure', null);
+      Session.set('success', this._id);
+    }else{
+      Session.set('success', null);
+
+      Session.set('failure', this._id);
+    }
   },
   'click #help': function(){
     Session.set("postForum", this._id);

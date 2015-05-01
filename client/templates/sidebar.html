@@ -24,6 +24,12 @@
                 <!-- Blog Categories Well -->
                 <div class="">
                   <div class="">
+                    {{#if success}}
+                        {{> successDialog}}
+                    {{/if}}
+                    {{#if failure}}
+                        {{> failureDialog}}
+                    {{/if}}
                     <h4 align="center">Help Chat</h4>
                     {{#if postForum}}
                         {{> postHelp}}
@@ -34,5 +40,16 @@
             </div>
             {{/with}}
 </div>
+</div>
+</template>
+<template name="successDialog">
+  <div style="text-align: center;">
+    <i style="color: green;" class="fa fa-check fa-5x"></i>
+  </div>
+</template>
+<template name="failureDialog">
+  <div style="text-align: center;">
+
+  <i style="color: red;" class="fa fa-remove fa-5x"></i>
 </div>
 </template>

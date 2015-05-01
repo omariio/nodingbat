@@ -5,7 +5,17 @@ Template.sidebar.helpers({
 		var post = Posts.findOne({name:name});
 		return post;
 	},
-  	postForum: function(){
-    	return Session.get('postForum');
-  }
+	exerciseLink: function(){
+		var exercises = Posts.find().fetch();
+		return exercises;
+	},
+  postForum: function(){
+    return Session.get('postForum');
+  },
+	success: function(){
+		return Session.get('success');
+	},
+	failure: function(){
+		return Session.get('failure')
+	}
 });
