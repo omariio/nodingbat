@@ -33,6 +33,8 @@ Template.postItem.events({
     var solutionIndex = 1;
     var index = 1;
 
+    $(".rotate").toggleClass("down");
+
     var self = this;
 
     _.forEach(self.inputs, function(input){
@@ -70,15 +72,11 @@ Template.postItem.events({
       Session.set('success', null);
       Session.set('failure', this._id);
     }
-    $(".rotate").click(function(){
-      $(this).toggleClass("down");
-    })
 
 
   },
   'click #help': function(){
     Session.set("postForum", this._id);
-
   }
 });
 
