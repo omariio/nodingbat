@@ -1,7 +1,7 @@
-<template name = "sidebar">
-  <div class ="container">
-<div class="row">
-{{#with post}}
+<template name="sidebar">
+  <div class="container">
+    <div class="row">
+      {{#with post}}
             <div class="col-md-4" id="side-bar">
               <!-- <div class="row"> -->
                 <div class="well">
@@ -10,7 +10,7 @@
                         <div id="userSolution"></div>
                         <div id="flexContainer">
                           <div id="color-title">
-                            Expected Output <i class="fa fa-circle-o-notch"></i> Run
+                            Expected Output <i class="fa fa-meh-o rotate"></i> Run
                           </div>
                         </div>
                         <div id="color" >
@@ -25,31 +25,27 @@
                 <div class="">
                   <div class="">
                     {{#if success}}
-                        {{> successDialog}}
+                        <div style="text-align: center;">
+                          <i style="color: green;" class="fa fa-check fa-5x"></i>
+                          <h1 style="margin-top: 0px;">Success!</h1>
+                        </div>
                     {{/if}}
                     {{#if failure}}
-                        {{> failureDialog}}
+                        <div style="text-align: center;">
+                          <i style="color: red;" class="fa fa-remove fa-5x"></i>
+                          <h1 style="margin-top: 0px;">Failure!</h1>
+
+                        </div>
                     {{/if}}
-                    <h4 align="center">Help Chat</h4>
+
                     {{#if postForum}}
+                        <h4 align="center">Help Chat</h4>
                         {{> postHelp}}
                     {{/if}}
                   </div>
-                  </div>
-                <!-- </div> -->
+                </div>
             </div>
             {{/with}}
-</div>
-</div>
-</template>
-<template name="successDialog">
-  <div style="text-align: center;">
-    <i style="color: green;" class="fa fa-check fa-5x"></i>
+    </div>
   </div>
-</template>
-<template name="failureDialog">
-  <div style="text-align: center;">
-
-  <i style="color: red;" class="fa fa-remove fa-5x"></i>
-</div>
 </template>
