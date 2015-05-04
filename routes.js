@@ -35,3 +35,4 @@ Router.configure({
   notFoundTemplate: 'notFound',
   waitOn: function() { return Meteor.subscribe('posts'); }
 });
+
