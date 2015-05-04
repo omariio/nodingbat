@@ -11,6 +11,10 @@ Template.postItem.helpers({
 });
 
 Template.postItem.rendered = function () {
+  Session.set('success', null);
+  Session.set('failure', null);
+  Session.set('postForum', null);
+
   Session.set("varName", this.data.setup);
 }
 
@@ -21,6 +25,7 @@ Template.postItem.events({
   },
 
   'click #run': function(){
+
     var obj = eval(Session.get("varName"));
     var userSolutionArr = [];
     var solutionArray = [];
@@ -63,9 +68,13 @@ Template.postItem.events({
       Session.set('success', this._id);
     }else{
       Session.set('success', null);
-
       Session.set('failure', this._id);
     }
+    $(".rotate").click(function(){
+      $(this).toggleClass("down");
+    })
+
+
   },
   'click #help': function(){
     Session.set("postForum", this._id);
