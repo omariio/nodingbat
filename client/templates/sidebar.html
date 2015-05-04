@@ -10,7 +10,11 @@
                         <div id="userSolution"></div>
                         <div id="flexContainer">
                           <div id="color-title">
-                            Expected Output <i class="fa fa-meh-o rotate"></i> Run
+                            {{#if success}}
+                              Expected Output <i class="fa fa-smile-o rotate fa-2x"></i> Run
+                            {{else}}
+                              Expected Output <i class="fa fa-meh-o rotate fa-2x"></i> Run   
+                            {{/if}}
                           </div>
                         </div>
                         <div id="color" >
