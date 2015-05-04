@@ -66,7 +66,7 @@
           "setup":"/* Given a non-empty string and an int n, return a new string */\n/* where the char at index n has been removed. The value of n */\n/* will be a valid index of a char in the original string */\n/* (i.e. n will be in the range 0..str.length()-1 inclusive). */\nmissingChar = function(str, n){ \n\n}"
         });
         Posts.insert({
-            "section":"warm-up1",
+            "section":"warm-up2",
             "name":"backAround",
               "inputs":[
                 "(true, true)",
@@ -78,7 +78,7 @@
           "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
         });
         Posts.insert({
-            "section":"warm-up1",
+            "section":"warm-up2",
             "name":"startHi",
               "inputs":[
                 "(true, true)",

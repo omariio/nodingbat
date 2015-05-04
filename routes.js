@@ -1,15 +1,3 @@
-// works
-Router.route('/:_name', function () {
-  var item = Posts.findOne({name: this.params._name});
-  console.log("route");
-  console.log(item);
-  if(!item)
-  	this.render('notFound');
-  else
-  	this.render('postItem', {data: item});
-});
-
-// test
 Router.route('/:_section/:_name', function () {
   var item = Posts.findOne({section: this.params._section}, {name: this.params._name});
   // console.log("route");
@@ -22,15 +10,9 @@ Router.route('/:_section/:_name', function () {
 
 // sections routes
 Router.route('/:_section', function () {
-  var item = Posts.findOne({section: this.params._section});
-  console.log("route");
-  console.log(item);
-  if(!item)
-    this.render('notFound');
-  else
-    this.render('postSection', {data: item});
+  console.log("ewrwer");
+  this.render('postSection');
 });
-
 
 
 Router.route("/", function() {
@@ -53,5 +35,3 @@ Router.configure({
   notFoundTemplate: 'notFound',
   waitOn: function() { return Meteor.subscribe('posts'); }
 });
-
-// Router.onBeforeAction('dataNotFound', {only: 'postList'});
