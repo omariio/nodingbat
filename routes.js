@@ -1,3 +1,4 @@
+// works
 Router.route('/:_name', function () {
   var item = Posts.findOne({name: this.params._name});
   console.log("route");
@@ -7,6 +8,30 @@ Router.route('/:_name', function () {
   else
   	this.render('postItem', {data: item});
 });
+
+// test
+Router.route('/:_section/:_name', function () {
+  var item = Posts.findOne({section: this.params._section}, {name: this.params._name});
+  // console.log("route");
+  // console.log(item);
+  if(!item)
+    this.render('notFound');
+  else
+    this.render('postItem', {data: item});
+});
+
+// sections routes
+Router.route('/:_section', function () {
+  var item = Posts.findOne({section: this.params._section});
+  console.log("route");
+  console.log(item);
+  if(!item)
+    this.render('notFound');
+  else
+    this.render('postSection', {data: item});
+});
+
+
 
 Router.route("/", function() {
 	this.render("postList");
