@@ -2,6 +2,11 @@ Router.route('/:_section/:_name', function () {
   this.render('postItem');
 });
 
+Router.route('/:_section', function () {
+  this.render('postSection');
+});
+
+
 Router.route("/", function() {
 	this.render("postList");
 });
