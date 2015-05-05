@@ -86,7 +86,8 @@ var run = function(self){
     Session.set('failure', null);
     Session.set('success', getPost()._id);
 
-    Meteor.call("userUpdate", Meteor.user()._id, this.name);
+    console.log("userUpdate")
+    Meteor.call("userUpdate", getPost().name);
   }else{
     Session.set('success', null);
     Session.set('failure', getPost()._id);

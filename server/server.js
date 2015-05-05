@@ -22,18 +22,13 @@ Meteor.publish("allUserData", function() {
             }
               Chatter.insert(messageObject);
         },
-        userUpdate: function (id, name) {
+        userUpdate: function (name) {
           if(!Meteor.user())
             return;
-
-          if(! Meteor.users.findOne({bats: name}))
-            Meteor.users.update({_id:id}, {$push:{"bats": name}}); 
+          if(! _.find(Meteor.user().bats, function(bat){ return bat == name; }))
+            Meteor.users.update({_id:Meteor.user()._id}, {$push:{"bats": name}}); 
 
         }
-        // bats: function() {
-
-        //   Meteor.user.update({})
-        // }
       })
     });
     // database of each coding bat exercise
@@ -55,7 +50,7 @@ Meteor.publish("allUserData", function() {
           	"name":"diff21",
               "inputs":[
                 "(19)",
-                "(10)",
+                "(x)",
                 "(21)"
                 ],
             "parameters": "diff21(n) ",
