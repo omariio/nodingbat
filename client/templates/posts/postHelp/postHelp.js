@@ -1,13 +1,10 @@
   Template.postHelp.helpers({
     chatLog:function(){
       var c = Posts.findOne({_id:Session.get('postForum')});
-      console.log(c);
       x = c._id;
-      console.log(x);
       return Chatter.find({modalID:x}, {sort:{timestamp: -1}});
     },
     userName: function(){
-      console.log(this);
       return this.user.username;
     }
   });

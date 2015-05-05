@@ -12,6 +12,6 @@ Template.sidebar.helpers({
 		return Session.get('success');
 	},
 	failure: function(){
-		return Session.get('failure')
+		return Session.get('failure');
 	}
 });
