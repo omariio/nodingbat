@@ -1,20 +1,39 @@
-  if (Meteor.isServer) {
+Accounts.onCreateUser(function(options, user) {
+  user.bats = [];
+  return user;
+});
+
+Meteor.publish("allUserData", function() {
+  return Meteor.users.find({}, {fields: {
+    'bats': 1
+  }});
+});
+
     Meteor.startup(function () {
         Meteor.methods({
         newMessage: function(body, ceID){
-        if(!Meteor.user())
+        if(!messageObjector.user())
           return;
+            var messageObject = {
+              body:body,
+              modalID:ceID,
+              user:Meteor.user(),
+              timestamp:(new Date()).getTime()
+            }
+              Chatter.insert(messageObject);
+        },
+        userUpdate: function (id, name) {
+          if(!Meteor.user())
+            return;
 
-        var messageObject = {
-          body:body,
-          modalID:ceID,
-          user:Meteor.user(),
-          timestamp:(new Date()).getTime()
+          if(! Meteor.users.findOne({bats: name}))
+            Meteor.users.update({_id:id}, {$push:{"bats": name}}); 
+
         }
+        // bats: function() {
 
-        Chatter.insert(messageObject);
-
-        }
+        //   Meteor.user.update({})
+        // }
       })
     });
     // database of each coding bat exercise
@@ -137,41 +156,4 @@
           "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
           "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
         });
-        Posts.insert({
-            "section":"warm-up1",
-            "name":"stringE",
-              "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
-                ],
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
-        });
-        Posts.insert({
-            "section":"warm-up1",
-            "name":"everyNth",
-              "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
-                ],
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
-        });
-        Posts.insert({
-            "section":"warm-up1",
-            "name":"monkeyTrouble",
-              "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
-                ],
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
-        });
-       }
 }

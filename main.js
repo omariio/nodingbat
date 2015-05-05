@@ -1,5 +1,6 @@
 if (Meteor.isClient) {
 Meteor.subscribe('posts');
+Meteor.subscribe('allUserData');
 
 Accounts.ui.config({
 	passwordSignupFields: "USERNAME_ONLY",
