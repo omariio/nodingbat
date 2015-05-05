@@ -1,4 +1,5 @@
 <template name="postItem">
+  {{#with item}}
     <div class="container">
         <div class="row">
             <div class="col-md-8">
@@ -9,7 +10,9 @@
                       <li class="active">{{name}}</li>
                   </ol>
                 </h4>
-                {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                <div id="code-mirror">
+                  {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                </div>
                 <button type="submit" class="btn btn-primary" id="run">
                         Run
                 </button>
@@ -20,4 +23,5 @@
             </div>
         </div>
     </div>
+  {{/with}}
 </template>
