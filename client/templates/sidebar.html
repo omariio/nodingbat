@@ -2,8 +2,7 @@
   <div class="container">
     <div class="row">
       {{#with post}}
-            <div class="col-md-4" id="side-bar">
-              <!-- <div class="row"> -->
+            <div class="col-md-4 animated slideInRight" id="side-bar">
                 <div class="well">
                     <div class="panel">
                         <div id="solution"></div>
@@ -17,7 +16,7 @@
                             {{/if}}
                           </div>
                         </div>
-                        <div id="color" >
+                        <div id="color">
                             <div class="colors"></div>
                             <div class="colors"></div>
                             <div class="colors"></div>
@@ -29,18 +28,17 @@
                 <div class="">
                   <div class="">
                     {{#if success}}
-                        <div style="text-align: center;">
-                          <i style="color: green;" class="fa fa-check fa-5x"></i>
+                        <div style="text-align: center;" class="animated bounce">
+                          <i style="color: green;" class="fa fa-check fa-5x animated"></i>
                           <h1 style="margin-top: 0px;">Success!</h1>
                         </div>
                     {{/if}}
                     {{#if failure}}
                         <div style="text-align: center;">
                           <i style="color: red;" class="fa fa-remove fa-5x"></i>
-                          <h1 style="margin-top: 0px;">Failure!</h1>
+                          <h1 style="margin-top: 0px;" class="animated shake">Failure!</h1>
                         </div>
                     {{/if}}
-
                     {{#if postForum}}
                         <h4 align="center">Help Chat</h4>
                         {{> postHelp}}
