@@ -6,7 +6,6 @@ Router.route('/:_section', function () {
   this.render('postSection');
 });
 
-
 Router.route("/", function() {
 	this.render("postList");
 });

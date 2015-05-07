@@ -1,21 +1,24 @@
 <template name = "postSection">
   {{> well}}
 <div class="container">
-        <div class="row">
-          <!-- {{#with author}} -->
-            <div class="col-md-8" id="spoogScroll">
-        {{#each posts}}
-                <h4>
-                  <ol class="breadcrumb">
-                    <li><a href="/{{section}}">{{section}}</a></li>
-                    <li><a href="/{{section}}/{{name}}">{{name}}</a></li>
-                      <li>
-                      <a href="/{{section}}/{{pathFor 'postItem'}}" class="discuss btn btn-default">Start</a>
-                    </li>
-                  </ol>
-                </h4>
+  <div class="row">
+      <div class="col-md-8" id="spoogScroll">
+      {{#each posts}}
+        <h4>
+          <ol class="breadcrumb">
+            <li>
+              <a href="/{{section}}">{{section}}</a>
+            </li>
+            <li>
+              <a href="/{{section}}/{{name}}">{{name}}</a>
+            </li>
+            <li>
+              <a href="/{{section}}/{{pathFor 'postItem'}}" class="discuss btn btn-default">Start</a>
+            </li>
+          </ol>
+        </h4>
       {{/each}}
-      </div>
-      </div>
     </div>
+  </div>
+</div>
 </template>

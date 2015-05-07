@@ -2,7 +2,7 @@
   {{#with item}}
     <div class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-8 animated slideInLeft">
                 <h4>
                   <ol class="breadcrumb">
                       <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
@@ -14,7 +14,7 @@
                   {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
                 </div>
                 <button type="submit" class="btn btn-primary" id="run">
-                        Run
+                  Run
                 </button>
                 <button class="btn btn-default" id="help">
                         <a href="{{pathFor 'postHelp'}}">Help</a>

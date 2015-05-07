@@ -1,35 +1,33 @@
-  Template.postHelp.helpers({
-    chatLog:function(){
+Template.postHelp.helpers({
+  chatLog:function(){
+    var c = Posts.findOne({_id:Session.get('postForum')});
+    x = c._id;
+    return Chatter.find({modalID:x}, {sort:{timestamp: -1}});
+  },
+  userName: function(){
+    return this.user.username;
+  }
+});
+
+Template.postHelp.events({
+    'keypress input': function(e) {
       var c = Posts.findOne({_id:Session.get('postForum')});
-      x = c._id;
-      return Chatter.find({modalID:x}, {sort:{timestamp: -1}});
+      // var x = c._id;
+      if(e.keyCode != 13)
+        return;
+
+      var message = document.getElementById("chat-box").value;
+
+      if(message.length == 0)
+        return;
+
+      Meteor.call("newMessage", message, x);
+      document.getElementById("chat-box").value = "";
     },
-    userName: function(){
-      return this.user.username;
+    'click #chat-send-button': function(){
+
+    },
+    'click #close':function(){
+      Session.set('postForum',null);
     }
-  });
-
-  Template.postHelp.events({
-      'keypress input': function(e) {
-        var c = Posts.findOne({_id:Session.get('postForum')});
-        // var x = c._id;
-        if(e.keyCode != 13)
-          return;
-
-        var message = document.getElementById("chat-box").value;
-
-        if(message.length == 0)
-          return;
-
-        Meteor.call("newMessage", message, x);
-        document.getElementById("chat-box").value = "";
-      },
-      'click #chat-send-button': function(){
-
-      },
-      'click #close':function(){
-        // var c = Posts.findOne({_id:Session.get('postForum')});
-
-        Session.set('postForum',null);
-      }
-  });
+});

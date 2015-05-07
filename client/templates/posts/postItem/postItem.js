@@ -1,16 +1,16 @@
 Template.postItem.helpers({
   editorOptions: function() {
-    return {
-      lineNumbers: true,
+      return {
+        lineNumbers: true,
         mode: "javascript"
-          }
+      }
     },
   editorCode: function() {
     return "Code to show in editor";
-    },
+  },
   item: function(){
     return getPost();
-    }
+  }
 });
 
 Template.postItem.rendered = function () {
@@ -59,13 +59,14 @@ var run = function(self){
   var solutionIndex = 1;
   $(".rotate").toggleClass("down");
 
-  //self is this
+  // self is this
   // var this = self;
   var index = 0;
   for( ; index < self.inputs.length; ++index){
-    console.log(self.inputs[index])
     var userOutput = eval(self.name + self.inputs[index]);
     var output = eval("solutions." + self.name + self.inputs[index]);
+
+
 
     if(output == userOutput){
       var currentDiv = $("div.colors:nth-child("+(index + 1)+")");

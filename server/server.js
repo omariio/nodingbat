@@ -43,7 +43,7 @@ Meteor.publish("allUserData", function() {
                 "(false, false)"
                 ],
             "parameters": "sleepIn(weekday, vacation) ",
-            "setup":"/* The parameter weekday is True if it is a weekday, and the parameter */\n/* vacation is True if we are on vacation. We sleep in if it is not a weekday */\n/* or we're on vacation. Return True if we sleep in. */\n\nvar sleepIn = function(weekday, vacation){ \n\n}"
+            "setup":"/* The parameter weekday is True if it is a weekday, and the parameter */\n/* vacation is True if we are on vacation. We sleep in if it is not a */\n/* weekday or we're on vacation. Return True if we sleep in. */\n\nvar sleepIn = function(weekday, vacation){ \n\n}"
       });
         Posts.insert({
             "section":"warm-up1",
