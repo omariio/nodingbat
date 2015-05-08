@@ -14,3 +14,8 @@ Template.sidebar.helpers({
 		return Session.get('failure');
 	}
 });
+
+var abiShake = function(){
+	var currentDiv = $('h1.animated').removeClass('shake');
+	currentDive.addClass('shake');
+}

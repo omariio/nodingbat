@@ -17,6 +17,14 @@
   overflow: scroll;
   height: 476px;
 }
+#ol-flex{
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+}
+#ol-flex-right{
+  align-self: flex-end;
+}
 body{
   position: fixed;
 }
