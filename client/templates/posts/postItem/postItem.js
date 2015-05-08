@@ -14,13 +14,8 @@ Template.postItem.helpers({
 });
 
 Template.postItem.rendered = function () {
-  Session.set('success', null);
-  Session.set('failure', null);
-  Session.set('postForum', null);
-
-  Session.set("varName", getPost().setup);
+  session_set();
 }
-
 
 Template.postItem.events({
   "getEditorText": function() {
@@ -47,12 +42,23 @@ var getPost = function(){
   return Posts.findOne({name: Router.current().params._name})
 }
 
+var session_set = function(){
+  Session.set('success', null);
+  Session.set('failure', null);
+  Session.set('postForum', null);
+  Session.set("varName", getPost().setup);
+}
+
+var abiShake = function(){
+  $('h1.animated').toggleClass('shake');
+}
+
 var run = function(self){
   try{
     var obj = eval(Session.get("varName"));
   }
   catch(e){
-    console.log("it crashed!")
+    console.log("it crashed!");
     console.log(e);
   }
   var obj = eval(Session.get("varName"));
@@ -66,29 +72,23 @@ var run = function(self){
     var userOutput = eval(self.name + self.inputs[index]);
     var output = eval("solutions." + self.name + self.inputs[index]);
 
-
-
     if(output == userOutput){
-      var currentDiv = $("div.colors:nth-child("+(index + 1)+")");
-      currentDiv.css("background-color", "green");
+      var currentDiv = $("div.colors:nth-child("+(index + 1)+")").css("background-color", "green");
       solutionIndex++;
-
       currentDiv.html(self.parameters+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-smile-o'></i> "+ userOutput );
     }
     else{
-      var currentDiv = $("div.colors:nth-child("+(index+1)+")");
-      currentDiv.css("background-color", "red");
-
+      var currentDiv = $("div.colors:nth-child("+(index+1)+")").css("background-color", "red");;
       currentDiv.html(self.parameters+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-frown-o'></i> "+ userOutput );
+      abiShake();
     }
   }
 
   if (solutionIndex == (index+1)){
     Session.set('failure', null);
     Session.set('success', getPost()._id);
-
-    console.log("userUpdate")
     Meteor.call("userUpdate", getPost().name);
+
   }else{
     Session.set('success', null);
     Session.set('failure', getPost()._id);
