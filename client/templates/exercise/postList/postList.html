@@ -1,0 +1,20 @@
+<template name="exerciseList">
+{{> well}}
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 animated slideInLeft" id="spoogScroll">
+     {{#each exercises}}
+        <h4>
+          <ol class="breadcrumb">
+            <li><a href="/{{section}}">{{section}}</a></li>
+            <li><a href="/{{section}}/{{name}}">{{name}}</a></li>
+            	<li>
+            	  <a href="/{{section}}/{{name}}" class="discuss btn ">Start</a>
+        		</li>
+          </ol>
+        </h4>
+     {{/each}}
+   </div>
+  </div>
+</div>
+</template>

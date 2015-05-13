@@ -26,14 +26,14 @@ Meteor.publish("allUserData", function() {
           if(!Meteor.user())
             return;
           if(! _.find(Meteor.user().bats, function(bat){ return bat == name; }))
-            Meteor.users.update({_id:Meteor.user()._id}, {$push:{"bats": name}}); 
+            Meteor.users.update({_id:Meteor.user()._id}, {$push:{"bats": name}});
 
         }
       })
     });
     // database of each coding bat exercise
-      if (Posts.find().count() === 0) {
-        Posts.insert({
+      if (Exercises.find().count() === 0) {
+        Exercises.insert({
             "section":"warm-up1",
           	"name":"sleepIn",
               "inputs":[
@@ -45,7 +45,7 @@ Meteor.publish("allUserData", function() {
             "parameters": "sleepIn(weekday, vacation) ",
             "setup":"/* The parameter weekday is True if it is a weekday, and the parameter */\n/* vacation is True if we are on vacation. We sleep in if it is not a */\n/* weekday or we're on vacation. Return True if we sleep in. */\n\nvar sleepIn = function(weekday, vacation){ \n\n}"
       });
-        Posts.insert({
+        Exercises.insert({
             "section":"warm-up1",
           	"name":"diff21",
               "inputs":[
@@ -56,7 +56,7 @@ Meteor.publish("allUserData", function() {
             "parameters": "diff21(n) ",
           "setup":"/* Given an int n, return the absolute difference between n and 21, */\n/* except return double the absolute difference if n is over 21. */\nvar diff21 = function(n){ \n\n}"
         });
-        Posts.insert({
+        Exercises.insert({
             "section":"warm-up1",
             "name":"nearHundred",
               "inputs":[
@@ -68,7 +68,7 @@ Meteor.publish("allUserData", function() {
           "setup":"/* Given an int n, return True if it is within 10 of 100 or 200. */\n/* Note: abs(num) computes the absolute value of a number. */\nnearhundred = function(n){ \n\n}"
         });
 
-        Posts.insert({
+        Exercises.insert({
             "section":"warm-up1",
             "name":"missingChar",
               "inputs":[
@@ -79,7 +79,7 @@ Meteor.publish("allUserData", function() {
                 "parameters": "missingChar(str, n) ",
           "setup":"/* Given a non-empty string and an int n, return a new string */\n/* where the char at index n has been removed. The value of n */\n/* will be a valid index of a char in the original string */\n/* (i.e. n will be in the range 0..str.length()-1 inclusive). */\nmissingChar = function(str, n){ \n\n}"
         });
-        Posts.insert({
+        Exercises.insert({
             "section":"warm-up2",
             "name":"backAround",
               "inputs":[
@@ -91,7 +91,7 @@ Meteor.publish("allUserData", function() {
                 "parameters": "backAround(str, n) ",
           "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
         });
-        Posts.insert({
+        Exercises.insert({
             "section":"warm-up2",
             "name":"startHi",
               "inputs":[
@@ -103,7 +103,7 @@ Meteor.publish("allUserData", function() {
           "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
           "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
         });
-        Posts.insert({
+        Exercises.insert({
             "section":"warm-up1",
             "name":"hasTeen",
               "inputs":[
@@ -115,7 +115,7 @@ Meteor.publish("allUserData", function() {
           "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
           "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
         });
-        Posts.insert({
+        Exercises.insert({
             "section":"warm-up1",
             "name":"startHi",
               "inputs":[
@@ -127,7 +127,7 @@ Meteor.publish("allUserData", function() {
           "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
           "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
         });
-        Posts.insert({
+        Exercises.insert({
             "section":"warm-up1",
             "name":"mixStart",
               "inputs":[
@@ -139,7 +139,7 @@ Meteor.publish("allUserData", function() {
           "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
           "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
         });
-        Posts.insert({
+        Exercises.insert({
             "section":"warm-up1",
             "name":"close10",
               "inputs":[

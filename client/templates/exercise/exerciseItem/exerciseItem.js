@@ -1,4 +1,4 @@
-Template.postItem.helpers({
+Template.exerciseItem.helpers({
   editorOptions: function() {
       return {
         lineNumbers: true,
@@ -9,28 +9,28 @@ Template.postItem.helpers({
     return "Code to show in editor";
   },
   item: function(){
-    return getPost();
+    return getExercise();
   }
 });
 
-Template.postItem.rendered = function () {
+Template.exerciseItem.rendered = function () {
   session_set();
 }
 
-Template.postItem.events({
+Template.exerciseItem.events({
   "getEditorText": function() {
     return Session.get("varName"); // "varName" is variable name you provided to reactiveVar
   },
   'keypress #code-mirror': function(e) {
     if(e.keyCode != 13)
       return;
-    run(getPost());
+    run(getExercise());
   },
   'click #run': function(){
-    run(getPost());
+    run(getExercise());
   },
   'click #help': function(){
-    Session.set("postForum", this._id);
+    Session.set("exerciseForum", this._id);
   }
 });
 
@@ -38,15 +38,15 @@ var enclose = function(functionString){
   return eval(functionString);
 }
 
-var getPost = function(){
-  return Posts.findOne({name: Router.current().params._name})
+var getExercise  = function(){
+  return Exercises.findOne({name: Router.current().params._name})
 }
 
 var session_set = function(){
   Session.set('success', null);
   Session.set('failure', null);
-  Session.set('postForum', null);
-  Session.set("varName", getPost().setup);
+  Session.set('exerciseForum', null);
+  Session.set("varName", getExercise().setup);
 }
 
 var abiShake = function(){
@@ -86,11 +86,11 @@ var run = function(self){
 
   if (solutionIndex == (index+1)){
     Session.set('failure', null);
-    Session.set('success', getPost()._id);
-    Meteor.call("userUpdate", getPost().name);
+    Session.set('success', getExercise()._id);
+    Meteor.call("userUpdate", getExercise().name);
 
   }else{
     Session.set('success', null);
-    Session.set('failure', getPost()._id);
+    Session.set('failure', getExercise()._id);
   }
 }

@@ -1,9 +1,9 @@
-<template name = "postSection">
+<template name = "exerciseSection">
   {{> well}}
 <div class="container">
   <div class="row">
       <div class="col-md-8" id="spoogScroll">
-      {{#each posts}}
+      {{#each exercises}}
         <h4>
           <ol class="breadcrumb">
             <li>
@@ -13,7 +13,7 @@
               <a href="/{{section}}/{{name}}">{{name}}</a>
             </li>
             <li>
-              <a href="/{{section}}/{{pathFor 'postItem'}}" class="discuss btn btn-default">Start</a>
+              <a href="/{{section}}/{{pathFor 'exerciseItem'}}" class="discuss btn btn-default">Start</a>
             </li>
           </ol>
         </h4>

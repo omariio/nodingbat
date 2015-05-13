@@ -1,5 +1,5 @@
 if (Meteor.isClient) {
-Meteor.subscribe('posts');
+Meteor.subscribe('exercises');
 Meteor.subscribe('allUserData');
 
 Accounts.ui.config({
@@ -8,9 +8,8 @@ Accounts.ui.config({
 
 Template.layout.helpers({
   exerciseLink: function(){
-		var exercises = Posts.find().fetch();
+		var exercises = Exercises.find().fetch();
 		return exercises;
 	}
 });
-
 }

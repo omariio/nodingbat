@@ -1,6 +1,6 @@
-Template.postHelp.helpers({
+Template.exerciseHelp.helpers({
   chatLog:function(){
-    var c = Posts.findOne({_id:Session.get('postForum')});
+    var c = Chatter.findOne({_id:Session.get('exerciseForum')});
     x = c._id;
     return Chatter.find({modalID:x}, {sort:{timestamp: -1}});
   },
@@ -9,9 +9,9 @@ Template.postHelp.helpers({
   }
 });
 
-Template.postHelp.events({
+Template.exerciseHelp.events({
     'keypress input': function(e) {
-      var c = Posts.findOne({_id:Session.get('postForum')});
+      var c = Exercises.findOne({_id:Session.get('exerciseForum')});
       // var x = c._id;
       if(e.keyCode != 13)
         return;
@@ -28,6 +28,6 @@ Template.postHelp.events({
 
     },
     'click #close':function(){
-      Session.set('postForum',null);
+      Session.set('exerciseForum',null);
     }
 });

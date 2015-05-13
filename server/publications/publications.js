@@ -1,4 +1,4 @@
 // on the server
-Meteor.publish('posts', function() {
-  return Posts.find();
+Meteor.publish('exercises', function() {
+  return Exercises.find();
 });

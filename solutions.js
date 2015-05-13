@@ -25,14 +25,14 @@ solutions.diff21 = function(n) {
 }
 
 // Java > Warm-up1 > nearHundred
-// Given an int n, return True if it is within 10 of 100 or 200. 
+// Given an int n, return True if it is within 10 of 100 or 200.
 // Note: abs(num) computes the absolute value of a number.
 solutions.nearHundred = function(n) {
   if (Math.abs(100) - n <= 10 || Math.abs(200) - n <= 10){
     return true;
   } else {
     return false;
-  }  
+  }
 }
 // console.log(nearHundred(93));
 // console.log(nearHundred(90));
@@ -369,9 +369,9 @@ var notString = function(str){
 // console.log(notString("not bad"));
 
 // Java > Warmup-1 > front3
-// Given a string, we'll say that the front is the first 3 chars of the string. 
-// If the string length is less than 3, the front is whatever is there. 
-// Return a new string which is 3 copies of the front. 
+// Given a string, we'll say that the front is the first 3 chars of the string.
+// If the string length is less than 3, the front is whatever is there.
+// Return a new string which is 3 copies of the front.
 var front3 = function(str){
 	front = "";
 	if (str.length >= 3){
@@ -387,8 +387,8 @@ var front3 = function(str){
 // console.log(front3("abc"));
 
 // Java > Warmup-1 > front22
-// Given a string, take the first 2 chars and return the string with the 2 chars added at both the 
-// front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever 
+// Given a string, take the first 2 chars and return the string with the 2 chars added at both the
+// front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever
 // chars are there.
 var front22 = function(str){
 	take = 2;
@@ -403,7 +403,7 @@ var front22 = function(str){
 // console.log(front22("abc"));
 
 // Java > Warmup-1 > in1020
-// Given 2 int values, return true if either of them is in the range 10..20 inclusive. 
+// Given 2 int values, return true if either of them is in the range 10..20 inclusive.
 var in1020 = function(a,b){
 	if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)){
 		return true;
@@ -417,8 +417,8 @@ var in1020 = function(a,b){
 // console.log(in1020(8,99));
 
 // Java > Warmup-1 > delDel
-// Given a string, if the string "del" appears starting at index 1, return a string where that "del" 
-// has been deleted. Otherwise, return the string unchanged. 
+// Given a string, if the string "del" appears starting at index 1, return a string where that "del"
+// has been deleted. Otherwise, return the string unchanged.
 var delDel = function(str){
 	output = str.substring(1,4);
 	return output;
@@ -440,7 +440,7 @@ var delDel = function(str){
 // console.log(delDel("adebc"));
 
 // Java > Warmup-1 > intMax
-// Given three int values, a b c, return the largest. 
+// Given three int values, a b c, return the largest.
 var intMax = function(a,b,c){
 	max = 0;
 	if ( a > b){
@@ -458,8 +458,8 @@ var intMax = function(a,b,c){
 // console.log(intMax(3,2,1));
 
 // Java > Warmup-1 > max1020
-// Given 2 positive int values, return the larger value that is in the range 10..20 inclusive, 
-// or return 0 if neither is in that range. 
+// Given 2 positive int values, return the larger value that is in the range 10..20 inclusive,
+// or return 0 if neither is in that range.
 var max1020 = function(a,b){
 	if (b > a) {
 		temp = a;
@@ -471,7 +471,7 @@ var max1020 = function(a,b){
 	}
 	if (a >=10 && a <= 20){
 		return b;
-	return 0;	
+	return 0;
 	}
 }
 // console.log(max1020(11,19));
@@ -479,9 +479,9 @@ var max1020 = function(a,b){
 // console.log(max1020(11,9));
 
 // Java > Warmup-1 > endUp
-// Given a string, return a new string where the last 3 chars are now in upper case. If the string has 
+// Given a string, return a new string where the last 3 chars are now in upper case. If the string has
 // less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase
-// version of a string. 
+// version of a string.
 var endUp = function(str){
 	if(str.length <= 3){
 		return str.toUpperCase();
@@ -495,8 +495,3 @@ var endUp = function(str){
 // console.log(endUp("Hello"));
 // console.log(endUp("hi there"));
 // console.log(endUp("hi"));
-
-
-
-
-
