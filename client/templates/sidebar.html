@@ -1,7 +1,7 @@
 <template name="sidebar">
   <div class="container">
     <div class="row">
-      {{#with post}}
+      {{#with exercise}}
             <div class="col-md-4 animated slideInRight" id="side-bar">
                 <div class="well">
                     <div class="panel">
@@ -39,9 +39,9 @@
                           <h1 style="margin-top: 0px;" class="animated shake">Failure!</h1>
                         </div>
                     {{/if}}
-                    {{#if postForum}}
+                    {{#if exerciseForum}}
                         <h4 align="center">Help Chat</h4>
-                        {{> postHelp}}
+                        {{> exerciseHelp}}
                     {{/if}}
                   </div>
                 </div>

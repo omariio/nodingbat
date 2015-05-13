@@ -8,7 +8,6 @@ Meteor.publish("allUserData", function() {
     'bats': 1
   }});
 });
-
     Meteor.startup(function () {
         Meteor.methods({
         newMessage: function(body, ceID){

@@ -1,6 +1,6 @@
 Template.well.helpers({
 exerciseLink: function(){
-  var exercises = Posts.find().fetch();
+  var exercises = Exercises.find().fetch();
   return exercises;
 }
 });

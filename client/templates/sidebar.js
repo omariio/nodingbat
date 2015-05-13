@@ -1,11 +1,11 @@
 Template.sidebar.helpers({
-	post:function(){
+	exercise:function(){
 		var name = Router.current().params._name;
-		var post = Posts.findOne({name:name});
-		return post;
+		var exercise = Exercises.findOne({name:name});
+		return exercise;
 	},
-  postForum: function(){
-    return Session.get('postForum');
+  exerciseForum: function(){
+    return Session.get('exerciseForum');
   },
 	success: function(){
 		return Session.get('success');
