@@ -17,7 +17,7 @@ solutions.diff21 = function(n) {
   }
   else{
     return (n - 21) * 2;
-    }
+  }
 }
 
 // Java > Warm-up1 > nearHundred
@@ -78,19 +78,17 @@ solutions.startHi =  function(str){
 // Java > Warm-up1 > hasTeen
 // We'll say that a number is "teen" if it is in the range 13..19 inclusive.
 // Given 3 int values, return true if 1 or more of them are teen.
-var hasTeen = function(a, b, c){
-	return (a>=13 && a<=19) ||
-			(b>=13 && b<=19) ||
-			(c>=13 && c<=19);
+solutions.hasTeen = function(a, b, c){
+	return (a>=13 && a<=19) || (b>=13 && b<=19) || (c>=13 && c<=19);
 }
-// console.log(hasTeen(13, 20, 10));
-// console.log(hasTeen(20, 19, 10));
-// console.log(hasTeen(20, 10, 13));
+// console.log(solutions.hasTeen(13, 20, 10));
+// console.log(solutions.hasTeen(20, 19, 10));
+// console.log(solutions.hasTeen(20, 10, 13));
 
 // Java > Warm-up1 > mixStart
 // Return true if the given string begins with "mix", except the 'm' can be anything,
 //so "pix", "9ix" .. all count.
-var mixStart = function(str){
+solutions.mixStart = function(str){
 	if (str.length<3){
 		return false;
 	}

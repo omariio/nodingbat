@@ -1,10 +1,10 @@
-Router.route('/:_section/:_name/:_title', function () {
-  this.postList('postList', {
-    data: function() {
-      return Posts.findOne({_title: this.params._title});
-    }
-  })
-});
+// Router.route('/:_section/:_name/:_title', function () {
+//   this.postList('postList', {
+//     data: function() {
+//       return Posts.findOne({_title: this.params._title});
+//     }
+//   })
+// });
 
 Router.route('/:_section/:_name', function () {
   this.render('exerciseItem');
