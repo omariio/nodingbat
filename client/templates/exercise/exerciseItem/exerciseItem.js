@@ -72,14 +72,16 @@ var run = function(self){
     var userOutput = eval(self.name + self.inputs[index]);
     var output = eval("solutions." + self.name + self.inputs[index]);
 
+
+
     if(output == userOutput){
       var currentDiv = $("div.colors:nth-child("+(index + 1)+")").css("background-color", "green");
       solutionIndex++;
-      currentDiv.html(self.parameters+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-smile-o'></i> "+ userOutput );
+      currentDiv.html(self.name+self.inputs[index]+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-smile-o'></i> "+ userOutput );
     }
     else{
       var currentDiv = $("div.colors:nth-child("+(index+1)+")").css("background-color", "red");;
-      currentDiv.html(self.parameters+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-frown-o'></i> "+ userOutput );
+      currentDiv.html(self.name+self.inputs[index]+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-frown-o'></i> "+ userOutput );
       abiShake();
     }
   }

@@ -5,10 +5,7 @@
 solutions = {}
 
 solutions.sleepIn = function(weekday, vacation) {
-	if (!weekday || vacation){
-		return true;
-	}
-	return false;
+	return !weekday || vacation;
 }
 
 // Java > Warm-up1 > diff21

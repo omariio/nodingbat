@@ -35,48 +35,47 @@ Meteor.publish("allUserData", function() {
         Exercises.insert({
             "section":"warm-up1",
           	"name":"sleepIn",
-              "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
-                ],
-            "parameters": "sleepIn(weekday, vacation) ",
-            "setup": setup.sleepIn
+            "inputs":[
+              "(true, true)",
+              "(true, false)",
+              "(false, true)",
+              "(false, false)"
+              ],
+             "setup": setup.sleepIn
       });
         Exercises.insert({
             "section":"warm-up1",
           	"name":"diff21",
-              "inputs":[
-                "(19)",
-                "(x)",
-                "(21)"
-                ],
-            "parameters": "diff21(n) ",
-          "setup": setup.diff21
+            "inputs":[
+              "(19)",
+              "(10)",
+              "(21)",
+              "(22)",
+              "(25)",
+              "(30)",
+              "(0)",            
+              ],
+             "setup": setup.diff21
         });
         Exercises.insert({
             "section":"warm-up1",
             "name":"nearHundred",
-              "inputs":[
-                "(93)",
-                "(90)",
-                "(89)"
-                ],
-            "parameters": "nearHundred(n) ",
-          "setup": setup.nearHundred
+            "inputs":[
+              "(93)",
+              "(90)",
+              "(89)"
+              ],
+            "setup": setup.nearHundred
         });
-
         Exercises.insert({
             "section":"warm-up1",
             "name":"missingChar",
-              "inputs":[
-                "('kitten', 1)",
-                "('kitten', 0)",
-                "('kitten', 4)"
-                ],
-                "parameters": "missingChar(str, n) ",
-          "setup":setup.missingChar
+            "inputs":[
+              "('kitten', 1)",
+              "('kitten', 0)",
+              "('kitten', 4)"
+              ],
+            "setup":setup.missingChar
         });
         Exercises.insert({
             "section":"warm-up1",
