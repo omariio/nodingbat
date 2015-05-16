@@ -128,48 +128,50 @@ Meteor.publish("allUserData", function() {
             "section":"warm-up1",
             "name":"hasTeen",
               "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
+                "(13, 20, 10)",
+                "(20, 19, 10)",
+                "(20, 10, 13)",
+                "(1, 20, 12)",
+                "(19, 20, 12)",
+                "(12, 20, 19)",
+                "(12, 9, 20)",
+                "(12, 18, 20)",
+                "(14, 2, 20)",
+                "(4, 2, 20)",
+                "(11, 22, 22)"
                 ],
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
-        });
-        Exercises.insert({
-            "section":"warm-up1",
-            "name":"startHi",
-              "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
-                ],
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
+            "setup": setup.hasTeen
         });
         Exercises.insert({
             "section":"warm-up1",
             "name":"mixStart",
               "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
+                "('mix snacks')",
+                "('pix snacks')",
+                "('piz snacks')",
+                "('nix')",
+                "('ni')",
+                "('n')"
                 ],
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
+            "setup": setup.mixStart
         });
         Exercises.insert({
             "section":"warm-up1",
             "name":"close10",
               "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
+                "(8, 13)",
+                "(13, 8)",
+                "(13, 7)",
+                "(7, 13)",
+                "(9, 13)",
+                "(13, 8)",
+                "(10, 12)",
+                "(11, 10)",
+                "(5, 21)",
+                "(0, 20)",
+                "(0, 20)",
+                "(10, 10)"
                 ],
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
+          "setup": setup.close10
         });
 }
