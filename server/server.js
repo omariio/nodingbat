@@ -53,7 +53,12 @@ Meteor.publish("allUserData", function() {
               "(22)",
               "(25)",
               "(30)",
-              "(0)",            
+              "(0)",
+              "(1)",
+              "(2)",
+              "(-1)",
+              "(-2)",
+              "(50)",
               ],
              "setup": setup.diff21
         });
@@ -63,7 +68,14 @@ Meteor.publish("allUserData", function() {
             "inputs":[
               "(93)",
               "(90)",
-              "(89)"
+              "(89)",
+              "(110)",
+              "(111)",
+              "(121)",
+              "(0)",
+              "(5)",
+              "(191)",
+              "(189)"
               ],
             "setup": setup.nearHundred
         });
@@ -73,30 +85,44 @@ Meteor.publish("allUserData", function() {
             "inputs":[
               "('kitten', 1)",
               "('kitten', 0)",
-              "('kitten', 4)"
+              "('kitten', 4)",
+              "('Hi', 0)",
+              "('Hi', 1)",
+              "('code', 0)",
+              "('code', 1)",
+              "('code', 2)",
+              "('code', 3)",
+              "('chocolate', 8)"
               ],
             "setup":setup.missingChar
         });
         Exercises.insert({
             "section":"warm-up1",
             "name":"backAround",
-              "inputs":[
-                "('cat')",
-                "('Hello')",
-                "('a')"
-                ],
-                "parameters": "backAround(str, n) ",
-          "setup": setup.backAround
+            "inputs":[
+              "('cat')",
+              "('Hello')",
+              "('a')",
+              "('abc')",
+              "('read')",
+              "('boo')"
+              ],
+            "setup": setup.backAround
         });
         Exercises.insert({
             "section":"warm-up1",
             "name":"startHi",
-              "inputs":[
-                "('hi there')",
-                "('hi')",
-                "('hello hi')"
-                ],
-          "setup":setup.startHi
+            "inputs":[
+              "('hi there')",
+              "('hi')",
+              "('hello hi')",
+              "('he')",
+              "('h')",
+              "('')",
+              "('ho hi')",
+              "('hi ho')"
+              ],
+            "setup": setup.startHi
         });
         Exercises.insert({
             "section":"warm-up1",
