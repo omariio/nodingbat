@@ -30,7 +30,7 @@ Template.exerciseItem.events({
     run(getExercise());
   },
   'click #help': function(){
-    Session.set("exerciseForum", this._id);
+    Session.set("postList", this._id);
   }
 });
 
@@ -45,7 +45,7 @@ var getExercise  = function(){
 var session_set = function(){
   Session.set('success', null);
   Session.set('failure', null);
-  Session.set('exerciseForum', null);
+  // Session.set('exerciseForum', null);
   Session.set("varName", getExercise().setup);
 }
 

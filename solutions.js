@@ -2,7 +2,6 @@
 
 // Java > Warmup-1 > sleepIn
 // The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.
-
 solutions = {}
 
 solutions.sleepIn = function(weekday, vacation) {
@@ -495,3 +494,100 @@ var endUp = function(str){
 // console.log(endUp("Hello"));
 // console.log(endUp("hi there"));
 // console.log(endUp("hi"));
+
+// Java > String-1 > helloName
+// Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".
+solutions.helloName = function(name){
+	return "Hello " + name;
+}
+// console.log(helloName("bob"));
+// console.log(helloName("Alice"));
+
+// Java > String-1 > makeAbba
+// Given two strings, a and b, return the result of putting them together in the
+// order abba, e.g. "Hi" and "Bye" returns "HiByeByeHi".
+solutions.makeAbba = function(a, b){
+	return a + b + b + a;
+}
+// console.log(solutions.makeAbba("Hi", "Bye"));
+// console.log(makeAbba("Yo", "Alice"));
+// console.log(makeAbba("What", "Up"));
+
+// Java > String-1 > makeTags
+// The web is built with HTML strings like "<i>Yay</i>" which draws Yay as italic text.
+// In this example, the "i" tag makes <i> and </i> which surround the word "Yay".
+// Given tag and word strings, create the HTML string with tags around the word, e.g. "<i>Yay</i>".
+solutions.makeTags = function(tag, word){
+	return "<"+tag+">"+word+"</"+tag+">";
+}
+// console.log(solutions.makeTags("i", "Yay"));
+// console.log(solutions.makeTags("i", "Hello"));
+// console.log(solutions.makeTags("cite", "Yay"));
+
+// Java > String-1 > makeOutWord
+// Given an "out" string length 4, such as "<<>>", and a word, return a new string where
+// the word is in the middle of the out string, e.g. "<<word>>". Note: use str.substring(i, j)
+// to extract the String starting at index i and going up to but not including index j.
+solutions.makeOutWord = function(out, word){
+	front = out.substring(0,2);
+	back = out.substring(2,4);
+	return front + word + back
+}
+// console.log(solutions.makeOutWord("<<>>", "Yay"));
+// console.log(solutions.makeOutWord("<<>>", "WooHoo"));
+// console.log(solutions.makeOutWord("[[]]", "word"));
+
+// Java > String-1 > extraEnd
+// Given a string, return a new string made of 3 copies of the last 2 chars
+// of the original string. The string length will be at least 2.
+solutions.extraEnd = function(str){
+	if (str.length>1){
+		back = str.substring(str.length-2);
+		return back+back+back;
+	}
+}
+// console.log(solutions.extraEnd("Hello"));
+// console.log(solutions.extraEnd("ab"));
+// console.log(solutions.extraEnd("Hi"));
+
+// Java > String-1 > firstTwo
+// Given a string, return the string made of its first two chars,
+// so the String "Hello" yields "He". If the string is shorter than
+// length 2, return whatever there is, so "X" yields "X", and the empty string ""
+// yields the empty string "". Note that str.length() returns the length of a string.
+solutions.withoutEnd = function(str){
+	return str.substring(1, str.length-1);
+}
+// console.log(solutions.withoutEnd("Hello"));
+// console.log(solutions.withoutEnd("java"));
+// console.log(solutions.withoutEnd("coding"));
+
+// Java > String-1 > comboString
+// Given 2 strings, a and b, return a string of the form short+long+short, with
+// the shorter string on the outside and the longer string on the inside. The
+// strings will not be the same length, but they may be empty (length 0).
+solutions.comboString = function(a,b){
+	if (a.length < b.length){
+		return a+b+a;
+	}
+	else{
+		return b+a+b;
+	}
+}
+// console.log(solutions.comboString("Hello", "hi"));
+// console.log(solutions.comboString("hi", "Hello"));
+// console.log(solutions.comboString("aaa", "b"));
+
+// Java > String-1 > nonStart
+// Given 2 strings, return their concatenation, except omit the first char
+// of each. The strings will be at least length 1.
+solutions.nonStart = function(a,b){
+	a = a.substring(1,a.length);
+	b = b.substring(1,b.length);
+	return a + b;
+}
+// console.log(solutions.nonStart("Hello", "There"));
+// console.log(solutions.nonStart("java", "code"));
+// console.log(solutions.nonStart("shotl", "java"));
+
+// Java > String-1 > nonStart
