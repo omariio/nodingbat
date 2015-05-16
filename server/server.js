@@ -53,7 +53,7 @@ Meteor.publish("allUserData", function() {
                 "(21)"
                 ],
             "parameters": "diff21(n) ",
-          "setup":"/* Given an int n, return the absolute difference between n and 21, */\n/* except return double the absolute difference if n is over 21. */\nvar diff21 = function(n){ \n\n}"
+          "setup": setup.diff21
         });
         Exercises.insert({
             "section":"warm-up1",
@@ -64,7 +64,7 @@ Meteor.publish("allUserData", function() {
                 "(89)"
                 ],
             "parameters": "nearHundred(n) ",
-          "setup":"/* Given an int n, return True if it is within 10 of 100 or 200. */\n/* Note: abs(num) computes the absolute value of a number. */\nnearhundred = function(n){ \n\n}"
+          "setup": setup.nearHundred
         });
 
         Exercises.insert({
@@ -76,31 +76,28 @@ Meteor.publish("allUserData", function() {
                 "('kitten', 4)"
                 ],
                 "parameters": "missingChar(str, n) ",
-          "setup":"/* Given a non-empty string and an int n, return a new string */\n/* where the char at index n has been removed. The value of n */\n/* will be a valid index of a char in the original string */\n/* (i.e. n will be in the range 0..str.length()-1 inclusive). */\nmissingChar = function(str, n){ \n\n}"
+          "setup":setup.missingChar
         });
         Exercises.insert({
-            "section":"warm-up2",
+            "section":"warm-up1",
             "name":"backAround",
               "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
+                "('cat')",
+                "('Hello')",
+                "('a')"
                 ],
                 "parameters": "backAround(str, n) ",
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
+          "setup": setup.backAround
         });
         Exercises.insert({
-            "section":"warm-up2",
+            "section":"warm-up1",
             "name":"startHi",
               "inputs":[
-                "(true, true)",
-                "(true, false)",
-                "(false, true)",
-                "(false, false)"
+                "('hi there')",
+                "('hi')",
+                "('hello hi')"
                 ],
-          "setup":"/*Given an int n, return the absolute difference between n and 21,\nexcept return double the absolute difference if n is over 21.*/\nvar diff21=function(n){ }",
-          "divineFunction":"var diff21 = function(n){ if (n <= 21){ return 21 - n;} else {return (n - 21) * 2;}}"
+          "setup":setup.startHi
         });
         Exercises.insert({
             "section":"warm-up1",

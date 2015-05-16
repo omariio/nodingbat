@@ -52,7 +52,7 @@ solutions.missingChar = function(str, n) {
 // Java > Warm-up1 > backAround
 //Given a string, take the last char and return a new string with the last char added at
 //the front and back, so "cat" yields "tcatt". The original string will be length 1 or more.
-var backAround = function(str){
+solutions.backAround = function(str){
 	last = str.substring(str.length-1);
 	return last + str + last;
 }
@@ -62,7 +62,7 @@ var backAround = function(str){
 
 // Java > Warm-up1 > startHi
 // Given a string, return true if the string starts with "hi" and false otherwise.
-var startHi =  function(str){
+solutions.startHi =  function(str){
 	if (str.length < 2){
 		return false;
 	}
