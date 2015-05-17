@@ -554,11 +554,9 @@ solutions.extraEnd = function(str){
 // console.log(solutions.extraEnd("ab"));
 // console.log(solutions.extraEnd("Hi"));
 
-// Java > String-1 > firstTwo
-// Given a string, return the string made of its first two chars,
-// so the String "Hello" yields "He". If the string is shorter than
-// length 2, return whatever there is, so "X" yields "X", and the empty string ""
-// yields the empty string "". Note that str.length() returns the length of a string.
+// Java > String-1 > withoutEnd
+// Given a string, return a version without the first and last char, so "Hello" yields "ell".
+// The string length will be at least 2.
 solutions.withoutEnd = function(str){
 	return str.substring(1, str.length-1);
 }
@@ -594,4 +592,120 @@ solutions.nonStart = function(a,b){
 // console.log(solutions.nonStart("java", "code"));
 // console.log(solutions.nonStart("shotl", "java"));
 
-// Java > String-1 > nonStart
+// Java > String-1 > firstHalf
+// Given a string of even length, return the first half.
+// So the string "WooHoo" yields "Woo".
+solutions.firstHalf = function(str){
+	if(str.length % 2 == 0){
+		return str.substring(0,str.length/2)
+	}
+	return str
+}
+// console.log(firstHalf("WooHoo"));
+// console.log(firstHalf("HelloThere"));
+// console.log(firstHalf("abcdef"));
+
+// Java > String-1 > firstTwo
+// Given a string, return the string made of its first two chars, so the String
+// "Hello" yields "He". If the string is shorter than length 2, return whatever
+// there is, so "X" yields "X", and the empty string "" yields the
+// empty string "". Note that str.length() returns the length of a string.
+solutions.firstTwo = function(str){
+	if(str.length>2){
+		return str.substring(0,2);
+	}
+	return str;
+}
+// console.log(solutions.firstTwo("Hello"));
+// console.log(solutions.firstTwo("ab"));
+
+// Java > String-1 > left2
+// Given a string, return a "rotated left 2" version where the first 2 chars are
+// moved to the end. The string length will be at least 2.
+solutions.left2 = function(str){
+	if(str.length>1){
+		front = str.substring(0,2);
+		back = str.substring(2,str.length);
+		return back + front;
+	}
+	return str;
+}
+// console.log(solutions.left2("Hello"));
+// console.log(solutions.left2("java"));
+// console.log(solutions.left2("Hi"));
+
+// Java > String-1 > right2
+// Given a string, return a "rotated right 2" version where the last 2 chars are
+// moved to the start. The string length will be at least 2.
+solutions.right2 = function(str){
+	if(str.length>1){
+		back = str.substring(str.length-2,str.length);
+		front = str.substring(0,str.length-2);
+		return back + front;
+	}
+	return str;
+}
+// console.log(solutions.right2("Hello"));
+// console.log(solutions.right2("java"));
+// console.log(solutions.right2("Hi"));
+
+// Java > String-1 > theEnd
+// Given a string, return a string length 1 from its front, unless front is false,
+// in which case return a string length 1 from its back. The string will be non-empty.
+solutions.theEnd = function(str, front){
+	if(front){
+		return str.substring(0,1);
+	}
+	return str.substring(str.length-1);
+}
+
+// Java > String-1 > withouEnd2
+// Given a string, return a version without both the first and last char of the
+// string. The string may be any length, including 0.
+solutions.withouEnd2 = function(str){
+	if(str.length<=1){
+		return "";
+	}
+	return str.substring(1,str.length-1);
+}
+
+// Java > String-1 > middleTwo
+// Given a string of even length, return a string made of the middle two chars,
+// so the string "string" yields "ri". The string length will be at least 2.
+solutions.middleTwo = function(str){
+	if(str.length % 2 == 0){
+		temp = str.substring(str.length/2 -1);
+		mid = temp.substring(0,2);
+		return mid;
+	}
+	return str;
+}
+// console.log(solutions.middleTwo("string"));
+// console.log(solutions.middleTwo("code"));
+// console.log(solutions.middleTwo("Practice"));
+
+// Java > String-1 > endsLy
+// Given a string, return true if it ends in "ly".
+solutions.endsLy = function(str){
+	if(str.substring(str.length-2, str.length) == "ly"){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+// console.log(solutions.endsLy("oddly"));
+// console.log(solutions.endsLy("y"));
+// console.log(solutions.endsLy("oddy"));
+// console.log(solutions.endsLy("oddl"));
+// console.log(solutions.endsLy("olydd"));
+// console.log(solutions.endsLy("ly"));
+// console.log(solutions.endsLy("falsely"));
+// console.log(solutions.endsLy("evenly"));
+
+// Java > String-1 > nTwice
+// Given a string and an int n, return a string made of the first and last n chars
+// from the string. The string length will be at least n.
+// solutions.nTwice = function(str, n){
+//
+// }

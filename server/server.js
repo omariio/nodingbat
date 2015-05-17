@@ -600,4 +600,119 @@ Meteor.publish("allUserData", function() {
   ],
   "setup": setup.nonStart
   });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "firstHalf",
+  "inputs": [
+    "('WooHoo')",
+    "('HelloThere')",
+    "('abcdefg')",
+    "('ab')",
+    "('')",
+    "('0123456789')",
+    "('kitten')"
+  ],
+  "setup": setup.firstHalf
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "firstTwo",
+  "inputs": [
+    "('Hello')",
+    "('abcdefg')",
+    "('ab')",
+    "('a')",
+    "('')",
+    "('kitten')",
+    "('hi')",
+    "('hiya')"
+  ],
+  "setup": setup.firstTwo
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "left2",
+  "inputs": [
+    "('Hello')",
+    "('java')",
+    "('Hi')",
+    "('code')",
+    "('cat')",
+    "('12345')",
+    "('Chocolate')",
+    "('bricks')"
+  ],
+  "setup": setup.left2
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "right2",
+  "inputs": [
+    "('Hello')",
+    "('java')",
+    "('Hi')",
+    "('code')",
+    "('cat')",
+    "('12345')"
+  ],
+  "setup": setup.right2
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "theEnd",
+  "inputs": [
+    "('Hello', true)",
+    "('Hello', false)",
+    "('oh', true)",
+    "('oh', false)",
+    "('x', true)",
+    "('x', false)",
+    "('java', true)",
+    "('chocolate', false)",
+    "('1234', true)",
+    "('code', false)"
+  ],
+  "setup": setup.theEnd
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "withouEnd2",
+  "inputs": [
+    "('Hello')",
+    "('abc')",
+    "('ab')",
+    "('a')",
+    "('')",
+    "('coldy')",
+    "('java code')"
+  ],
+  "setup": setup.withouEnd2
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "middleTwo",
+  "inputs": [
+    "('string')",
+    "('code')",
+    "('Practice')",
+    "('ab')",
+    "('123456789')"
+  ],
+  "setup": setup.middleTwo
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "endsLy",
+  "inputs": [
+    "('oddly')",
+    "('y')",
+    "('oddl')",
+    "('olydd')",
+    "('ly')",
+    "('')",
+    "('falsely')",
+    "('evenly')"
+  ],
+  "setup": setup.endsLy
+  });
 }
