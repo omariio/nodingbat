@@ -493,4 +493,111 @@ Meteor.publish("allUserData", function() {
   ],
   "setup": setup.endUp
   });
+  // start of the string-1 java problems
+  Exercises.insert({
+  "section": "string-1",
+  "name": "helloName",
+  "inputs": [
+    "('Bob')",
+    "('Alice')",
+    "('X')",
+    "('Dolly')",
+    "('Alpha')",
+    "('Omega')",
+    "('Goodbye')",
+    "('ho ho ho')",
+    "('xyz!')",
+    "('Hello!')"
+  ],
+  "setup": setup.helloName
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "makeAbba",
+  "inputs": [
+    "('Hi', 'Bye')",
+    "('Yo', 'Alice')",
+    "('What', 'Up')",
+    "('aaa', 'bbb')",
+    "('x', 'y')",
+    "('x', '')",
+    "('ba', 'Ya')",
+    "('Ya', 'Ya')"
+  ],
+  "setup": setup.makeAbba
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "makeOutWord",
+  "inputs": [
+    "('<<>>', 'Yay')",
+    "('<<>>', 'WooHoo')",
+    "('[[]]', 'word')",
+    "('HHoo', 'Hello')",
+    "('abyz', 'YAY')"
+  ],
+  "setup": setup.makeOutWord
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "extraEnd",
+  "inputs": [
+    "('Hello')",
+    "('ab')",
+    "('Hi')",
+    "('Candy')",
+    "('Code')"
+  ],
+  "setup": setup.extraEnd
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "withoutEnd",
+  "inputs": [
+    "('Hello')",
+    "('java')",
+    "('coding')",
+    "('code')",
+    "('ab')",
+    "('Chocolate!')",
+    "('kitten')",
+    "('woohoo')"
+  ],
+  "setup": setup.withoutEnd
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "comboString",
+  "inputs": [
+    "('Hello', 'hi')",
+    "('Hi', 'Hello')",
+    "('aaa', 'b')",
+    "('b', 'aaa')",
+    "('aaa', '')",
+    "('', 'bb')",
+    "('aaa', '1234')",
+    "('aaa', 'bb')",
+    "('a', 'bb')",
+    "('bb', 'a')",
+    "('a', 'bb')",
+    "('xyz', 'ab')"
+  ],
+  "setup": setup.comboString
+  });
+  Exercises.insert({
+  "section": "string-1",
+  "name": "nonStart",
+  "inputs": [
+    "('Hello', 'There')",
+    "('java', 'code')",
+    "('shotl', 'java')",
+    "('ab', 'xy')",
+    "('ab', 'x')",
+    "('x', 'ac')",
+    "('a', 'x')",
+    "('kit', 'kat')",
+    "('mart', 'dart')"
+  ],
+  "setup": setup.nonStart
+  });
 }
