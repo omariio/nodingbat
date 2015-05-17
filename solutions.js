@@ -452,9 +452,9 @@ solutions.intMax = function(a,b,c){
 // console.log(intMax(3,2,1));
 
 // Java > Warmup-1 > max1020
-// Given 2 positive int values, return the larger value that is in the range 10..20 inclusive,
-// or return 0 if neither is in that range.
-var max1020 = function(a,b){
+// Given 2 positive int values, return the larger value that is in the range 10..20
+// inclusive, or return 0 if neither is in that range.
+solutions.max1020 = function(a,b){
 	if (b > a) {
 		temp = a;
 		a = b;
@@ -473,10 +473,10 @@ var max1020 = function(a,b){
 // console.log(max1020(11,9));
 
 // Java > Warmup-1 > endUp
-// Given a string, return a new string where the last 3 chars are now in upper case. If the string has
-// less than 3 chars, uppercase whatever is there. Note that str.toUpperCase() returns the uppercase
-// version of a string.
-var endUp = function(str){
+// Given a string, return a new string where the last 3 chars are now in upper case.
+// If the string has less than 3 chars, uppercase whatever is there. Note that
+// str.toUpperCase() returns the uppercase version of a string.
+solutions.endUp = function(str){
 	if(str.length <= 3){
 		return str.toUpperCase();
 	}
@@ -489,6 +489,15 @@ var endUp = function(str){
 // console.log(endUp("Hello"));
 // console.log(endUp("hi there"));
 // console.log(endUp("hi"));
+
+
+
+
+
+
+
+
+
 
 // Java > String-1 > helloName
 // Given a string name, e.g. "Bob", return a greeting of the form "Hello Bob!".

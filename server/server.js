@@ -461,6 +461,36 @@ Meteor.publish("allUserData", function() {
   ],
   "setup": setup.intMax
   });
-
-
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "max1020",
+  "inputs": [
+    "(11, 19)",
+    "(19, 11)",
+    "(11, 9)",
+    "(9, 21)",
+    "(10, 21)",
+    "(21, 10)",
+    "(9, 11)",
+    "(23, 10)",
+    "(20, 10)",
+    "(7, 20)",
+    "(17, 16)"
+  ],
+  "setup": setup.max1020
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "endUp",
+  "inputs": [
+    "('Hello')",
+    "('hi there')",
+    "('hi')",
+    "('woo hoo')",
+    "('xyz12')",
+    "('x')",
+    "('')"
+  ],
+  "setup": setup.endUp
+  });
 }
