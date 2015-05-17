@@ -272,4 +272,90 @@ Meteor.publish("allUserData", function() {
       ],
       "setup": setup.or35
     });
+    Exercises.insert({
+    "section": "warmup-1",
+    "name": "icyHot",
+    "inputs": [
+      "(120, -1)",
+      "(-1, 120)",
+      "(2, 120)",
+      "(-1, 100)",
+      "(-2, 120)",
+      "(120, 120)"
+    ],
+    "setup": setup.icyHot
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "loneTeen",
+  "inputs": [
+    "(13, 99)",
+    "(21, 19)",
+    "(13, 13)",
+    "(14, 20)",
+    "(20, 15)",
+    "(16, 17)",
+    "(16, 9)",
+    "(16, 18)",
+    "(13, 19)",
+    "(13, 20)",
+    "(6, 18)",
+    "(99, 13)",
+    "(99, 99)"
+  ],
+  "setup": setup.loneTeen
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "startOz",
+  "inputs": [
+    "('ozymandias')",
+    "('bzoo')",
+    "('oxx')",
+    "('ounce')",
+    "('o')",
+    "('abc')",
+    "('')",
+    "('zoo')",
+    "('aztec')",
+    "('zzzz')",
+    "('oznic')"
+  ],
+  "setup": setup.startOz
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "in3050",
+  "inputs": [
+    "(30, 31)",
+    "(30, 41)",
+    "(40, 50)",
+    "(40, 51)",
+    "(39, 50)",
+    "(50, 39)",
+    "(40, 39)",
+    "(49, 48)",
+    "(50, 40)",
+    "(50, 51)",
+    "(35, 36)",
+    "(35, 45)"
+  ],
+  "setup": setup.in3050
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "lastDigit",
+  "inputs": [
+    "(7, 17)",
+    "(6, 17)",
+    "(3, 113)",
+    "(114, 113)",
+    "(114, 4)",
+    "(10, 0)",
+    "(11, 0)"
+  ],
+  "setup": setup.lastDigit
+  });
+
+
 }

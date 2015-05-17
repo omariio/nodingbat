@@ -234,7 +234,7 @@ solutions.or35 = function(n){
 
 // Java > Warm-up1 > icyHot
 // Given two temperatures, return true if one is less than 0 and the other is greater than 100.
-var icyHot = function(temp1, temp2){
+solutions.icyHot = function(temp1, temp2){
 	if (temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100){
 		return true;
 	}
@@ -247,7 +247,7 @@ var icyHot = function(temp1, temp2){
 // Java > Warm-up1 > loneTeen
 // We'll say that a number is "teen" if it is in the range 13..19 inclusive.
 // Given 2 int values, return true if one or the other is teen, but not both.
-var loneTeen = function(a, b){
+solutions.loneTeen = function(a, b){
 	if (a >= 13 || a <= 19){
 		return true;
 		}
@@ -264,7 +264,7 @@ var loneTeen = function(a, b){
 // Given a string, return a string made of the first 2 chars (if present),
 // however include first char only if it is 'o' and include the second only if it is 'z',
 // so "ozymandias" yields "oz".
-var startOz = function(str){
+solutions.startOz = function(str){
 	result = "";
 
 	if(str.length >= 1 && str.charAt(0) == "o"){
@@ -297,7 +297,7 @@ var startOz = function(str){
 // Java > Warmup-1 > in3050
 // Given 2 int values, return true if they are both in the range 30..40 inclusive,
 // or they are both in the range 40..50 inclusive.
-var in3050 = function(a, b) {
+solutions.in3050 = function(a, b) {
 	if ((a >= 30 && a<=40 && b>=30 && b<=40) || (a >=40 && a<=50 && b>=40 && b<=50)){
 		return true;
 	}
@@ -312,7 +312,7 @@ var in3050 = function(a, b) {
 // Java > Warmup-1 > lastDigit
 // Given two non-negative int values, return true if they have the same last digit,
 // such as with 27 and 57. Note that the % "mod" operator computes remainders, so 17 % 10 is 7.
-var lastDigit = function(a, b){
+solutions.lastDigit = function(a, b){
 	return (a % 10 == b % 10);
 }
 // console.log(lastDigit(7,17));
