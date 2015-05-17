@@ -107,7 +107,7 @@ solutions.mixStart = function(str){
 // Given 2 int values, return whichever value is nearest to the value 10,
 // or return 0 in the event of a tie. Note that Math.abs(n) returns the absolute value
 // of a number.
-var close10 = function(a, b){
+solutions.close10 = function(a, b){
 	aDiff = Math.abs(a-10);
 	bDiff = Math.abs(b-10);
 
@@ -124,7 +124,7 @@ var close10 = function(a, b){
 
 // Java > Warm-up1 > stringE
 // Return true if the given string contains between 1 and 3 'e' chars.
-var stringE = function(str){
+solutions.tringE = function(str){
 	count = 0;
 	for(var i=0; i<str.length; i++){
 		if(str.charAt(i) == "e"){
@@ -141,7 +141,7 @@ var stringE = function(str){
 // Given a non-empty string and an int N, return the string made starting with char 0,
 // and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on.
 // N is 1 or more.
-var everyNth = function(str, n){
+solutions.everyNth = function(str, n){
 	result = "";
 	for(var i=0; i<str.length; i = i + n){
 		result = result + str.charAt(i);
@@ -156,7 +156,7 @@ var everyNth = function(str, n){
 // We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each
 // is smiling. We are in trouble if they are both smiling or if neither of them is smiling.
 // Return true if we are in trouble.
-var monkeyTrouble = function(aSmile, bSmile){
+solutions.monkeyTrouble = function(aSmile, bSmile){
 	if(aSmile && bSmile){
 		return true;
 	}
@@ -173,7 +173,7 @@ var monkeyTrouble = function(aSmile, bSmile){
 // We have a loud talking parrot. The "hour" parameter is the current hour time in the range 0..23.
 //We are in trouble if the parrot is talking and the hour is before 7 or after 20.
 //Return True if we are in trouble.
-function parrotTrouble(talking, hour) {
+solutions.parrotTrouble = function(talking, hour) {
  if (talking === true && (hour < 7 || hour > 20)) {
     return true;
  }
@@ -189,7 +189,7 @@ function parrotTrouble(talking, hour) {
 //Given 2 int values, return True if one is negative and one is positive.
 //Except if the parameter "negative" is True, then return True only if
 //both are negative.
-var posNeg = function(a, b, negative) {
+solutions.posNeg = function(a, b, negative) {
   if (negative === true) {
     return true;
   }
@@ -205,7 +205,7 @@ var posNeg = function(a, b, negative) {
 
 // Java > Warm-up1 > frontBack
 // Given a string, return a new string where the first and last chars have been exchanged.
-var frontBack = function(str){
+solutions.frontBack = function(str){
 	if (str.length <= 1){
 		return str;
 	}
@@ -213,14 +213,14 @@ var frontBack = function(str){
 
 	return (str.length-1) + mid + str.charAt(0);
 }
-console.log(frontBack("code"));
-console.log(frontBack("a"));
-console.log(frontBack("ab"));
+console.log(solutions.frontBack("code"));
+console.log(solutions.frontBack("a"));
+console.log(solutions.frontBack("ab"));
 
 // Java > Warm-up1 > or35
 // Return true if the given non-negative number is a multiple of 3 or a multiple of 5.
 //Use the % "mod" operator
-var or35 = function(n){
+solutions.or35 = function(n){
 	if(n % 3 == 0 || n % 5 == 0){
 		return true;
 	}

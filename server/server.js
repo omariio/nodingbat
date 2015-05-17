@@ -158,20 +158,118 @@ Meteor.publish("allUserData", function() {
         Exercises.insert({
             "section":"warm-up1",
             "name":"close10",
-              "inputs":[
-                "(8, 13)",
-                "(13, 8)",
-                "(13, 7)",
-                "(7, 13)",
-                "(9, 13)",
-                "(13, 8)",
-                "(10, 12)",
-                "(11, 10)",
-                "(5, 21)",
-                "(0, 20)",
-                "(0, 20)",
-                "(10, 10)"
-                ],
-          "setup": setup.close10
+            "inputs":[
+              "(8, 13)",
+              "(13, 8)",
+              "(13, 7)",
+              "(7, 13)",
+              "(9, 13)",
+              "(13, 8)",
+              "(10, 12)",
+              "(11, 10)",
+              "(5, 21)",
+              "(0, 20)",
+              "(0, 20)",
+              "(10, 10)"
+              ],
+            "setup": setup.close10
         });
+        Exercises.insert({
+          "section": "warmup-1",
+          "name": "stringE",
+          "inputs":[
+            "('Hello')",
+            "('Heelle')",
+            "('Heelele')",
+            "('HII')",
+            "('e')",
+            "('')"
+          ],
+          "setup": setup.stringE
+        });
+        Exercises.insert({
+          "section": "warmup-1",
+          "name": "everyNth",
+          "inputs":[
+            "('Miracle', 2)",
+            "('abcdefg', 2)",
+            "('Chocolate', 3)",
+            "('Chocolate', 3)",
+            "('Chocolate', 4)",
+            "('Chocolate', 100)"
+          ],
+          "setup": setup.everyNth
+        });
+        Exercises.insert({
+          "section": "warmup-1",
+          "name": "monkeyTrouble",
+          "inputs":[
+            "(true, true)",
+            "(false, false)",
+            "(true, false)",
+            "(false, true)"
+          ],
+          "setup": setup.monkeyTrouble
+        });
+        Exercises.insert({
+          "section": "warmup-1",
+          "name": "parrotTrouble",
+          "inputs": [
+            "(true, 6)",
+            "(true, 7)",
+            "(false, 6)",
+            "(true, 21)",
+            "(false, 21)",
+            "(true, 23)",
+            "(false, 23)",
+            "(true, 20)",
+            "(false, 12)"
+          ],
+          "setup": setup.parrotTrouble
+        });
+        Exercises.insert({
+        "section": "warmup-1",
+        "name": "frontBack",
+        "inputs": [
+          "('code')",
+          "('a')",
+          "('ab')",
+          "('abc')",
+          "('')",
+          "('Chocolate')",
+          "('aavj')",
+          "('hello')"
+        ],
+        "setup": setup.frontBack
+      });
+      Exercises.insert({
+      "section": "warmup-1",
+      "name": "or35",
+      "inputs": [
+        "(3)",
+        "(10)",
+        "(8)",
+        "(15)",
+        "(5)",
+        "(4)",
+        "(9)",
+        "(4)",
+        "(7)",
+        "(6)",
+        "(17)",
+        "(18)",
+        "(29)",
+        "(20)",
+        "(21)",
+        "(22)",
+        "(45)",
+        "(99)",
+        "(100)",
+        "(101)",
+        "(121)",
+        "(122)",
+        "(123)"
+      ],
+      "setup": setup.or35
+    });
 }
