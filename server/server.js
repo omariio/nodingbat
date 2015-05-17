@@ -356,6 +356,111 @@ Meteor.publish("allUserData", function() {
   ],
   "setup": setup.lastDigit
   });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "sumDouble",
+  "inputs": [
+    "(1, 2)",
+    "(3, 2)",
+    "(2, 2)",
+    "(-1, 0)",
+    "(3, 3)",
+    "(0, 0)",
+    "(0, 1)",
+    "(3, 4)"
+  ],
+  "setup": setup.sumDouble
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "makes10",
+  "inputs": [
+    "(9, 10)",
+    "(9, 9)",
+    "(1, 9)",
+    "(10, 1)",
+    "(10, 10)",
+    "(8, 2)",
+    "(8, 3)",
+    "(10, 42)",
+    "(12, -2)"
+  ],
+  "setup": setup.makes10
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "notString",
+  "inputs": [
+    "('candy')",
+    "('x')",
+    "('not bad')",
+    "('bad')",
+    "('not')",
+    "('is not')",
+    "('no')"
+  ],
+  "setup": setup.notString
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "front3",
+  "inputs": [
+    "('Java')",
+    "('Chocolate')",
+    "('abc')",
+    "('abcXYZ')",
+    "('ab')",
+    "('a')",
+    "('')"
+  ],
+  "setup": setup.front3
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "front22",
+  "inputs": [
+    "('kitten')",
+    "('Ha')",
+    "('abc')",
+    "('ab')",
+    "('a')",
+    "('')",
+    "('Logic')"
+  ],
+  "setup": setup.front22
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "in1020",
+  "inputs": [
+    "(12, 99)",
+    "(21, 12)",
+    "(8, 99)",
+    "(99, 10)",
+    "(20, 20)",
+    "(21, 21)",
+    "(9, 9)",
+  ],
+  "setup": setup.in1020
+  });
+  Exercises.insert({
+  "section": "warmup-1",
+  "name": "intMax",
+  "inputs": [
+    "(1, 2, 3)",
+    "(1, 3, 2)",
+    "(3, 2, 1)",
+    "(9, 3, 3)",
+    "(3, 9, 3)",
+    "(3, 3, 9)",
+    "(8, 2, 3)",
+    "(-3, -1, -2)",
+    "(6, 2, 5)",
+    "(5, 6, 2)",
+    "(5, 2, 6)"
+  ],
+  "setup": setup.intMax
+  });
 
 
 }

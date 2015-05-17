@@ -322,7 +322,7 @@ solutions.lastDigit = function(a, b){
 // Java > Warmup-1 > sumDouble
 // Given two int values, return their sum. Unless the two values are the same,
 // then return double their sum.
-var sumDouble = function(a, b){
+solutions.sumDouble = function(a, b){
 	if(a == b){
 		return 2*(a+b);
 	}
@@ -336,7 +336,7 @@ var sumDouble = function(a, b){
 
 // Java > Warmup-1 > makes10
 // Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
-var makes10 = function(a,b){
+solutions.makes10 = function(a,b){
 	if((a == 10 || b == 10) || (a + b == 10)){
 		return true;
 	}
@@ -352,7 +352,7 @@ var makes10 = function(a,b){
 // Given a string, return a new string where "not " has been added to the front.
 // However, if the string already begins with "not", return the string unchanged.
 // Note: use .equals() to compare 2 strings.
-var notString = function(str){
+solutions.notString = function(str){
 	if (str.length <= 3 && str.substring(0,3).localeCompare("not")){
 		return str;
 	}
@@ -366,7 +366,7 @@ var notString = function(str){
 // Given a string, we'll say that the front is the first 3 chars of the string.
 // If the string length is less than 3, the front is whatever is there.
 // Return a new string which is 3 copies of the front.
-var front3 = function(str){
+solutions.front3 = function(str){
 	front = "";
 	if (str.length >= 3){
 		front = str.substring(0,3);
@@ -384,7 +384,7 @@ var front3 = function(str){
 // Given a string, take the first 2 chars and return the string with the 2 chars added at both the
 // front and back, so "kitten" yields"kikittenki". If the string length is less than 2, use whatever
 // chars are there.
-var front22 = function(str){
+solutions.front22 = function(str){
 	take = 2;
 	if(take > str.length){
 		take = str.length;
@@ -398,7 +398,7 @@ var front22 = function(str){
 
 // Java > Warmup-1 > in1020
 // Given 2 int values, return true if either of them is in the range 10..20 inclusive.
-var in1020 = function(a,b){
+solutions.in1020 = function(a,b){
 	if ((a >= 10 && a <= 20) || (b >= 10 && b <= 20)){
 		return true;
 	}
@@ -413,9 +413,9 @@ var in1020 = function(a,b){
 // Java > Warmup-1 > delDel
 // Given a string, if the string "del" appears starting at index 1, return a string where that "del"
 // has been deleted. Otherwise, return the string unchanged.
-var delDel = function(str){
-	output = str.substring(1,4);
-	return output;
+// var delDel = function(str){
+// 	output = str.substring(1,4);
+// 	return output;
 	// front = str.substring(0);
 	// if(str.substring(1,4).localeCompare("del")){
 	// 	output = str.substring(0); //+ str.substring(4,str.length);
@@ -428,14 +428,14 @@ var delDel = function(str){
 	// 	output = substring(4);
 	// 	return front + output;
 	// }
-}
+//}
 // console.log(delDel("adelbc"));
 // console.log(delDel("adelHello"));
 // console.log(delDel("adebc"));
 
 // Java > Warmup-1 > intMax
 // Given three int values, a b c, return the largest.
-var intMax = function(a,b,c){
+solutions.intMax = function(a,b,c){
 	max = 0;
 	if ( a > b){
 		max = a;
