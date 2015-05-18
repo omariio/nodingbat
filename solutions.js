@@ -709,3 +709,36 @@ solutions.endsLy = function(str){
 // solutions.nTwice = function(str, n){
 //
 // }
+
+// Java > String-1 > twoChar
+// Given a string and an index, return a string length 2 starting at the given index.
+// If the index is too big or too small to define a string length 2, use the first
+// 2 chars. The string length will be at least 2.
+// solutions.twoChar = function(str, index){
+// 	if(str.length>1){
+// 		x = str.substring(index, index+2);
+// 		return x;
+// 	}
+// 	if(index > str.length-2) {
+// 		return str.charAt(0) + str.charAt(1);
+// 	}
+// }
+// console.log(solutions.twoChar("java", 0));
+// console.log(solutions.twoChar("java", 2));
+// console.log(solutions.twoChar("java", 3));
+
+// Java > String-1 > middleThree
+// Given a string of odd length, return the string length 3 from its middle, so
+// "Candy" yields "and". The string length will be at least 3.
+// solutions.middleThree = function(str){
+// 	if(str.length <= 3){
+// 		return str;
+// 	}
+// 	if(str.length % 2 != 0){
+// 		temp = str.length/2;
+// 		mid = str.substring(temp, temp + 2);
+// 	}
+// }
+// console.log(solutions.middleThree("Candy"));
+// console.log(solutions.middleThree("and"));
+// console.log(solutions.middleThree("solving"));
