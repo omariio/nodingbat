@@ -1,0 +1,33 @@
+<template name = "exerciseHelp">
+  <div class="row">
+    <div class="chatContainer" id="">
+      <div class="">
+        <div class="panel" id="">
+        {{#if currentUser}}
+        <div id="chat-log">
+            {{#each chatLog}}
+                <div>
+                    <span class="chat-username-column">{{userName}}</span>
+                    <span class="chat-body-column">{{body}}</span>
+                </div>
+            {{/each}}
+        </div>
+        <div>
+          <div id="inputBox" class="input-group">
+            <input id="chat-box" type="text" class="form-control" style="text-align:center;" placeholder="Chat..." />
+            <button id="chat-send-button" class="btn btn-info"> Send </button>
+            <button id="close" class="btn btn-danger"> x </button>
+          </div>
+        </div>
+        {{else}}
+          Log in!
+        {{/if}}
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="chatBox">
+    <span class="chat-username-column">{{userName}}</span>
+    <span class="chat-body-column">{{body}}</span>
+  </div>
+</template>

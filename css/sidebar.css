@@ -1,0 +1,113 @@
+i.fa-circle-o-notch{
+  font-size:14px;
+}
+
+i.fa-circle-thin{
+  font-size:10px;
+}
+
+a#exColor:hover{
+
+}
+
+ol.breadcrumb{
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+
+  background-color: #242424;
+}
+
+ol.breadcrumb:hover{
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+
+  color: #92e7f7;
+  box-shadow: 0px 0px 10px;
+}
+
+ol.breadcrumb:active{
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+}
+
+.slide-right{
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  margin-left: 400px;
+}
+
+a.discuss:hover{
+  -moz-transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  transition: all .5s linear;
+  background-color: rgba(0, 137, 102, 0.35);
+}
+
+#buttonContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#headerContainer{
+display: flex;
+flex-direction: row;
+justify-content: center;
+
+}
+
+.imageHeader{
+  text-align:center;
+  flex-grow:2;
+  padding-top:15px;
+}
+
+#flexContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+
+}
+#exerciseContainer{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.chat-body-column{
+  float: right;
+}
+
+#chat-log{
+  max-height: 100px;
+  overflow-y: scroll;
+
+}
+.well{}
+#inputBox{
+  display: flex;
+  flex-direction: row;
+}
+
+.chatContainer{
+  height:400px;
+
+
+}
+
+.rotate{
+    -moz-transition: all 1s linear;
+    -webkit-transition: all 1s linear;
+    transition: all 1s linear;
+}
+
+.rotate.down{
+    -moz-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+}

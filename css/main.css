@@ -1,0 +1,144 @@
+.BAT{
+  background-image: url(bat_run_v1.gif);
+}
+
+.footer{
+  height: 83px;
+}
+#footFix{
+  padding-bottom: 30px;
+}
+
+.breadcrumb{
+  background-color: rgba(70, 69, 69, 0.28);
+}
+
+#spoogScroll{
+  overflow: scroll;
+  height: 476px;
+}
+#ol-flex{
+  display: flex;
+  align-items: center;
+  /*justify-content: center;*/
+}
+#ol-flex-right{
+  align-self: flex-end;
+}
+body{
+  position: fixed;
+}
+
+.pull-right{
+  padding-top: 20px;
+}
+.main-wrapper{
+  height: auto;
+  width: auto;
+}
+.fixed {
+  position: fixed;
+  width: 25%;
+}
+.scrollit {
+  float: left;
+  width: 71%
+}
+footer {
+  position: fixed;
+  bottom: 0px;
+  height: 60px;
+}
+#color{
+  display: flex;
+  flex-direction: column;
+}
+
+.colors{
+  padding: 0px 20px 0px 20px;
+}
+
+
+#side-bar{
+  position: fixed;
+  margin: 115px 0 0 0;
+  right: 1%;
+  /*z-index: 1000;*/
+  /*margin: auto;*/
+  top: 1%;
+
+}
+
+.cm-s-sublime-text-like.CodeMirror {
+  background-color: #242424;
+  color: #fff;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+  border-left: 1px solid #f8f8f0;
+  z-index: 3;
+}
+
+.CodeMirror-selected {
+    background: #3d3d3d;
+    opacity: .23;
+}
+
+.cm-s-sublime-text-like .cm-keyword {color: #ff007f;}
+.cm-s-sublime-text-like .cm-atom {color: #c48cff;}
+.cm-s-sublime-text-like .cm-number {color: #c48cff;}
+.cm-s-sublime-text-like .cm-def {color: #fd963f;}
+.cm-s-sublime-text-like .cm-variable {color: #fff;}
+.cm-s-sublime-text-like .cm-variable-2 {color: #c48cff;}
+.cm-s-sublime-text-like .cm-property {color: #52e3f6;}
+.cm-s-sublime-text-like .cm-operator {color: #ff007f;}
+.cm-s-sublime-text-like .cm-comment {color: #8c8c8c;}
+.cm-s-sublime-text-like .cm-string {color: #ece47e;}
+.cm-s-sublime-text-like .cm-string-2 {color: #ece47e;}
+.cm-s-sublime-text-like .cm-meta {color: #a7ec21;}
+.cm-s-sublime-text-like .cm-qualifier {color: #a7ec21;}
+.cm-s-sublime-text-like .cm-bracket {color: #f9faf4;}
+.cm-s-sublime-text-like .cm-tag {color: #ff007f;}
+.cm-s-sublime-text-like .cm-attribute {color: #a7ec21;}
+
+.cm-s-sublime-text-like .cm-matchhighlight {
+  background-color: #00CCFF;
+  color: #242424;
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+    color: #a7ec21;
+    font-weight: bold;
+}
+
+
+div.CodeMirror span.CodeMirror-searching {
+  outline: 1px solid #fff;
+  color: black;
+}
+
+
+div.CodeMirror span.cm-matchhighlight.CodeMirror-searching.CodeMirror-selectedtext {
+    background-color: #ffe69d;
+    color: #242424;
+}
+
+.cm-s-sublime-text-like.CodeMirror pre {
+  /*padding between line number & content*/
+  padding: 0 2px;
+}
+.cm-s-sublime-text-like.CodeMirror .CodeMirror-gutters {
+  border-color: #303030;
+  background: #303030;
+}
+.cm-s-sublime-text-like.CodeMirror .CodeMirror-linenumbers {
+  background-color: #303030;
+}
+.cm-s-sublime-text-like.CodeMirror .CodeMirror-linebackground {
+  outline: 1px solid #494949;
+  z-index: 3;
+}
+.cm-s-sublime-text-like.CodeMirror .CodeMirror-activeline,
+.cm-s-sublime-text-like.CodeMirror.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
+  background: rgba(255, 255, 255, .1);
+}

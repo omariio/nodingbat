@@ -1,0 +1,27 @@
+<template name="exerciseItem">
+  {{#with item}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 animated slideInLeft">
+                <h4>
+                  <ol class="breadcrumb">
+                      <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a></li>
+                      <li><a href="/">{{section}}</a></li>
+                      <li class="active">{{name}}</li>
+                  </ol>
+                </h4>
+                <div id="code-mirror">
+                  {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+                </div>
+                <button type="submit" class="btn btn-primary" id="run">
+                  Run
+                </button>
+                <button class="btn btn-danger" id="help">
+                        <a href="{{pathFor 'postList'}}">Q/A Forum</a>
+                </button>
+                <hr>
+            </div>
+        </div>
+    </div>
+  {{/with}}
+</template>

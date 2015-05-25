@@ -1,0 +1,15 @@
+<head>
+  <title>Noding Bat</title>
+</head>
+<body>
+</body>
+
+<template name = "layout">
+    {{> header}}
+    <div class="container">
+        <div class="row">
+          {{> yield}}
+          {{> sidebar}}
+        </div>
+    </div>
+</template>

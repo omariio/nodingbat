@@ -1,0 +1,24 @@
+<template name = "exerciseSection">
+  {{> well}}
+<div class="container">
+  <div class="row">
+      <div class="col-md-8" id="spoogScroll">
+      {{#each exercises}}
+        <h4>
+          <ol class="breadcrumb">
+            <li>
+              <a href="/{{section}}">{{section}}</a>
+            </li>
+            <li>
+              <a href="/{{section}}/{{name}}">{{name}}</a>
+            </li>
+            <li>
+              <a href="/{{section}}/{{name}}" class="discuss btn btn-default">Start</a>
+            </li>
+          </ol>
+        </h4>
+      {{/each}}
+    </div>
+  </div>
+</div>
+</template>

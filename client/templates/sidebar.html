@@ -1,0 +1,64 @@
+<template name="sidebar">
+  <div class="container">
+    <div class="row">
+      {{#with exercise}}
+            <div class="col-md-4 animated slideInRight" id="side-bar">
+                <div class="well">
+                    <div class="panel">
+                        <div id="solution"></div>
+                        <div id="userSolution"></div>
+                        <div id="flexContainer">
+                          <div id="color-title">
+                            {{#if success}}
+                              Expected Output <i class="fa fa-smile-o rotate fa-2x"></i> Run
+                            {{else}}
+                              Expected Output <i class="fa fa-meh-o rotate fa-2x"></i> Run
+                            {{/if}}
+                          </div>
+                        </div>
+                        <div id="color">
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                            <div class="colors"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Blog Categories Well -->
+                <div class="">
+                  <div class="">
+                    {{#if success}}
+                        <div style="text-align: center;" class="animated bounce">
+                          <i style="color: green;" class="fa fa-check fa-5x animated"></i>
+                          <h1 style="margin-top: 0px;">Success!</h1>
+                        </div>
+                    {{/if}}
+                    {{#if failure}}
+                        <div style="text-align: center;">
+                          <i style="color: red;" class="fa fa-remove fa-5x"></i>
+                          <h1 style="margin-top: 0px;" class="animated shake">Failure!</h1>
+                        </div>
+                    {{/if}}
+                    {{#if exerciseForum}}
+                        <h4 align="center">Help Chat</h4>
+                        {{> exerciseHelp}}
+                    {{/if}}
+                  </div>
+                </div>
+            </div>
+        {{/with}}
+    </div>
+  </div>
+</template>
