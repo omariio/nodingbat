@@ -16,10 +16,13 @@ OR your own problems. The style guide is below:
 
 ## Converting Coding bat exercises:
 (Here's an example for adding this exercise)
+
 1.  Pick a problem- solve it in java/python, so you can see the test cases to use against the javascript version of your function. ![oops](/public/1.png)
-2. If you haven't already, git clone the repo and open the 3 files: 
+
+2.  If you haven't already, git clone the repo and open the 3 files: 
 /server/server.js 
 /lib/setup.js
 /solutions.js
-3. After sovling the exercise, rewrite the function in solutions.js (make sure the function works and you can take the console logs out)
+
+3.  After sovling the exercise, rewrite the function in solutions.js (make sure the function works and you can take the console logs out)
 ![oops](/public/2.png)
