@@ -1,6 +1,6 @@
 
 # noding-bat-meteor
-## Has migrated to our team's omari repo:
+<http://www.nodingbat.com/>
 ### https://github.com/omariio/nodingbat
 =======
 # nodingbat.com
@@ -12,4 +12,8 @@ off of <http://codingbat.com/>
 We need people to continue adding problems from the coding bat site. Eventually we want to add other
 material, like the euler problems and stuff that professors use in classes. If interested in helping out,
 please read the style guide for adding problems either from codingbat(ones we haven't done yet are listed below),
-OR your own problems. The style guide will be added below soon.
+OR your own problems. The style guide is below:
+
+## Adding Coding bat problems:
+1.  pick a problem- solve it in java/python, so you can see the test cases to use against the javascript version of your function.
+
