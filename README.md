@@ -14,6 +14,12 @@ material, like the euler problems and stuff that professors use in classes. If i
 please read the style guide for adding problems either from codingbat(ones we haven't done yet are listed below),
 OR your own problems. The style guide is below:
 
-## Adding Coding bat problems:
-1.  pick a problem- solve it in java/python, so you can see the test cases to use against the javascript version of your function.
-
+## Converting Coding bat exercises:
+(Here's an example for adding this exercise)
+1.  Pick a problem- solve it in java/python, so you can see the test cases to use against the javascript version of your function. ![oops](/public/1.png)
+2. If you haven't already, git clone the repo and open the 3 files: 
+/server/server.js 
+/lib/setup.js
+/solutions.js
+3. After sovling the exercise, rewrite the function in solutions.js (make sure the function works and you can take the console logs out)
+![oops](/public/2.png)
