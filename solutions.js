@@ -742,3 +742,17 @@ solutions.endsLy = function(str){
 // console.log(solutions.middleThree("Candy"));
 // console.log(solutions.middleThree("and"));
 // console.log(solutions.middleThree("solving"));
+
+// Java > String-1 > stringTimes
+// Given a string and a non-negative int n, return a larger string that is n
+// copies of the original string.
+solutions.stringTimes = function(str, n){
+	result = "";
+	for(i=0; i<n; i++){
+		result += str;
+	}
+	return result;
+}
+console.log(solutions.stringTimes("Hi", 2));
+console.log(solutions.stringTimes("Hi", 3));
+console.log(solutions.stringTimes("Hi", 1));
