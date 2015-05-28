@@ -6581,6 +6581,15 @@ button.close {
 .navbar {
   border-width: 0;
 }
+
+.ul {
+  -webkit-text-align: right; -webkit-width: 100%; -webkit-background-color: #999; -webkit-height: 20px;
+}
+
+.li {
+  -webkit-float:right;
+}
+
 .navbar-default .badge {
   background-color: #fff;
   color: #375a7f;
