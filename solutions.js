@@ -743,7 +743,7 @@ solutions.endsLy = function(str){
 // console.log(solutions.middleThree("and"));
 // console.log(solutions.middleThree("solving"));
 
-// Java > String-1 > stringTimes
+// Java > Warm-up2 > stringTimes
 // Given a string and a non-negative int n, return a larger string that is n
 // copies of the original string.
 solutions.stringTimes = function(str, n){
@@ -753,6 +753,6 @@ solutions.stringTimes = function(str, n){
 	}
 	return result;
 }
-console.log(solutions.stringTimes("Hi", 2));
-console.log(solutions.stringTimes("Hi", 3));
-console.log(solutions.stringTimes("Hi", 1));
+// console.log(solutions.stringTimes("Hi", 2));
+// console.log(solutions.stringTimes("Hi", 3));
+// console.log(solutions.stringTimes("Hi", 1));
