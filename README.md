@@ -37,7 +37,7 @@ OR your own problems. The style guide is below:
 7.  Puurrfect- now submit Pull Request, grab a beer, and be nice to your mum <3 
 
 ##### Please ask if you have any questions,
-###### <3 <http://www.omari.io/>
+###### <3 <http://omari.io/>
  
 
 
