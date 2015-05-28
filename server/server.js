@@ -715,4 +715,22 @@ Meteor.publish("allUserData", function() {
   ],
   "setup": setup.endsLy
   });
+  Exercises.insert({
+  "section": "warm-up2",
+  "name": "stringTimes",
+  "inputs": [
+    "('Hi', 2)",
+    "('Hi', 3)",
+    "('Hi', 1)",
+    "('Hi', 0)",
+    "('Hi', 5)",
+    "('Oh Boy!', 2)",
+    "('x', 4)",
+    "('', 4)",
+    "('code', 2)",
+    "('code', 3)"
+  ],
+  "setup": setup.stringTimes
+}); //note: changes in here will only happen after you 'meteor reset'
+
 }
