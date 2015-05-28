@@ -6,6 +6,10 @@
 //   })
 // });
 
+Router.route('/profile', function() {
+  this.render('profile');
+});
+
 Router.route('/:_section/:_name', function () {
   this.render('exerciseItem');
 });
