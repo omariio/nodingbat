@@ -1,7 +1,6 @@
 .BAT{
   background-image: url(bat_run_v1.gif);
 }
-
 .footer{
   height: 83px;
 }
@@ -49,6 +48,14 @@ footer {
   bottom: 0px;
   height: 60px;
 }
+.testCases{
+  padding: 0px 20px 0px 20px;
+}
+#testCase{
+  display: flex;
+  flex-direction: column;
+}
+
 #color{
   display: flex;
   flex-direction: column;
@@ -142,5 +149,3 @@ div.CodeMirror span.cm-matchhighlight.CodeMirror-searching.CodeMirror-selectedte
 .cm-s-sublime-text-like.CodeMirror.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
   background: rgba(255, 255, 255, .1);
 }
-
-
