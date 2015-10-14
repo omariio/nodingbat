@@ -19,8 +19,7 @@ Template.profile.helpers({
   user: function(){
     return Meteor.user();
   },
-  action: function() {
-  	return Meteor.users.find({username: FlowRouter.current().params.username});
-    console.log(FlowRouter.current().params.username);
+  username: function() {
+  	return Meteor.users.findOne();
   }
 });

@@ -1,6 +1,5 @@
 Template.header.helpers({
   username: function(){
-    // Meteor.users.find({username: FlowRouter.getParam(username)});
   	return Meteor.users.findOne().username;
   }
 });

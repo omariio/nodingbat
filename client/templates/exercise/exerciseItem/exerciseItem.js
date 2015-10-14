@@ -19,29 +19,7 @@ Template.exerciseItem.helpers({
 
 Template.exerciseItem.rendered = function () {
   session_set();
-  // try{
-  //   var obj = eval(Session.get("varName"));
-  // }
-  // catch(e){
-  //   console.log("it crashed!");
-  //   console.log(e);
-  // }
-  // var obj = eval(Session.get("varName"));
-  // var renderRun = function(self){
-  //   // console.log("asd");
-  //   var obj = eval(Session.get("varName"));
-  //   var index = 0;
-  //   for( ; index < self.inputs.length; ++index){
-  //     // var userOutput = eval(self.name + self.inputs[index]);
-  //     var output = eval("solutions." + self.name + self.inputs[index]);
-  //       var thisDiv = $("div.testCases:nth-child("+(index + 1)+")").css("background-color", "white");
-  //       console.log(thisDiv);
-  //   return thisDiv.html(self.name+self.inputs[index]+"<i class='fa fa-long-arrow-right'></i>"+ output);
-  //   }
-  // }
-  // renderRun(this.self);
 }
-
 
 Template.exerciseItem.events({
   "getEditorText": function() {
@@ -91,8 +69,6 @@ var run = function(self){
   var solutionIndex = 1;
   $(".rotate").toggleClass("down");
 
-  // self is this
-  // var this = self;
   var index = 0;
   for( ; index < self.inputs.length; ++index){
     var userOutput = eval(self.name + self.inputs[index]);
