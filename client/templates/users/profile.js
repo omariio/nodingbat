@@ -1,4 +1,5 @@
 BlazeLayout.setRoot('body');
+
 Template.profile.helpers({
   currentUser: function(){
     var user = Meteor.user();
@@ -17,5 +18,9 @@ Template.profile.helpers({
   },
   user: function(){
     return Meteor.user();
+  },
+  action: function() {
+  	return Meteor.users.find({username: FlowRouter.current().params.username});
+    console.log(FlowRouter.current().params.username);
   }
 });

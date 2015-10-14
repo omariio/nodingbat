@@ -1,3 +1,9 @@
+Template.header.Template.name.helpers({
+  username: function(){
+  	return Meteor.users.find({username: FlowRouter.current().params.username});
+    console.log(FlowRouter.current().params.username);
+});
+
 Template.header.rendered=function(){
   if(!Meteor.user()){
     var a = $('.dropdown-toggle').html(" ");

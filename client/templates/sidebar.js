@@ -1,6 +1,6 @@
 Template.sidebar.helpers({
 	exercise:function(){
-		var name = Router.current().params._name;
+		var name = FlowRouter.current().params.name;
 		var exercise = Exercises.findOne({name:name});
 		return exercise;
 	},
