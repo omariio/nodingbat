@@ -1,7 +1,8 @@
-Template.header.Template.name.helpers({
+Template.header.helpers({
   username: function(){
-  	return Meteor.users.find({username: FlowRouter.current().params.username});
-    console.log(FlowRouter.current().params.username);
+    // Meteor.users.find({username: FlowRouter.getParam(username)});
+  	return Meteor.users.findOne().username;
+  }
 });
 
 Template.header.rendered=function(){
