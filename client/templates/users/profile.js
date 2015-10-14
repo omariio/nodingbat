@@ -1,3 +1,4 @@
+BlazeLayout.setRoot('body');
 Template.profile.helpers({
   currentUser: function(){
     var user = Meteor.user();

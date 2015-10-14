@@ -5,10 +5,11 @@
 </body>
 
 <template name = "layout">
-    {{> header}}
+    {{> Template.dynamic template=top}}
+    {{> Template.dynamic template=main}}
     <div class="container">
         <div class="row">
-          {{> yield}}
+          <!-- {{> yield}} -->
           {{> sidebar}}
         </div>
     </div>
