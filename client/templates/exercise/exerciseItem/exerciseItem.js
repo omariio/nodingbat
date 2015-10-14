@@ -10,6 +10,10 @@ Template.exerciseItem.helpers({
   },
   item: function(){
     return getExercise();
+  },
+  exercises: function() {
+    console.log(FlowRouter.current().params.name);
+  	return Exercises.find({name: FlowRouter.current().params.name});
   }
 });
 
@@ -61,7 +65,7 @@ var enclose = function(functionString){
 }
 
 var getExercise = function(){
-  return Exercises.findOne({name: Router.current().params._name})
+  return Exercises.findOne({name: FlowRouter.current().params.name})
 }
 
 var session_set = function(){
