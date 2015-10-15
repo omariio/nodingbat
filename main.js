@@ -2,8 +2,14 @@ if (Meteor.isClient) {
 Meteor.subscribe('exercises');
 Meteor.subscribe('allUserData');
 
-Accounts.ui.config({
-	passwordSignupFields: "USERNAME_ONLY",
+AccountsTemplates.configure({
+    defaultTemplate: 'myCustomFullPageAtForm',
+    defaultLayout: 'layout',
+    defaultLayoutRegions: {
+        top: 'top',
+        main: 'main'
+    },
+    defaultContentRegion: 'main'
 });
 
 Template.layout.helpers({
