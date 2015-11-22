@@ -76,7 +76,6 @@ var run = function(self){
 
     if(output == userOutput){
       var currentDiv = $("div.colors:nth-child("+(index + 1)+")").css("background-color", "green");
-      console.log(currentDiv.html);
 
       solutionIndex++;
       currentDiv.html(self.name+self.inputs[index]+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-smile-o'></i> "+ userOutput );

@@ -15,7 +15,6 @@ accounts-password
 sacha:spin
 autopublish
 natestrauser:animate-css
-ian:accounts-ui-bootstrap-3
 coffeescript
 standard-minifiers
 meteor-base
@@ -32,3 +31,7 @@ spacebars
 check
 kadira:flow-router
 kadira:blaze-layout
+useraccounts:flow-routing
+useraccounts:core
+accounts-google
+useraccounts:materialize

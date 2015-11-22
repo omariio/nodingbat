@@ -1,3 +1,17 @@
+#footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  height: 70px;
+}
+
+#footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+
+
 .BAT{
   background-image: url(bat_run_v1.gif);
 }
