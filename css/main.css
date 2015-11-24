@@ -1,3 +1,11 @@
+input, textarea {
+  color: #e6e6e6;
+}
+
+body{
+  position: relative !important;
+}
+
 #footer {
   position: absolute;
   bottom: 20px;

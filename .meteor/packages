@@ -8,7 +8,6 @@ insecure
 mizzao:sharejs-codemirror
 perak:codemirror
 jquery
-twbs:bootstrap
 fourseven:scss
 fortawesome:fontawesome
 accounts-password
@@ -35,3 +34,4 @@ useraccounts:flow-routing
 useraccounts:core
 accounts-google
 useraccounts:materialize
+materialize:materialize
