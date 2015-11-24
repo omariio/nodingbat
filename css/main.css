@@ -1,3 +1,11 @@
+.btn{
+  text-transform: lowercase;
+}
+
+nav {
+  background-color: rgba(70, 69, 69, 0.28);
+}
+
 input, textarea {
   color: #e6e6e6;
 }

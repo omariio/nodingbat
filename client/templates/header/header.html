@@ -1,11 +1,62 @@
 <template name="header">
-  <header>
-    <div class="header">
-      <ul class="nav nav-pills pull-right navbar-right">
-        <li><h4></h4></li>
-        <li><a href="/profile/{{username}}"><i class="fa fa-folder-o fa-2x"></i></a></li>
-      </ul>
+  <!-- <a href="#" class="brand-logo right"><img src="/noding_bat_v2.png" alt="<3"></a> -->
+  <!-- <nav>
+     <div class="nav-wrapper">
+
+       <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li>{{> atNavButton}}</li>
+         <li><a href="/" class= "waves-effect waves-small btn">Home</a></li>
+         <li><a href="/profile/{{username}}" class="waves-effect waves-light"><i class="material-icons">person_pin</i></a></li>
+         <li><a href="/{{section}}" class="waves-effect waves-light btn">Exercises</a></li>
+       </ul>
+     </div>
+   </nav> -->
+   <nav>
+   <div class="navbar-fixed">
+           <div class="nav-wrapper container">
+               <a href="/" class="brand-logo">&nbsp;Noding Bat</a>
+               <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+               <ul class="right hide-on-med-and-down">
+                   <li><a href="#modalLogin" class="modal-trigger"><i class="mdi-action-perm-identity"></i></a></li>
+                   <!-- <li><a href="#"><i class="mdi-navigation-refresh"></i></a></li> -->
+                   <li>{{> atNavButton}}</li>
+                   <li><a href="/profile/{{username}}"><i class="mdi-navigation-more-vert"></i></a></li>
+               </ul>
+           </div>
     </div>
-    <a href="/"><img src="/noding_bat_v2.png" alt="<3"></a>
-  </header>
+  </nav>
+
+  <!--login modal-->
+  <div id="modalLogin" class="modal">
+      <div class="modal-content">
+          <h2 class="center-align">Login</h2>
+          <div class="center-align">
+              <div class="divider"></div>
+              <form class="col s12">
+                  <div class="row center-align">
+                      <div class="input-field col m10 offset-m1 blue-text">
+                          <i class="mdi-action-account-circle prefix"></i>
+                          <input id="icon_prefix" type="text" class="validate">
+                          <label for="icon_prefix">Username || email</label>
+                      </div>
+                      <div class="input-field col m10 offset-m1 blue-text ">
+                          <i class="mdi-action-lock-open prefix"></i>
+                          <input id="icon_password" type="password" class="validate">
+                          <label for="icon_password">Password</label>
+                      </div>
+                      <div class="input-field col m10 offset-m1 blue-text">
+                          <input type="checkbox" class="blue-text" id="filled-in-box" checked="checked">
+                          <label for="filled-in-box">Remember me next time</label>
+                      </div>
+                  </div>
+              </form>
+              <div class="divider"></div>
+              <p>
+                  <a href="#" class="btn btn-flat white modal-close">Cancel</a> &nbsp;
+                  <a href="#" class="waves-effect waves-blue blue btn btn-flat modal-action modal-close">Login</a>
+              </p>
+          </div>
+    </div>
+  </div>
+
 </template>
