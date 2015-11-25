@@ -1,20 +1,20 @@
 <template name="exerciseList">
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 animated slideInLeft" id="spoogScroll">
-     {{#each exercises}}
-     <nav>
-       <div class= "nav-wrapper">
-       <div class= "col s12">
-         <a href="/{{section}}">{{section}}</a>
-         <a href="/{{name}}" class="active">{{name}}</a>
-         <a href="/{{section}}/{{name}}" class="discuss btn ">Start</a>
-       </div>
-       </div>
-     </nav>
-     {{/each}}
-   </div>
+  <div class="container">
+    <div class="row">
+      <div class="animated slideInLeft" id="spoogScroll">
+       {{#each exercises}}
+       <nav>
+         <div class= "nav-wrapper">
+         <div class= "col s12">
+           <a href="/" class="breadcrumb">Home</a>
+           <a href="/{{section}}" class="breadcrumb">{{section}}</a>
+           <a href="/{{section}}/{{name}}" class="active breadcrumb">{{name}}</a>
+           <a href="/{{section}}/{{name}}" class="breadcrumb">Start</a>
+         </div>
+         </div>
+       </nav>
+       {{/each}}
+     </div>
+    </div>
   </div>
-</div>
 </template>

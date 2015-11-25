@@ -1,3 +1,7 @@
+.breadcrumb{
+  background-color: rgba(70, 69, 69, 0.28) !important;
+}
+
 .btn{
   text-transform: lowercase;
 }
@@ -41,10 +45,6 @@ body{
 }
 #footFix{
   padding-bottom: 30px;
-}
-
-.breadcrumb{
-  background-color: rgba(70, 69, 69, 0.28);
 }
 
 #spoogScroll{

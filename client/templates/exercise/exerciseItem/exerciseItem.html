@@ -7,11 +7,11 @@
             <div class="col s10">
                   <nav>
                     <div class= "nav-wrapper">
-                    <div class= "col s12">
-                      <a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
-                      <a href="/{{section}}">{{section}}</a>
-                      <a href="/{{name}}" class="active">{{name}}</a>
-                    </div>
+                      <div class="container">
+                        <a href="/" class="breadcrumb">Home</a>
+                        <a href="/{{section}}" class="breadcrumb">{{section}}</a>
+                        <a href="/{{section}}/{{name}}" class="active breadcrumb">{{name}}</a>
+                      </div>
                     </div>
                   </nav>
                 <div id="code-mirror">

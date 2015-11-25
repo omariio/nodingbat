@@ -1,25 +1,21 @@
 <template name = "exerciseSection">
-    {{> Template.dynamic template=top}}
-    {{> well}}
-<div class="container">
-  <div class="row">
-      <div class="col-md-8" id="spoogScroll">
-      {{#each exercises}}
-        <h4>
-          <ol class="breadcrumb">
-            <li>
-              <a href="/{{section}}">{{section}}</a>
-            </li>
-            <li>
-              <a href="/{{section}}/{{name}}">{{name}}</a>
-            </li>
-            <li>
-              <a href="/{{section}}/{{name}}" class="discuss btn btn-default">Start</a>
-            </li>
-          </ol>
-        </h4>
-      {{/each}}
+{{> Template.dynamic template=top}}
+  <div class="container">
+    <div class="row">
+      <div class="animated slideInLeft" id="spoogScroll">
+       {{#each exercises}}
+       <nav>
+         <div class= "nav-wrapper">
+         <div class= "col s12">
+           <a href="/" class="breadcrumb">Home</a>
+           <a href="/{{section}}" class="breadcrumb">{{section}}</a>
+           <a href="/{{name}}" class="active breadcrumb">{{name}}</a>
+           <a href="/{{section}}/{{name}}" class="breadcrumb">Start</a>
+         </div>
+         </div>
+       </nav>
+       {{/each}}
+     </div>
     </div>
   </div>
-</div>
 </template>
