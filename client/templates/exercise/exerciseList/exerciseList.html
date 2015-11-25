@@ -4,7 +4,18 @@
   <div class="row">
     <div class="col-md-8 animated slideInLeft" id="spoogScroll">
      {{#each exercises}}
-        <h4>
+     <nav>
+       <div class= "nav-wrapper">
+       <div class= "col s12">      
+         <a href="/{{section}}">{{section}}</a>
+         <a href="/{{name}}" class="active">{{name}}</a>
+         <a href="/{{section}}/{{name}}" class="discuss btn ">Start</a>
+       </div>
+       </div>
+     </nav>
+
+
+        <!-- <h4>
           <ol class="breadcrumb">
             <li><a href="/{{section}}">{{section}}</a></li>
             <li><a href="/{{section}}/{{name}}">{{name}}</a></li>
@@ -12,7 +23,7 @@
             	  <a href="/{{section}}/{{name}}" class="discuss btn ">Start</a>
         		</li>
           </ol>
-        </h4>
+        </h4> -->
      {{/each}}
    </div>
   </div>
