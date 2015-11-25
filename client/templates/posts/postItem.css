@@ -1,0 +1,53 @@
+#modal {
+  color: #000;
+}
+
+#modal1 h2 {
+  color: #000;
+  font-weight: 600;
+  margin-bottom: 0;
+  display: inline;
+}
+
+#modal1 .btn-floating {
+  float: right;
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#textarea1 {
+  color: #000;
+}
+
+#comment-area {
+  margin: 0 auto;
+  height:150px;
+  width:80%;
+  border: 1pt solid #ddd;
+}
+
+#comment-area:hover {
+  border-width: 3pt;
+}
+
+.add-comment {
+  text-align: center;
+  color: #ddd;
+}
+
+.add-comment:hover  {
+
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+}
+
+.comment-entry {
+  min-height:200px;
+  padding:35px;
+
+
+}

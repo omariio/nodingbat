@@ -35,3 +35,4 @@ useraccounts:core
 accounts-google
 useraccounts:materialize
 materialize:materialize
+skeleton:skeleton

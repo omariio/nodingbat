@@ -27,6 +27,14 @@ Meteor.publish("allUserData", function() {
           if(! _.find(Meteor.user().bats, function(bat){ return bat == name; }))
             Meteor.users.update({_id:Meteor.user()._id}, {$push:{"bats": name}});
 
+        },
+        addComment: function(comment, user, exerciseName) {
+          var messageObject = {
+            textArea: comment,
+            user: user,
+            exerciseName: exerciseName
+          }
+          Comments.insert(messageObject);
         }
       })
     });

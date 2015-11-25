@@ -2,6 +2,10 @@
   background-color: rgba(70, 69, 69, 0.28) !important;
 }
 
+a {
+  color: #fff !important;
+}
+
 .btn{
   text-transform: lowercase;
 }
