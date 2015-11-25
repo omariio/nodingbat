@@ -7,7 +7,11 @@ nav {
 }
 
 input, textarea {
-  color: #e6e6e6;
+  color: #FFF;
+}
+
+h6{
+  color: #FFF;
 }
 
 body{
@@ -94,17 +98,6 @@ footer {
 
 .colors{
   padding: 0px 20px 0px 20px;
-}
-
-
-#side-bar{
-  position: fixed;
-  margin: 115px 0 0 0;
-  right: 1%;
-  /*z-index: 1000;*/
-  /*margin: auto;*/
-  top: 1%;
-
 }
 
 .cm-s-sublime-text-like.CodeMirror {

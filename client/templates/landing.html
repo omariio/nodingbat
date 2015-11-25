@@ -1,15 +1,16 @@
-<template name = "well">
-  <div style="right:0px;">
-    <div class="col-md-4 animated slideInRight" id="side-bar">
-        <div class="well">
+<template name = "landing">
+  <div class="container">
+    <div class="row">
+    <div class="animated slideInRight">
+        <div class="well row">
             <h4>Welcome.</h4>
             <p>Each exercise is a javascript
             version from the wonderful <a href="http://codingbat.com/">Coding Bat
             </a>.</p>
             <div class="panel panel-primary"></div>
         </div>
-        <div class="">
-          <div class="well">
+        <div class="container">
+          <div class="well row">
             <h4 align="">Exercises</h4>
             <div id="exerciseContainer">
               {{#each exerciseLink}}
@@ -40,5 +41,6 @@
           </form>
         </div>
       </div>
+  </div>
   </div>
 </template>
