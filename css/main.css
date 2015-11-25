@@ -3,7 +3,7 @@
 }
 
 nav {
-  background-color: rgba(70, 69, 69, 0.28);
+  background-color: rgba(70, 69, 69, 0.28) !important;
 }
 
 input, textarea {
@@ -12,6 +12,7 @@ input, textarea {
 
 body{
   position: relative !important;
+  background-color: #303030 !important;
 }
 
 #footer {

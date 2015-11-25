@@ -6,33 +6,6 @@ i.fa-circle-thin{
   font-size:10px;
 }
 
-a#exColor:hover{
-
-}
-
-ol.breadcrumb{
-  -moz-transition: all .5s linear;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
-
-  background-color: #242424;
-}
-
-ol.breadcrumb:hover{
-  -moz-transition: all .5s linear;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
-
-  color: #92e7f7;
-  box-shadow: 0px 0px 10px;
-}
-
-ol.breadcrumb:active{
-  -moz-transition: all .5s linear;
-  -webkit-transition: all .5s linear;
-  transition: all .5s linear;
-}
-
 .slide-right{
   -moz-transition: all .5s linear;
   -webkit-transition: all .5s linear;
@@ -88,12 +61,12 @@ justify-content: center;
   overflow-y: scroll;
 
 }
-.well{}
+.well{color: #FFF !important;}
 #inputBox{
   display: flex;
   flex-direction: row;
+  color: #FFF;
 }
-
 .chatContainer{
   height:400px;
 }
