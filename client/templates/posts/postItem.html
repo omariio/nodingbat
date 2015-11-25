@@ -12,13 +12,23 @@
           </div>
    </div>
  </nav>
-  <h1>Help Forum for {{exerciseName}}</h1>
-  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Comment</a>
-  {{#each posts}}
+ <div class="container">
+   <div class="row">
+    <h1>Help Forum for {{exerciseName}}</h1>
+   </div>
+ </div>
+  <a style="display:none;" class="waves-effect waves-light btn modal-trigger" href="#modal1">Comment</a>
+  {{#each getComments}}
     <div class="container comment-entry">
       <div class="row">
-        <h4>{{_id}}</h4>
         <h4>{{exerciseName}}</h4>
+        {{#with user}}
+          <div class="user_meta">
+            <h5>{{username}}</h5>
+            <h5>{{bats.length}}</h5>
+          </div>
+        {{/with}}
+        <p>{{textArea}}</p>
         <!-- <a href="#modal1"><div class="btn btn-default modal-trigger" ></div></a> -->
         <!-- <button data-target="modal1" class="btn modal-trigger" id="commentBtn">Comment</button> -->
       </div>
