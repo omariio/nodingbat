@@ -29,3 +29,6 @@ Template.layout.helpers({
 	}
 });
 }
+if (Meteor.isServer) {
+console.log('(ಠ益ಠ) ʟᴇᴛꜱ ɢᴇᴛ ɴᴏᴅɪɴɢ! (ﾉಥ益ಥ）ﾉ﻿ ┻━┻ !!!!!!!!!');
+}

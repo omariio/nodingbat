@@ -11,6 +11,10 @@ Template.postItem.helpers({
   },
   currentUser: function() {
     return Meteor.user();
+  },
+  getComments: function() {
+    var routeName = FlowRouter.current().params.name;
+    return Comments.find({exerciseName: routeName});
   }
 });
 

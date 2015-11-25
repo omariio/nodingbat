@@ -18,6 +18,10 @@ input, textarea {
   color: #FFF;
 }
 
+input[type="text"] {
+
+}
+
 h6{
   color: #FFF;
 }
@@ -52,8 +56,8 @@ body{
 }
 
 #spoogScroll{
-  overflow: scroll;
-  height: 476px;
+/*   overflow: scroll;
+height: 476px; */
 }
 #ol-flex{
   display: flex;
@@ -64,7 +68,7 @@ body{
   align-self: flex-end;
 }
 body{
-  position: fixed;
+  /* position: fixed; */
 }
 
 .pull-right{
@@ -176,4 +180,9 @@ div.CodeMirror span.cm-matchhighlight.CodeMirror-searching.CodeMirror-selectedte
 .cm-s-sublime-text-like.CodeMirror .CodeMirror-activeline,
 .cm-s-sublime-text-like.CodeMirror.CodeMirror-focused .CodeMirror-activeline .CodeMirror-gutter-elt {
   background: rgba(255, 255, 255, .1);
+}
+
+.at-input .fa {
+  float: right;
+  color: #008000;
 }

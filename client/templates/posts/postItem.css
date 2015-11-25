@@ -16,6 +16,12 @@
   transform: rotate(-45deg);
 }
 
+#modal1 a#submit {
+position: absolute;
+right: 100px;
+top: 160px;
+}
+
 #textarea1 {
   color: #000;
 }
@@ -48,6 +54,11 @@
 .comment-entry {
   min-height:200px;
   padding:35px;
+}
 
-
+.user_meta {
+  display: flex;
+}
+.user_meta h5 {
+  padding-right: 10px;
 }
