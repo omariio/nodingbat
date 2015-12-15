@@ -6,11 +6,12 @@ Template.profile.helpers({
     return user.username;
   },
   usersBats: function(){
+    var allExercises = Exercises.find().fetch();
     var user = Meteor.user();
     return Meteor.user().bats;
   },
   batDiff: function(){
-    var allExercises = Exercises.find().fetch();
+    // var allExercises = Exercises.find().fetch();
     var usersBats = Meteor.user().bats;
 
     var arrayDiff = _.difference(allExercises, usersBats);
