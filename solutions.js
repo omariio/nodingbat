@@ -804,12 +804,13 @@ solutions.last2 = function(str){
 // Java > Warm-up2 > array123
 // Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere. 
 solutions.array123 = function(nums){
-	for (x=0; x <= nums.length-2; x++){
-		if(nums[x] == 1 && nums[x+1] == 2 && nums[x+2] == 3){
-			return true;
-		}
-		return false;
-	}
+	return !!(nums.join("").match(/123/g));
+	// for (x=0; x <= nums.length-2; x++){
+	// 	if(nums[x] == 1 && nums[x+1] == 2 && nums[x+2] == 3){
+	// 		return true;
+	// 	}
+	// 	return false;
+	
 }
 // console.log(solutions.array123([1,2,3]));
 // console.log(solutions.array123([1,1,2,3,1]));
@@ -948,18 +949,20 @@ solutions.stringYak = function(str){
 // followed by the value plus 5, followed by the value minus 1. Additionally the 271 
 // counts even if the "1" differs by 2 or less from the correct value.
 solutions.has271 = function(nums){
-	for (x=0; x < nums.length-1; x++){
-		val = nums[x];
-		if(nums.charAt[x+1] == (val + 5) && Math.abs(nums.charAt[i+2] - (val-1)) <= 2){
-			return true;
-		}
-	}
-	return false;
+	// for (x=0; x < nums.length-1; x++){
+	// 	val = nums[x];
+	// 	if(nums.charAt[x+1] == (val + 5) && Math.abs(nums.charAt[i+2] - (val-1)) <= 2){
+	// 		return true;
+	// 	}
+	// }
+	// return false;
+
+	return !!(nums.join("").match(/271/g));
 }
-// console.log(solutions.has271(2,7,1));
-// console.log(solutions.has271(1,2,7,1));
-// console.log(solutions.has271(1,2,8,1));
-// console.log(solutions.has271(2,7,1));
+console.log(solutions.has271([2,7,1]));
+console.log(solutions.has271([1,2,7,1]));
+console.log(solutions.has271([1,2,8,1]));
+console.log(solutions.has271([2,7,1]));
 
 
 
