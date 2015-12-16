@@ -838,6 +838,56 @@ Exercises.insert({
   ],
   "setup": setup.arrayCount9
   });
+  Exercises.insert({
+  "section": "warm-up2",
+  "name": "stringMatch",
+  "inputs": [
+    "('xxcaazz', 'xxbaaz')",
+    "('abc', 'abc')",
+    "('abc', 'axc')",
+    "('hello', 'he')",
+    "('he', 'hello')",
+    "('', 'hello')",
+    "('aabbccdd', 'abbbxxd')",
+    "('aaxxaaxx', 'iaxxai')",
+    "('iaxxai', 'aaxxaaxx')"
+  ],
+  "setup": setup.stringMatch
+  });
+  Exercises.insert({
+  "section": "warm-up2",
+  "name": "stringYak",
+  "inputs": [
+    "('yakpak')",
+    "('pakyak')",
+    "('yak123ya')",
+    "('yak')",
+    "('yakxxxyak')",
+    "('xxcaazz', 'hiyakHi')",
+    "(xxxyakyyyakzzz')"
+  ],
+  "setup": setup.stringYak
+  });
+  Exercises.insert({
+  "section": "warm-up2",
+  "name": "has271",
+  "inputs": [
+    "([1,2,7,1])",
+    "([1,2,8,1])",
+    "([2,7,1])",
+    "([3,8,2])",
+    "([2,7,3])",
+    "([2,7,4])",
+    "([2,7,-1])",
+    "([2,7,-2])",
+    "([4,5,3,8,0])",
+    "([2,7,5,10,4])",
+    "([2,7,-2,4,9,3])",
+    "([2,7,5,10,1])",
+    "([2,7,-2,10,2])"
+  ],
+  "setup": setup.has271
+  });
 }
 
 

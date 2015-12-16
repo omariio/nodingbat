@@ -904,6 +904,67 @@ solutions.arrayCount9 = function(nums){
 // console.log(solutions.arrayCount9([1,9,9]));
 // console.log(solutions.arrayCount9([1,9,9,3,9]));
 
+// Warm-Up2 > stringMatch
+// Given 2 strings, a and b, return the number of the positions where they contain
+// the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", 
+// "aa", and "az" substrings appear in the same place in both strings.
+solutions.stringMatch = function(a,b){
+	len = Math.min(a.length, b.length);
+	count = 0;
+	for(x=0; x<len-1; x++){
+		aSub = a.substring(x, x+2);
+		bSub = b.substring(x, x+2);
+		if ( aSub == bSub){
+			count++;
+		}
+	}
+	return count;
+}
+// console.log(solutions.stringMatch('xxcaazz', 'xxbaaz'));
+// console.log(solutions.stringMatch('abc', 'abc'));
+// console.log(solutions.stringMatch('abc', 'axc'));
+
+// Warm-Up2 > stringYak
+// Suppose the string "yak" is unlucky. Given a string, return a version where all 
+// the "yak" are removed, but the "a" can be any char. The "yak" strings will not overlap.
+solutions.stringYak = function(str){
+	result = "";
+	for(x=0; x<str.length; x++){
+		if(x+2<str.length && str.charAt(x) == 'y' && str.charAt(x+2) == 'k'){
+			x = x + 2;
+		}
+		else {
+			result = result + str.charAt(x);
+		}
+	}
+	return result;
+}
+// console.log(solutions.stringYak('yakpak'));
+// console.log(solutions.stringYak('pakyak'));
+// console.log(solutions.stringYak('yak123ya'));
+
+// Warm-Up2 > has271
+// Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value, 
+// followed by the value plus 5, followed by the value minus 1. Additionally the 271 
+// counts even if the "1" differs by 2 or less from the correct value.
+solutions.has271 = function(nums){
+	for (x=0; x < nums.length-1; x++){
+		val = nums[x];
+		if(nums.charAt[x+1] == (val + 5) && Math.abs(nums.charAt[i+2] - (val-1)) <= 2){
+			return true;
+		}
+	}
+	return false;
+}
+// console.log(solutions.has271(2,7,1));
+// console.log(solutions.has271(1,2,7,1));
+// console.log(solutions.has271(1,2,8,1));
+// console.log(solutions.has271(2,7,1));
+
+
+
+
+
 
 
 
