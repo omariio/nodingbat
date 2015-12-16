@@ -875,6 +875,41 @@ if (frontLen > str.length) {
 // console.log(solutions.frontTimes('Chocolate', 3));
 // console.log(solutions.frontTimes('Abc', 3));
 
+// Java > Warm-Up2 > stringBits
+// Given a string, return a new string made of every other char 
+// starting with the first, so "Hello" yields "Hlo".
+solutions.stringBits = function(str){
+	result = "";
+	for(x=0; x<str.length; x+=2){
+		result = result + str.substring(x, x+1);
+	}
+	return result;
+}
+// console.log(solutions.stringBits('Hello'));
+// console.log(solutions.stringBits('Hi'));
+// console.log(solutions.stringBits('Heeololeo'));
+
+// Warmup-Up2 > arrayCount9
+// Given an array of ints, return the number of 9's in the array.
+solutions.arrayCount9 = function(nums){
+	count = 0;
+	for (x=0; x<nums.length; x++){
+		if(nums[x] == 9){
+			count++
+		}
+	}
+	return count
+}
+// console.log(solutions.arrayCount9([1,2,9]));
+// console.log(solutions.arrayCount9([1,9,9]));
+// console.log(solutions.arrayCount9([1,9,9,3,9]));
+
+
+
+
+
+
+
 
 
 

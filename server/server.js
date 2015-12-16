@@ -807,6 +807,37 @@ Exercises.insert({
   ],
   "setup": setup.frontTimes
   });
+  Exercises.insert({
+  "section": "warm-up2",
+  "name": "stringBits",
+  "inputs": [
+    "('Hello')",
+    "('Hi')",
+    "('Heeololeo')",
+    "('HiHiHi')",
+    "('')",
+    "('Greetings')",
+    "('Chocolate')",
+    "('pi')",
+    "('Hello Kitten')",
+    "('hxaxpxpxy')"
+  ],
+  "setup": setup.stringBits
+  });
+  Exercises.insert({
+  "section": "warm-up2",
+  "name": "arrayCount9",
+  "inputs": [
+    "([1,2,9])",
+    "([1,9,9])",
+    "([1,9,9,3,9])",
+    "([1,2,3])",
+    "([])",
+    "([4,2,4,3,1])",
+    "([9,2,4,3,1])",
+  ],
+  "setup": setup.arrayCount9
+  });
 }
 
 
