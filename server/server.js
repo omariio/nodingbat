@@ -1,3 +1,5 @@
+//IMPORTANT*** changes in here will only happen after you 'meteor reset'
+
 Accounts.onCreateUser(function(options, user) {
   user.bats = [];
   return user;
@@ -739,6 +741,22 @@ Meteor.publish("allUserData", function() {
     "('code', 3)"
   ],
   "setup": setup.stringTimes
-}); //note: changes in here will only happen after you 'meteor reset'
-
+});
+  Exercises.insert({
+  "section": "warm-up2",
+  "name": "doubleX",
+  "inputs": [
+    "('axxbb')",
+    "('axaxax')",
+    "('xxxxx')",
+    "('xaxxx')",
+    "('aaaax')",
+    "('')",
+    "('abc')",
+    "('x')",
+    "('xx')",
+    "('xaxx')"
+  ],
+  "setup": setup.doubleX
+});
 }

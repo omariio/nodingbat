@@ -663,7 +663,7 @@ solutions.theEnd = function(str, front){
 // Java > String-1 > withouEnd2
 // Given a string, return a version without both the first and last char of the
 // string. The string may be any length, including 0.
-solutions.withouEnd2 = function(str){
+solutions.withoutEnd2 = function(str){
 	if(str.length<=1){
 		return "";
 	}
@@ -757,3 +757,25 @@ solutions.stringTimes = function(str, n){
 // console.log(solutions.stringTimes("Hi", 2));
 // console.log(solutions.stringTimes("Hi", 3));
 // console.log(solutions.stringTimes("Hi", 1));
+
+// Java > Warm-up2 > doubleX
+// Given a string, return true if the first instance of "x" in the string is 
+// immediately followed by another "x". 
+solutions.doubleX = function(str){
+	str.toLowerCase();
+	x = str.indexOf('x');
+	if (x == -1){
+		return false;
+	}
+	if (x >= str.length){
+		return false;
+	}
+	return str.substring(x+1, x+2) == "x";
+}
+// console.log(solutions.doubleX("axxbb"));
+// console.log(solutions.doubleX("axaxax"));
+// console.log(solutions.doubleX("xxxxxx"));
+
+
+
+
