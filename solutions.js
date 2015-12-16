@@ -776,9 +776,10 @@ solutions.doubleX = function(str){
 // console.log(solutions.doubleX("axaxax"));
 // console.log(solutions.doubleX("xxxxxx"));
 
-// Java > Warm-up2 > doubleX
-// Given a string, return true if the first instance of "x" in the string is 
-// immediately followed by another "x". 
+// Java > Warm-up2 > last2
+// Given a string, return the count of the number of times that a substring 
+// length 2 appears in the string and also as the last 2 chars of the string, 
+// so "hixxxhi" yields 1 (we won't count the end substring). 
 
 solutions.last2 = function(str){
 	if (str.length < 2){
@@ -799,4 +800,81 @@ solutions.last2 = function(str){
 // console.log(solutions.last2('xaxxaxaxx'));
 // console.log(solutions.last2('axxxaaxx'));
 // console.log(solutions.last2('xxaxxaxxaxx'));
+
+// Java > Warm-up2 > array123
+// Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere. 
+solutions.array123 = function(nums){
+	for (x=0; x <= nums.length-2; x++){
+		if(nums[x] == 1 && nums[x+1] == 2 && nums[x+2] == 3){
+			return true;
+		}
+		return false;
+	}
+}
+// console.log(solutions.array123([1,2,3]));
+// console.log(solutions.array123([1,1,2,3,1]));
+// console.log(solutions.array123([1,1,2,4,1]));
+// console.log(solutions.array123([1,1,2,1,1,2,3]));
+
+// Java > Warm-up2 > altPairs
+// Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... 
+// so "kittens" yields "kien".
+solutions.altPairs = function(str){
+	result="";
+	for(x=0; x<str.length; x+=4){
+		end = x + 2;
+		if(end > str.length){
+			end = str.length
+		}
+		result = result + str.substring(x, end);
+	}
+	return result;
+}
+// console.log(solutions.altPairs('kitten'));
+// console.log(solutions.altPairs('Chocolate'));
+// console.log(solutions.altPairs('CodingHorror'));
+
+// Java > Warm-up2 > noTriples
+// Given an array of ints, we'll say that a triple is a value appearing 
+// 3 times in a row in the array. Return true if the array does not contain 
+// any triples. 
+solutions.noTriples = function(nums){
+	temp = true;
+	for(x=0; x<nums.length-1; x++){
+		first = nums[x];
+		if (nums[x+1] == first && nums[x+2] == first){
+			temp = false;
+		}
+		return temp;
+	}
+}
+// console.log("test noTriples");
+// console.log(solutions.noTriples([1,1,2,2,1]));
+// console.log(solutions.noTriples([1,1,2,2,2,1]));
+// console.log(solutions.noTriples([1,1,1,2,2,2,1]));
+
+// Java > Warm-up2 > frontTimes
+// Given a string and a non-negative int n, we'll say that the front of the string is
+// the first 3 chars, or whatever is there if the string is less than length 3.
+// Return n copies of the front;
+
+solutions.frontTimes = function(str, n){
+	frontLen = 3;
+if (frontLen > str.length) {
+	frontLen = str.length;
+}
+	front = str.substring(0, frontLen);
+
+	result = "";
+	for (x=0; x<n; x++){
+		result = result + front
+	}
+	return result;
+}
+// console.log(solutions.frontTimes('Chocolate', 2));
+// console.log(solutions.frontTimes('Chocolate', 3));
+// console.log(solutions.frontTimes('Abc', 3));
+
+
+
 

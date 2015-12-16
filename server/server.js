@@ -778,4 +778,47 @@ Meteor.publish("allUserData", function() {
   ],
   "setup": setup.last2
 });
+Exercises.insert({
+  "section": "warm-up2",
+  "name": "altPairs",
+  "inputs": [
+    "('kitten')",
+    "('Chocolate')",
+    "('CodingHorror')",
+    "('yak')",
+    "('ya')",
+    "('y')",
+    "('')",
+    "('ThisThatTheOther')"
+  ],
+  "setup": setup.altPairs
+});
+  Exercises.insert({
+  "section": "warm-up2",
+  "name": "frontTimes",
+  "inputs": [
+    "('Chocolate', 2)",
+    "('Chocolate', 3)",
+    "('Abc', 3)",
+    "('Ab', 4)",
+    "('A', 4)",
+    "('',4)",
+    "('Abc', 0)"
+  ],
+  "setup": setup.frontTimes
+  });
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
