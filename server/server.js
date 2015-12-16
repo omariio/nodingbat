@@ -759,4 +759,23 @@ Meteor.publish("allUserData", function() {
   ],
   "setup": setup.doubleX
 });
+    Exercises.insert({
+  "section": "warm-up2",
+  "name": "last2",
+  "inputs": [
+    "('hixxhi')",
+    "('xaxxaxaxx')",
+    "('axxaaxx')",
+    "('xxaxxaxxaxx')",
+    "('xaxaxaa')",
+    "('xxxx')",
+    "('13121312')",
+    "('11212')",
+    "('13121311')",
+    "('hi')",
+    "('h')",
+    "('')"
+  ],
+  "setup": setup.last2
+});
 }

@@ -776,6 +776,27 @@ solutions.doubleX = function(str){
 // console.log(solutions.doubleX("axaxax"));
 // console.log(solutions.doubleX("xxxxxx"));
 
+// Java > Warm-up2 > doubleX
+// Given a string, return true if the first instance of "x" in the string is 
+// immediately followed by another "x". 
 
+solutions.last2 = function(str){
+	if (str.length < 2){
+		return 0;
+	}
+	end = str.substring(str.length-2);
+	count = 0;
 
+	for(i=0; i<str.length-2; i++){
+		sub = str.substring(i, i+2);
+		if(sub == end){
+			count++;
+		}
+	}
+	return count;
+}
+// console.log(solutions.last2('hixxhi'));
+// console.log(solutions.last2('xaxxaxaxx'));
+// console.log(solutions.last2('axxxaaxx'));
+// console.log(solutions.last2('xxaxxaxxaxx'));
 
