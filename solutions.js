@@ -24,11 +24,13 @@ solutions.diff21 = function(n) {
 // Given an int n, return True if it is within 10 of 100 or 200.
 // Note: abs(num) computes the absolute value of a number.
 solutions.nearHundred = function(n) {
-  if (Math.abs(100) - n <= 10 || Math.abs(200) - n <= 10){
-    return true;
-  } else {
-    return false;
-  }
+	y = function(m,z){
+		return Math.abs(m-z);
+	}
+	a = y(100,n);
+	b = y(200,n);
+	j = (a <= n || b <= 10);
+		return c;
 }
 // console.log(nearHundred(93));
 // console.log(nearHundred(90));
@@ -949,22 +951,40 @@ solutions.stringYak = function(str){
 // followed by the value plus 5, followed by the value minus 1. Additionally the 271 
 // counts even if the "1" differs by 2 or less from the correct value.
 solutions.has271 = function(nums){
-	// for (x=0; x < nums.length-1; x++){
-	// 	val = nums[x];
-	// 	if(nums.charAt[x+1] == (val + 5) && Math.abs(nums.charAt[i+2] - (val-1)) <= 2){
-	// 		return true;
-	// 	}
-	// }
-	// return false;
-
 	return !!(nums.join("").match(/271/g));
 }
-console.log(solutions.has271([2,7,1]));
-console.log(solutions.has271([1,2,7,1]));
-console.log(solutions.has271([1,2,8,1]));
-console.log(solutions.has271([2,7,1]));
+// console.log(solutions.has271([2,7,1]));
+// console.log(solutions.has271([1,2,7,1]));
+// console.log(solutions.has271([1,2,8,1]));
+// console.log(solutions.has271([2,7,1]));
 
-
+// Warm-Up2 > countXX
+// Count the number of "xx" in the given string. We'll say that overlapping is allowed,
+// so "xxx" contains 2 "xx".
+solutions.countXX = function(str){
+	count = 0;
+	for(x=0; x<str.length-1; x++){
+		if(str.substring(x, x+1).match('xx')){
+			count++
+		}
+	}
+	return count++;
+}
+// console.log(solutions.countXX('abcxx'));
+// console.log(solutions.countXX('xxx'));
+// console.log(solutions.countXX('xxxx'));
+// Warm-Up2 > stringSplosion
+// Given a non-empty string like "Code" return a string like "CCoCodCode". 
+solutions.stringSplosion = function(str){
+	result = "";
+		for(x=0; x<str.length-1; x++){
+			result = result + str.substring(0, x+1);
+		}
+		return result;
+}
+console.log(solutions.stringSplosion("Code"));
+console.log(solutions.stringSplosion("abc"));
+console.log(solutions.stringSplosion("aab"));
 
 
 
