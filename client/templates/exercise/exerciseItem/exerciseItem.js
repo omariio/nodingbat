@@ -19,6 +19,17 @@ Template.exerciseItem.helpers({
 
 Template.exerciseItem.rendered = function () {
   session_set();
+  // Trying to make the window resizable
+  // $(function() {
+  //   var editor = CodeMirror.fromTextArea(document.getElementById("code-mirror"), {
+  //     lineNumbers = true,
+  //   });
+  //   $('.CodeMirror').resizable({
+  //     resize: function() {
+  //       editor.setSize($(this).width(), $(this).height());
+  //     }
+  //   });
+  // });
 }
 
 Template.exerciseItem.events({

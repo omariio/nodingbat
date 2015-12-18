@@ -1,33 +1,29 @@
 <template name="exerciseItem">
   {{> Template.dynamic template=top}}
   {{#with item}}
-    <div class="container">
-        <div class="row">
-            <!--1st column-->
-            <div class="col s10">
-                  <nav>
-                    <div class= "nav-wrapper">
-                      <div class="container">
-                        <a href="/" class="breadcrumb">Home</a>
-                        <a href="/{{section}}" class="breadcrumb">{{section}}</a>
-                        <a href="/{{section}}/{{name}}" class="active breadcrumb">{{name}}</a>
-                      </div>
-                    </div>
-                  </nav>
-                <div id="code-mirror">
-                  {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
-                </div>
-                <button type="submit" class="btn btn-primary" id="run">
-                  Run
-                </button>
-                <button type="submit" class="btn">
-                  <a href="/forum/{{section}}/{{name}}">Help Forum</a>
-                </button>
-                <hr>
-            </div>
-            <!-- 2nd column -->
-            <div class="col s2">{{> sidebar}}</div>
-        </div>
+    <!--1st column-->
+    <nav>
+      <div class= "nav-wrapper">
+        <a href="/" class="breadcrumb">Home</a>
+        <a href="/{{section}}" class="breadcrumb">{{section}}</a>
+        <a href="/{{section}}/{{name}}" class="active breadcrumb">{{name}}</a>
+      </div>
+    </nav>
+  <div class="row">
+    <div class="col s10">
+      <div id="code-mirror">
+        {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+      </div>
+      <button type="submit" class="btn btn-primary" id="run">
+        Run
+      </button>
+      <button type="submit" class="btn">
+        <a href="/forum/{{section}}/{{name}}">Help Forum</a>
+      </button>
+      <hr>
     </div>
+    <!-- 2nd column -->
+    <div class="col s2">{{> sidebar}}</div>
+  </div>
   {{/with}}
 </template>

@@ -1,3 +1,10 @@
+.panel{
+  background-color: #242424;
+  opacity: 0.7;
+  height: 500px;
+}
+
+
 h1, h2, h3, h4, h5, h6, p {
   color: #fff;
 }
@@ -33,6 +40,7 @@ a.discuss:hover{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-basis: auto;
 }
 
 #headerContainer{

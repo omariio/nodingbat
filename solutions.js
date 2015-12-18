@@ -761,8 +761,8 @@ solutions.stringTimes = function(str, n){
 // console.log(solutions.stringTimes("Hi", 1));
 
 // Java > Warm-up2 > doubleX
-// Given a string, return true if the first instance of "x" in the string is 
-// immediately followed by another "x". 
+// Given a string, return true if the first instance of "x" in the string is
+// immediately followed by another "x".
 solutions.doubleX = function(str){
 	str.toLowerCase();
 	x = str.indexOf('x');
@@ -779,9 +779,9 @@ solutions.doubleX = function(str){
 // console.log(solutions.doubleX("xxxxxx"));
 
 // Java > Warm-up2 > last2
-// Given a string, return the count of the number of times that a substring 
-// length 2 appears in the string and also as the last 2 chars of the string, 
-// so "hixxxhi" yields 1 (we won't count the end substring). 
+// Given a string, return the count of the number of times that a substring
+// length 2 appears in the string and also as the last 2 chars of the string,
+// so "hixxxhi" yields 1 (we won't count the end substring).
 
 solutions.last2 = function(str){
 	if (str.length < 2){
@@ -804,7 +804,7 @@ solutions.last2 = function(str){
 // console.log(solutions.last2('xxaxxaxxaxx'));
 
 // Java > Warm-up2 > array123
-// Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere. 
+// Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
 solutions.array123 = function(nums){
 	return !!(nums.join("").match(/123/g));
 	// for (x=0; x <= nums.length-2; x++){
@@ -812,7 +812,7 @@ solutions.array123 = function(nums){
 	// 		return true;
 	// 	}
 	// 	return false;
-	
+
 }
 // console.log(solutions.array123([1,2,3]));
 // console.log(solutions.array123([1,1,2,3,1]));
@@ -820,7 +820,7 @@ solutions.array123 = function(nums){
 // console.log(solutions.array123([1,1,2,1,1,2,3]));
 
 // Java > Warm-up2 > altPairs
-// Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ... 
+// Given a string, return a string made of the chars at indexes 0,1, 4,5, 8,9 ...
 // so "kittens" yields "kien".
 solutions.altPairs = function(str){
 	result="";
@@ -838,9 +838,9 @@ solutions.altPairs = function(str){
 // console.log(solutions.altPairs('CodingHorror'));
 
 // Java > Warm-up2 > noTriples
-// Given an array of ints, we'll say that a triple is a value appearing 
-// 3 times in a row in the array. Return true if the array does not contain 
-// any triples. 
+// Given an array of ints, we'll say that a triple is a value appearing
+// 3 times in a row in the array. Return true if the array does not contain
+// any triples.
 solutions.noTriples = function(nums){
 	temp = true;
 	for(x=0; x<nums.length-1; x++){
@@ -879,7 +879,7 @@ if (frontLen > str.length) {
 // console.log(solutions.frontTimes('Abc', 3));
 
 // Java > Warm-Up2 > stringBits
-// Given a string, return a new string made of every other char 
+// Given a string, return a new string made of every other char
 // starting with the first, so "Hello" yields "Hlo".
 solutions.stringBits = function(str){
 	result = "";
@@ -909,7 +909,7 @@ solutions.arrayCount9 = function(nums){
 
 // Warm-Up2 > stringMatch
 // Given 2 strings, a and b, return the number of the positions where they contain
-// the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx", 
+// the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx",
 // "aa", and "az" substrings appear in the same place in both strings.
 solutions.stringMatch = function(a,b){
 	len = Math.min(a.length, b.length);
@@ -928,7 +928,7 @@ solutions.stringMatch = function(a,b){
 // console.log(solutions.stringMatch('abc', 'axc'));
 
 // Warm-Up2 > stringYak
-// Suppose the string "yak" is unlucky. Given a string, return a version where all 
+// Suppose the string "yak" is unlucky. Given a string, return a version where all
 // the "yak" are removed, but the "a" can be any char. The "yak" strings will not overlap.
 solutions.stringYak = function(str){
 	result = "";
@@ -947,8 +947,8 @@ solutions.stringYak = function(str){
 // console.log(solutions.stringYak('yak123ya'));
 
 // Warm-Up2 > has271
-// Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value, 
-// followed by the value plus 5, followed by the value minus 1. Additionally the 271 
+// Given an array of ints, return true if it contains a 2, 7, 1 pattern -- a value,
+// followed by the value plus 5, followed by the value minus 1. Additionally the 271
 // counts even if the "1" differs by 2 or less from the correct value.
 solutions.has271 = function(nums){
 	return !!(nums.join("").match(/271/g));
@@ -974,7 +974,7 @@ solutions.countXX = function(str){
 // console.log(solutions.countXX('xxx'));
 // console.log(solutions.countXX('xxxx'));
 // Warm-Up2 > stringSplosion
-// Given a non-empty string like "Code" return a string like "CCoCodCode". 
+// Given a non-empty string like "Code" return a string like "CCoCodCode".
 solutions.stringSplosion = function(str){
 	result = "";
 		for(x=0; x<str.length-1; x++){
@@ -982,18 +982,39 @@ solutions.stringSplosion = function(str){
 		}
 		return result;
 }
-console.log(solutions.stringSplosion("Code"));
-console.log(solutions.stringSplosion("abc"));
-console.log(solutions.stringSplosion("aab"));
+// console.log(solutions.stringSplosion("Code"));
+// console.log(solutions.stringSplosion("abc"));
+// console.log(solutions.stringSplosion("aab"));
 
+// Warm-Up2 > arrayFront9
+// Given an array of ints, return true if one of the first 4 elements in
+// the array is a 9. The array length may be less than 4
+solutions.arrayFront9 = function(nums){
+	for(x=0; x<4; x++){
+		if(nums[x] == 9){
+			return true;
+		}
+	}
+	return false;
+}
+// console.log(solutions.arrayFront9([1,2,9,3,4]));
+// console.log(solutions.arrayFront9([1,2,3,4,9]));
+// console.log(solutions.arrayFront9([1,2,3,4,5]));
 
-
-
-
-
-
-
-
-
-
-
+// Warm-Up2 > stringX
+// Given a string, return a version where all the "x" have been removed.
+// Except an 'x' at the very start or end should not be removed.
+solutions.stringX = function(str){
+	result = "";
+	console.log(str.match(/"x"/g));
+	for(x=1; x<str.length-1; x++){
+		if(str.charAt(x) == "x"){
+			str.charAt(x) == "";
+		}
+		result += str.charAt(x);
+	}
+	return str.substring(0) + result + str.substring(str.length-1);
+}
+console.log(solutions.stringX("xxHixix"));
+console.log(solutions.stringX("abxxxcd"));
+console.log(solutions.stringX("xabxxxcdx"));

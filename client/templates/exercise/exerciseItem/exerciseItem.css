@@ -8,9 +8,18 @@
   height: 100%; /* Or whatever */
   margin: auto;  /* Magic! */
 }
+.col s10 {
+   /* This will be twice as big as the small item. */
+   -webkit-flex: 2 0 0;
+   flex: 2 0 0;
+}
+.col s2 {
+   -webkit-flex: 1 0 0;
+   flex: 1 0 0;
+}
 
 .flex-container {
-  padding: 0;
+  padding: 0 0 2em 2em;
   margin: 0;
   list-style: none;
   display: -webkit-box;
@@ -18,7 +27,8 @@
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
+  -webkit-flex-flow: column wrap;
+  flex-flow: column wrap;
   justify-content: space-around;
 }
 

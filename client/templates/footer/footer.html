@@ -2,7 +2,26 @@
   <div id="footer">
     <div class="container">
       <hr>
-      <h6>Made with love by Omari</h6>
+        <div class="well" id="buttonContainer">
+        <form action="http://www.nodingbat.com/">
+            <button class="btn btn-success BAT" href="http://www.nodingbat.com/">Subscribe</button>
+        </form>
+        <form action="https://github.com/omariio/nodingbat">
+            <button class="btn btn-default" href="https://github.com/MichaelFlops/noding-bat-meteor">Github&nbsp;<i class="fa fa-github"></i></button>
+        </form>
+          <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+            <input type="hidden" name="cmd" value="_donations">
+            <input type="hidden" name="business" value="michaelwbetts@hotmail.com">
+            <input type="hidden" name="lc" value="US">
+            <input type="hidden" name="item_name" value="Dinner Talk Audio Fiction">
+            <input type="hidden" name="no_note" value="0">
+            <input type="hidden" name="currency_code" value="USD">
+            <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+            <button class="btn btn-danger">Donate&nbsp;<i class="fa fa-heart"></i></button>
+          </form>
+        </div>
+              <h6>Made with love by Omari</h6>
+      </div>
     </div>
-  </div>
+
 </template>
