@@ -889,6 +889,22 @@ Exercises.insert({
   "setup": setup.has271
   });
   Exercises.insert({
+  "section": "warm-up2",
+  "name": "countXX",
+  "inputs": [
+    "('abcxx')",
+    "('xxx')",
+    "('xxxx')",
+    "('abc')",
+    "('Hello There')",
+    "('Hexxo Thxxe')",
+    "('')",
+    "('Kittens')",
+    "('Kittensxxx')"
+  ],
+  "setup": setup.countXX
+  });
+  Exercises.insert({
     "section": "warm-up2",
     "name": "arrayFront9",
     "inputs": [

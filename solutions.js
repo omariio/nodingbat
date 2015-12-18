@@ -963,9 +963,11 @@ solutions.has271 = function(nums){
 // so "xxx" contains 2 "xx".
 solutions.countXX = function(str){
 	count = 0;
-	for(x=0; x<str.length-1; x++){
-		if(str.substring(x, x+1).match('xx')){
-			count++
+	for(x=0; x<str.length; x++){
+		if(str.charAt(x) == "x"){
+			if(str.charAt(x+1) == "x"){
+				count++
+			}
 		}
 	}
 	return count++;
@@ -973,6 +975,7 @@ solutions.countXX = function(str){
 // console.log(solutions.countXX('abcxx'));
 // console.log(solutions.countXX('xxx'));
 // console.log(solutions.countXX('xxxx'));
+
 // Warm-Up2 > stringSplosion
 // Given a non-empty string like "Code" return a string like "CCoCodCode".
 solutions.stringSplosion = function(str){
