@@ -1006,15 +1006,15 @@ solutions.arrayFront9 = function(nums){
 // Except an 'x' at the very start or end should not be removed.
 solutions.stringX = function(str){
 	result = "";
-	console.log(str.match(/"x"/g));
-	for(x=1; x<str.length-1; x++){
-		if(str.charAt(x) == "x"){
-			str.charAt(x) == "";
+	front = str.substring(0,1);
+	end = str.substring(str.length-1);
+	for(i=1; i<str.length-1; i++){
+		if(str.charAt(i) !== "x"){
+			result += str.charAt(i);
 		}
-		result += str.charAt(x);
 	}
-	return str.substring(0) + result + str.substring(str.length-1);
+	return front + result + end;
 }
-console.log(solutions.stringX("xxHixix"));
-console.log(solutions.stringX("abxxxcd"));
-console.log(solutions.stringX("xabxxxcdx"));
+// console.log(solutions.stringX("xxHxix"));
+// console.log(solutions.stringX("abxxxcd"));
+// console.log(solutions.stringX("xabxxxcdx"));

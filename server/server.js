@@ -907,4 +907,19 @@ Exercises.insert({
     ],
     "setup": setup.arrayFront9
     });
+  Exercises.insert({
+    "section": "warm-up2",
+    "name": "stringX",
+    "inputs": [
+    "('xxHxix')",
+    "('abxxxcd')",
+    "('xabxxxcdx')",
+    "('xKittenx')",
+    "('Hello')",
+    "('xx')",
+    "('x')",
+    "('')"
+    ],
+    "setup": setup.stringX
+    });
 }
