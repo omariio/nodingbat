@@ -793,6 +793,25 @@ Exercises.insert({
   ],
   "setup": setup.altPairs
 });
+
+Exercises.insert({
+  "section": "warm-up2",
+  "name": "noTriples",
+  "inputs": [
+      "([1,1,2,2,1])",
+      "([1,1,2,2,2,1])",
+      "([1,1,2,2,2,1])",
+      "([1,2,1])",
+      "([1,1,1])",
+      "([1,1])",
+      "([1])",
+      "([1])",
+      "([])"
+  ],
+  "setup": setup.noTriples
+});
+
+
   Exercises.insert({
   "section": "warm-up2",
   "name": "frontTimes",

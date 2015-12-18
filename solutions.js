@@ -841,16 +841,15 @@ solutions.altPairs = function(str){
 // 3 times in a row in the array. Return true if the array does not contain
 // any triples.
 solutions.noTriples = function(nums){
-	temp = true;
-	for(x=0; x<nums.length-1; x++){
+	for(x=0; x<nums.length-2; x++){
 		first = nums[x];
-		if (nums[x+1] == first && nums[x+2] == first){
-			temp = false;
+		if(first == nums[x+1]){
+			if(first == nums[x+2]){
+				return false;
+			}
 		}
-		return temp;
-	}
+	} return true;
 }
-// console.log("test noTriples");
 // console.log(solutions.noTriples([1,1,2,2,1]));
 // console.log(solutions.noTriples([1,1,2,2,2,1]));
 // console.log(solutions.noTriples([1,1,1,2,2,2,1]));
