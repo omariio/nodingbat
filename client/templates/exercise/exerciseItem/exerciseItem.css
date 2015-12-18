@@ -16,10 +16,10 @@
 .col s2 {
    -webkit-flex: 1 0 0;
    flex: 1 0 0;
+   background-color: white;
 }
 
 .flex-container {
-  padding: 0 0 2em 2em;
   margin: 0;
   list-style: none;
   display: -webkit-box;

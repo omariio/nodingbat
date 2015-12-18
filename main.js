@@ -1,4 +1,9 @@
 if (Meteor.isClient) {
+  $(function(){
+    $('.button-collapse').sideNav();
+    $('.parallax').parallax();
+  }); // end of document ready
+
 Meteor.subscribe('exercises');
 Meteor.subscribe('allUserData');
 

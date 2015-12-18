@@ -1,8 +1,8 @@
-.panel{
+/*.panel{
   background-color: #242424;
   opacity: 0.7;
   height: 500px;
-}
+}*/
 
 
 h1, h2, h3, h4, h5, h6, p {
@@ -83,6 +83,10 @@ justify-content: center;
   display: flex;
   flex-direction: row;
   color: #FFF;
+  background-color: #242424;
+  opacity: 0.7;
+  height: 500px;
+
 }
 .chatContainer{
   height:400px;
