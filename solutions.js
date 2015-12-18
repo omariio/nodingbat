@@ -1018,3 +1018,22 @@ solutions.stringX = function(str){
 // console.log(solutions.stringX("xxHxix"));
 // console.log(solutions.stringX("abxxxcd"));
 // console.log(solutions.stringX("xabxxxcdx"));
+
+// Warmup-Up2 > array667
+// Given an array of ints, return the number of times that two 6's
+// are next to each other in the array. Also count instances where
+// the second "6" is actually a 7.
+solutions.array667 = function(nums){
+	count = 0;
+	for(x=0; x<nums.length; x++){
+		if (nums[x] == 6){
+			if (nums[x+1] == 6 || nums[x+1] == 7) {
+				count++;
+			}
+		}
+	} return count;
+}
+// console.log(solutions.array667([6,6,2]));
+// console.log(solutions.array667([6,6,2,6]));
+// console.log(solutions.array667([6,7,2,6]));
+// console.log(solutions.array667([6,6,2,7,6,7]));
