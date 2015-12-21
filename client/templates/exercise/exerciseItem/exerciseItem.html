@@ -2,28 +2,39 @@
   {{> Template.dynamic template=top}}
   {{#with item}}
     <!--1st column-->
-    <nav>
-      <div class= "nav-wrapper">
-        <a href="/" class="breadcrumb">Home</a>
-        <a href="/{{section}}" class="breadcrumb">{{section}}</a>
-        <a href="/{{section}}/{{name}}" class="active breadcrumb">{{name}}</a>
-      </div>
-    </nav>
-  <div class="row">
-    <div class="col s10">
-      <div id="code-mirror">
-        {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
-      </div>
-      <button type="submit" class="btn btn-primary" id="run">
-        Run
-      </button>
-      <button type="submit" class="btn">
-        <a href="/forum/{{section}}/{{name}}">Help Forum</a>
-      </button>
-      <hr>
-    </div>
+<div class="container">
+  <div class="col s10">
+      <nav>
+        <ol class="breadcrumb">
+          <li><a href="/">Home</a></li>
+          <li><a href="/exercises/{{section}}">{{section}}</a></li>
+          <li class="active"><a href="/{{section}}/{{name}}">{{name}}</a></li>
+        </ol>
+      </nav>
+        <div id="code-mirror">
+          {{> CodeMirror id="some-id" name="someName" options=editorOptions code=editorCode reactiveVar="varName"}}
+        </div>
+        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default" id="hint">Hint</button>
+          </div>
+          <div class="btn-group" role="group button">
+            <a href="/forum/{{section}}/{{name}}"><button type="button" class="btn btn-default">Help Forum</button></a>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default" id="run">Run</button>
+          </div>
+        </div>
+        <div class="panel panel-primary"></div>
+          <ul class="pager">
+            <li class="previous disabled"><a href="#">&larr; Older</a></li>
+            <li class="next"><a href="#">Newer &rarr;</a></li>
+          </ul>
+  </div>
     <!-- 2nd column -->
-    <div class="col s2">{{> sidebar}}</div>
+    <div class="col s2">
+      {{> sidebar}}
+    </div>
   </div>
   {{/with}}
 </template>

@@ -1,6 +1,51 @@
 <template name="sidebar" class="sidebar">
 {{#with exercise}}
   <div class="well">
+    <table class="table table-striped table-hover ">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Input</th>
+          <th>Output</th>
+          <th>Expected Output</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="info">
+          <td>3</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="success">
+          <td>4</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="danger">
+          <td>5</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="warning">
+          <td>6</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+        <tr class="active">
+          <td>7</td>
+          <td>Column content</td>
+          <td>Column content</td>
+          <td>Column content</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
     <div class="panel">
         <div id="solution"></div>
         <div id="userSolution"></div>
@@ -37,7 +82,7 @@
     </div>
 </div>
 <!-- Blog Categories Well -->
-<div class="">
+<div class="absolute">
   <div class="">
     {{#if success}}
         <div style="text-align: center;" class="animated bounce">

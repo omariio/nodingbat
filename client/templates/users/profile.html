@@ -1,31 +1,30 @@
 <template name="profile">
-  {{> Template.dynamic template=top}}
+{{> Template.dynamic template=top}}
   {{#if currentUser}}
 	<div class="container">
-		<div class="row" id="">
+		<div class="row">
     {{#with user}}
-    	<div class="container">
-          <h2>{{currentUser}}</h2>
-          <h4>Problems completed: <b>{{bats.length}}</b></h4>
-			</div>
-        <div class="exercise-container">
-          {{#each usersBats}}
-          <div class="usersBats">
-            <a href="/{{section}}/{{name}}">{{name}}</a>
-          </div>
-          {{/each}}
+      <h3><img src="/bat-1.png" alt="" height="50px;" width="50px;"/>{{currentUser}}</h3>
+      <h4>Problems completed: <b>{{bats.length}}</b></h4>
+      {{#each usersBats}}
+      <div class="usersBats">
+        <a href="/{{section}}/{{name}}">{{name}}</a>
+      </div>
+      {{/each}}
 
-          {{#each batDiff}}
-            <div class="batDiff">
-              <a href="/{{section}}/{{name}}" style="color:grey !important;">{{name}}</a>
-            </div>
-          {{/each}}
-			   </div>
+      {{#each batDiff}}
+        <div class="batDiff">
+          <a href="/{{section}}/{{name}}" style="color:grey !important;">{{name}}</a>
+        </div>
+      {{/each}}
+
     {{/with}}
   </div>
 </div>
+
 {{else}}
 
   <h1 align="center">Not Logged in</h1>
-{{/if}}
+  {{/if}}
+{{> Template.dynamic template=footer}}
 </template>

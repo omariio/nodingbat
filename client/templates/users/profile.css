@@ -1,3 +1,7 @@
+.at-form{
+  text-align: center;
+}
+
 #usersform{
   overflow-y: scroll;
   height: 530px;
@@ -10,15 +14,6 @@
 .batDiff{
   color: grey;
   text-decoration: none;
-
-}
-
-.exercise-container{
-  display: flex;
-  flow-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  font-size: 32px;
 }
 
 a {

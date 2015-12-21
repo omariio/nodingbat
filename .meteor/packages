@@ -33,6 +33,7 @@ kadira:blaze-layout
 useraccounts:flow-routing
 useraccounts:core
 accounts-google
-useraccounts:materialize
-materialize:materialize
 skeleton:skeleton
+twbs:bootstrap
+useraccounts:bootstrap
+accounts-facebook

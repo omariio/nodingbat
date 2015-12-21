@@ -1,29 +1,19 @@
 <template name="header">
-  <!-- <a href="#" class="brand-logo right"><img src="/noding_bat_v2.png" alt="<3"></a> -->
-  <!-- <nav>
-     <div class="nav-wrapper">
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Noding Bat</a>
+      </div>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#modalLogin" class="modal-trigger"><i class="mdi-action-perm-identity"></i></a></li>
+          <li><a href="/exercises">All Exercises</a></li>
+          <li><a href="/forum">Forum</a></li>
+          <li><a href="/profile/{{username}}">Dashboard</a></li>
+          <li class="waves-purple">{{> atNavButton}}</li>
 
-       <ul id="nav-mobile" class="right hide-on-med-and-down">
-         <li>{{> atNavButton}}</li>
-         <li><a href="/" class= "waves-effect waves-small btn">Home</a></li>
-         <li><a href="/profile/{{username}}" class="waves-effect waves-light"><i class="material-icons">person_pin</i></a></li>
-         <li><a href="/{{section}}" class="waves-effect waves-light btn">Exercises</a></li>
-       </ul>
-     </div>
-   </nav> -->
-   <nav>
-   <div class="navbar-fixed">
-           <div class="nav-wrapper container">
-               <a href="/" class="brand-logo">&nbsp;Noding Bat</a>
-               <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-               <ul class="right hide-on-med-and-down">
-                   <li><a href="#modalLogin" class="modal-trigger"><i class="mdi-action-perm-identity"></i></a></li>
-                   <li><a href="/{{postPage}}">Forum</a></li>
-                   <li><a href="/profile/{{username}}">Dashboard</a></li>
-                   <li class="waves-purple">{{> atNavButton}}</li>
-               </ul>
-           </div>
-    </div>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+
   </nav>
 
   <!--login modal-->

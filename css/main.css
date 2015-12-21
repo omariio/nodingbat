@@ -1,3 +1,20 @@
+th{
+  font-weight: lighter;
+}
+
+
+form {
+  margin-bottom: 0 !important;
+}
+
+table a:not(.btn){
+  text-decoration: none !important;
+}
+
+li {
+  margin-bottom: 0 !important;
+}
+
 .parallax-container {
   min-height: 380px;
   line-height: 0;
@@ -25,13 +42,9 @@
   }
 }
 
-a {
+/*a {
   color: #fff !important;
-}
-
-.btn{
-  text-transform: lowercase;
-}
+}*/
 
 nav {
   background-color: rgba(70, 69, 69, 0.28) !important;
@@ -41,10 +54,6 @@ input, textarea {
   color: #FFF;
 }
 
-input[type="text"] {
-
-}
-
 h6{
   color: #FFF;
 }
@@ -52,10 +61,9 @@ h6{
 body{
   position: relative !important;
   background-color: #303030 !important;
-  font-size: 1em;
 }
 
-#footer {
+/*#footer {
   position: absolute;
   bottom: 20px;
   width: 100%;
@@ -66,6 +74,8 @@ body{
   padding-right: 5px;
   padding-left: 5px;
 }
+  */
+
 
 
 
@@ -75,9 +85,7 @@ body{
 .footer{
   height: 83px;
 }
-#footFix{
-  padding-bottom: 30px;
-}
+
 
 #ol-flex{
   display: flex;
@@ -109,6 +117,15 @@ body{
 #testCase{
   display: flex;
   flex-direction: column;
+}
+.inputFunction{
+
+}
+.ouputClient{
+
+}
+.expectedOutput{
+
 }
 
 #color{

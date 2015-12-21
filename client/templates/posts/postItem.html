@@ -1,20 +1,8 @@
 <template name="postItem">
-  <nav>
-  <div class="navbar-fixed">
-          <div class="nav-wrapper container">
-              <a href="/" class="brand-logo">&nbsp;Noding Bat</a>
-              <a href="/" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-              <ul class="right hide-on-med-and-down">
-                  <li><a href="/{{postPage}}">Forum</a></li>
-                  <li><a href="/profile/{{username}}">Dashboard</a></li>
-                  <li class="waves-purple">{{> atNavButton}}</li>
-              </ul>
-          </div>
-   </div>
- </nav>
+  {{> Template.dynamic template=top}}
  <div class="container">
    <div class="row">
-    <h1>Help Forum for {{exerciseName}}</h1>
+    <h5>Help Forum for {{exerciseName}}</h5>
    </div>
  </div>
   <a style="display:none;" class="waves-effect waves-light btn modal-trigger" href="#modal1">Comment</a>
