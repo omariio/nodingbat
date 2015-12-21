@@ -86,14 +86,14 @@ var run = function(self){
     var output = eval("solutions." + self.name + self.inputs[index]);
 
     if(output == userOutput){
-      var currentDiv = $("div.colors:nth-child("+(index + 1)+")").css("background-color", "#00b359");
+      var currentDiv = $("tr.colors:nth-child("+(index + 1)+")").css("background-color", "#00b359");
 
       solutionIndex++;
-      currentDiv.html(self.name+self.inputs[index]+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-smile-o'></i> "+ userOutput );
+      currentDiv.html("<td>"+self.name+self.inputs[index]+"</td><i class='fa fa-long-arrow-right'></i><td>"+ output +"</td><i class='fa fa-smile-o'></i><td>"+ userOutput + "</td>" );
     }
     else{
-      var currentDiv = $("div.colors:nth-child("+(index+1)+")").css("background-color", "#ff704d");;
-      currentDiv.html(self.name+self.inputs[index]+"<i class='fa fa-long-arrow-right'></i>"+ output +" <i class='fa fa-frown-o'></i> "+ userOutput );
+      var currentDiv = $("tr.colors:nth-child("+(index+1)+")").css("background-color", "#ff704d");
+      currentDiv.html("<td>"+self.name+self.inputs[index]+"</td><i class='fa fa-long-arrow-right'></i><td>"+ output +"</td><i class='fa fa-smile-o'></i><td>"+ userOutput + "</td>" );
       abiShake();
     }
   }
