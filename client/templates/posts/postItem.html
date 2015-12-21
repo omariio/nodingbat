@@ -2,110 +2,30 @@
   {{> Template.dynamic template=top}}
  <div class="container">
    <div class="row">
-    <h5>Help Forum for {{exerciseName}}</h5>
-   </div>
- </div>
-  <a style="display:none;" class="waves-effect waves-light btn modal-trigger" href="#modal1">Comment</a>
-  {{#each getComments}}
-    <div class="container comment-entry">
-      <div class="row">
-        <h4>{{exerciseName}}</h4>
-        {{#with user}}
-          <div class="user_meta">
-            <h5>{{username}}</h5>
-            <h5>{{bats.length}}</h5>
-          </div>
-        {{/with}}
-        <p>{{textArea}}</p>
-        <!-- <a href="#modal1"><div class="btn btn-default modal-trigger" ></div></a> -->
-        <!-- <button data-target="modal1" class="btn modal-trigger" id="commentBtn">Comment</button> -->
-      </div>
-    </div>
-  {{/each}}
-<div class="flex-container">
-    <div id="comment-area">
-      <div class="container">
-        <div class="row">
-          <h1 class="add-comment">Enter Comment</h1>
-        </div>
-      </div>
-    </div>
+     <h3>Help forum for {{exerciseName}}</h3>
+     <blockquote class="blockquote">
+       <p>I don't get booleans</p>
+       <small>Michael Betts <cite title="Source Title">nov 17, 2015</cite></small>
+     </blockquote>
+     <blockquote class="blockquote">
+       <p>The answer is you want to return !weekday or vacation</p>
+       <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+     </blockquote>
+
+     {{#each getComments}}
+       <div class="container comment-entry">
+         <div class="row">
+           <h4>{{exerciseName}}</h4>
+           {{#with user}}
+             <div class="user_meta">
+               <h5>{{username}}</h5>
+               <h5>{{bats.length}}</h5>
+             </div>
+           {{/with}}
+           <p>{{textArea}}</p>
+         </div>
+       </div>
+     {{/each}}
   </div>
-
-  <!-- Modal Trigger -->
-  <!-- <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a> -->
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal bottom-sheet">
-    <div class="modal-content">
-      <h2>What you gotta say?</h2>
-      <a class="close btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
-      <br>
-      <span>Be kind considerate when dealing with indivduals online.</span>
-      <div class="row">
-        <form class="col s12">
-          <div class="row">
-            <div class="input-field col s12">
-              <textarea id="textarea1" class="materialize-textarea"></textarea>
-              <label for="textarea1">Enter Comment Brother</label>
-            </div>
-          </div>
-        </form>
-      </div>
-
-      <a class="waves-effect waves-light btn" id="submit">Submit</a>
-    </div>
-    <div class="modal-footer">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
-    </div>
   </div>
-
-
-  <!-- <div class="post">
-     <a href="#" class="upvote btn btn-default {{upvotedClass}}">⬆</a>
-    <div class="post-content">
-      <h3><a href="{{url}}">{{title}}</a><span>{{domain}}</span></h3>
-      <p>
-         {{pluralize votes "Vote"}},
-        submitted by {{author}},
-        <a href="{{pathFor 'postPage'}}">{{pluralize commentsCount "comment"}}</a>
-        {{#if ownPost}}<a href="{{pathFor 'postEdit'}}">Edit</a>{{/if}}
-
-        POST POST POST HELP HERE
-      </p>
-    </div>
-    <a href="{{pathFor 'postPage'}}" class="discuss btn btn-default">Discuss</a>
-  </div> -->
-  <!-- <div id="modalLogin__modal" class="modal">
-      <div class="modal-content">
-          <h2 class="center-align">Login</h2>
-          <div class="center-align">
-              <div class="divider"></div>
-              <form class="col s12">
-                  <div class="row center-align">
-                      <div class="input-field col m10 offset-m1 blue-text">
-                          <i class="mdi-action-account-circle prefix"></i>
-                          <input id="icon_prefix" type="text" class="validate">
-                          <label for="icon_prefix">Username || email</label>
-                      </div>
-                      <div class="input-field col m10 offset-m1 blue-text ">
-                          <i class="mdi-action-lock-open prefix"></i>
-                          <input id="icon_password" type="password" class="validate">
-                          <label for="icon_password">Password</label>
-                      </div>
-                      <div class="input-field col m10 offset-m1 blue-text">
-                          <input type="checkbox" class="blue-text" id="filled-in-box" checked="checked">
-                          <label for="filled-in-box">Remember me next time</label>
-                      </div>
-                  </div>
-              </form>
-              <div class="divider"></div>
-              <p>
-                  <a href="#" class="btn btn-flat white modal-close">Cancel</a> &nbsp;
-                  <a href="#" class="waves-effect waves-blue blue btn btn-flat modal-action modal-close">Login</a>
-              </p>
-          </div>
-    </div>
-  </div> -->
-
 </template>
