@@ -1,40 +1,51 @@
 <template name = "landing">
 <div class="animated fadeIn">
   <div class="container">
-    <div class="jumbotron">
-      <h3>Welcome Human.</h3>
-      <p>Each exercise is a javascript
-      version from the wonderful <a href="http://codingbat.com/">Coding Bat
-      </a>.</p>
-      <p class="success">If you would like to suggest / build exercises for the site, either post in the forums fork on github <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></p>
-      <p>
-        Noding bat (like Coding bat) doesn't hold your hand as much as other coding schools. These exercises are recommended for people whom are at least familar with the concepts and are looking to practice getting better at problem solving and syntax. Even if you don't like to think so, there is a good ammount of muscle memory in programming. Just like how a jazz musician can play scales, a good programmer should be able to easily think about foundational concepts such as string and array manipulation, loops, etc.
-      </p>
-      <p>
-        Don't be too discouraged if you get stuck. Post on the forum asking for help, but I purposefully didn't write in the ability to include code snippets. Don't give people the answers, you aren't helping them. If it's syntax, tell them that - we don't want a bunch of people copying and pasting.
-      </p>
-      <p class="text-info">Remember to go outside</p>
-      <p><a class="btn btn-primary btn-sm">Learn more</a></p>
-    </div>
-    <h2>Emphasis classes</h2>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6"><img src="/batcode-1.jpg" alt="" /></div>
+          <div class="col-md-6">
+            <h2 class="header">Welcome Human.</h2>
+              <p>Each exercise is a javascript
+              version from the wonderful <a href="http://codingbat.com/">Coding Bat
+              </a>.</p>
+              <div class="panel panel-primary"></div>
+              <p class="success">If you would like to suggest / build exercises for the site, either post in the forums fork on github
+              <span class="glyphicon glyphicon-heart" aria-hidden="true"></span></p>
+                <p class="text-info">Remember to go outside</p>
+                <p class="text-danger">Merry Christmas</p>
+                <p class="text-success">Happy New Year</p>
+                <blockquote class="blockquote">
+                  <p>"Do ... or do not. There is no try."</p>
+                  <cite title="Source Title">Yoda</cite>
+                </blockquote>
+          </div>
+        </div>
+      </div>
     <div class="section black">
-        <h2 class="header">Welcome Human.</h2>
-          <p>Each exercise is a javascript
-          version from the wonderful <a href="http://codingbat.com/">Coding Bat
-          </a>.</p>
-          <div class="panel panel-primary"></div>
+      <div class="exerciseContainer">
+      <br>
+      <div class="panel panel-primary"></div>
+      <h2>Practice, practice practice....</h2>
+      <p>
+        Noding bat (like Coding bat) doesn't hold your hand as much as other coding schools. These exercises are recommended for people whom are at least familar with the concepts and are looking to practice getting better at problem solving and syntax. Even if you don't like to think so, there is a good amount of muscle memory in programming. Just like how a jazz musician can play scales, a good programmer should be able to easily think about foundational concepts such as string and array manipulation, loops, etc. This is a place you can get quicker.
+      </p>
+      <p>
+        Don't be too discouraged if you get stuck. Post on the forum asking for help, but I purposefully didn't write in the ability to include code snippets. Don't give people the answers, you aren't helping them. If it's syntax, tell them that - we don't want a bunch of people copying and pasting. It'll save you a lot of time in the long game.
+      </p>
+    </div>
     </div>
     <div class="well row">
       <h4 align="">Exercises</h4>
       <div id="exerciseContainer">
         {{#each exerciseLink}}
-           <div class="exerciseName">
-             <a href="/exercises/{{section}}/{{name}}" id="exColor">&nbsp;{{name}}&nbsp;</a>
-           </div>
+         <div class="exerciseName">
+           <a href="/exercises/{{section}}/{{name}}" id="exColor">&nbsp;{{name}}&nbsp;</a>
+         </div>
         {{/each}}
         <br>
     </div>
     </div>
   </div>
-  </div>
+</div>
 </template>
