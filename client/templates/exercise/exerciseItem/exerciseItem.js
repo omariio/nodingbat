@@ -14,22 +14,35 @@ Template.exerciseItem.helpers({
   exercises: function() {
     console.log(FlowRouter.current().params.name);
   	return Exercises.find({name: FlowRouter.current().params.name});
+  },
+  prevURL: function() {
+    return Session.get('prevURL');
+  },
+  nextURL: function() {
+    return Session.get('nextURL');
   }
 });
 
 Template.exerciseItem.rendered = function () {
   session_set();
-  // Trying to make the window resizable
-  // $(function() {
-  //   var editor = CodeMirror.fromTextArea(document.getElementById("code-mirror"), {
-  //     lineNumbers = true,
-  //   });
-  //   $('.CodeMirror').resizable({
-  //     resize: function() {
-  //       editor.setSize($(this).width(), $(this).height());
-  //     }
-  //   });
-  // });
+
+  var allExercises = Exercises.find({}, { fields: {"name":1, "section":1} }).fetch();
+  var exerciseIndex = 0;
+
+  for(i=0; i<allExercises.length; i++) {
+    if( allExercises[i].name == FlowRouter.current().params.name ){
+        exerciseIndex = i;
+    }
+  }
+
+  function queryString(n) {
+    var query = "/exercises/" + allExercises[n].section + "/" + allExercises[n].name;
+    return query;
+  }
+
+  Session.set('prevURL', queryString(exerciseIndex - 1) );
+  Session.set('nextURL', queryString(exerciseIndex + 1) );
+
 }
 
 Template.exerciseItem.events({
@@ -46,6 +59,12 @@ Template.exerciseItem.events({
   },
   'click #help': function(){
     Session.set("postList", this._id);
+  },
+  'click .previous': function(){
+    window.location.assign(Session.get('prevURL'));
+  },
+  'click .next': function(){
+    window.location.assign(Session.get('nextURL'));
   }
 });
 
