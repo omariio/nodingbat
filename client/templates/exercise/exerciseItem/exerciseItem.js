@@ -14,10 +14,33 @@ Template.exerciseItem.helpers({
   exercises: function() {
     console.log(FlowRouter.current().params.name);
   	return Exercises.find({name: FlowRouter.current().params.name});
+  },
+  prevURL: function() {
+   return Session.get('prevURL');
+  },
+  nextURL: function() {
+   return Session.get('nextURL');
   }
 });
 
 Template.exerciseItem.rendered = function () {
+ var allExercises = Exercises.find({}, { fields: {"name":1, "section":1} }).fetch();
+ var exerciseIndex = 0;
+  for(i=0; i<allExercises.length; i++) {
+    if( allExercises[i].name == FlowRouter.current().params.name ){
+        exerciseIndex = i;
+        return;
+    }
+  }
+  function queryString(n) {
+    console.log(n);
+    var query = "/exercises/" + allExercises[n].section + "/" + allExercises[n].name;
+    return query;
+  }
+
+  Session.set('prevURL', queryString(exerciseIndex - 1) );
+  Session.set('nextURL', queryString(exerciseIndex + 1) );
+
   Tracker.autorun(function () {
     session_set();
   });
@@ -37,7 +60,14 @@ Template.exerciseItem.events({
   },
   'click #help': function(){
     Session.set("postList", this._id);
+  },
+  'click .previous': function(){
+   window.location.assign(Session.get('prevURL'));
+  },
+  'click .next': function(){
+   window.location.assign(Session.get('nextURL'));
   }
+
 });
 
 var enclose = function(functionString){
