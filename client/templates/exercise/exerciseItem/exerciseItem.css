@@ -1,3 +1,7 @@
+.forum-btn {
+  border-bottom-right-radius: 0 !important;
+  border-top-right-radius: 0 !important;
+}
 .parent {
   display: flex;
   height: 100%; /* Or whatever */

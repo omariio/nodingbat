@@ -1,31 +1,16 @@
 <template name="postItem">
-  {{> Template.dynamic template=top}}
- <div class="container">
-   <div class="row">
-     <h3>Help forum for {{exerciseName}}</h3>
-     <blockquote class="blockquote">
-       <p>I don't get booleans</p>
-       <small>Michael Betts <cite title="Source Title">nov 17, 2015</cite></small>
+{{> Template.dynamic template=top}}
+<div class="container">
+ <div class="row">
+  <h5>Help forum for {{exerciseName}}</h5>
+   {{#each getComments}}
+   <blockquote class="blockquote">
+     <p>{{body}}</p>
+       <small>{{user}}<cite title="Source Title">{{timestamp}}</cite></small>
      </blockquote>
-     <blockquote class="blockquote">
-       <p>The answer is you want to return !weekday or vacation</p>
-       <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
-     </blockquote>
-
-     {{#each getComments}}
-       <div class="container comment-entry">
-         <div class="row">
-           <h4>{{exerciseName}}</h4>
-           {{#with user}}
-             <div class="user_meta">
-               <h5>{{username}}</h5>
-               <h5>{{bats.length}}</h5>
-             </div>
-           {{/with}}
-           <p>{{textArea}}</p>
-         </div>
-       </div>
-     {{/each}}
-  </div>
-  </div>
+   {{/each}}
+   <textarea class="form-control" rows="3"></textarea>
+   <button type="submit" class="btn btn-default" id="submit">Submit</button>
+ </div>
+</div>
 </template>

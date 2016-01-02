@@ -32,9 +32,10 @@ Meteor.publish("allUserData", function() {
         },
         addComment: function(comment, user, exerciseName) {
           var messageObject = {
-            textArea: comment,
-            user: user,
-            exerciseName: exerciseName
+            body: comment,
+            username: user,
+            exerciseName: exerciseName,
+            timestamp:(new Date()).getTime()
           }
           Comments.insert(messageObject);
         }
