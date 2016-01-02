@@ -19,7 +19,6 @@ standard-minifiers
 meteor-base
 mobile-experience
 mongo
-blaze-html-templates
 session
 tracker
 logging
@@ -37,3 +36,4 @@ skeleton:skeleton
 twbs:bootstrap
 useraccounts:bootstrap
 accounts-facebook
+blaze-html-templates

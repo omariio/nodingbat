@@ -30,7 +30,7 @@ solutions.nearHundred = function(n) {
 	a = y(100,n);
 	b = y(200,n);
 	j = (a <= n || b <= 10);
-		return c;
+		return j;
 }
 // console.log(nearHundred(93));
 // console.log(nearHundred(90));

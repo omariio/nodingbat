@@ -20,7 +20,7 @@ Template.profile.helpers({
   user: function(){
     return Meteor.user();
   },
-  username: function() {
-  	return Meteor.users.findOne();
+  username: function(){
+    return Meteor.user();
   }
 });
