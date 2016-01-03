@@ -23,26 +23,25 @@ Template.exerciseItem.helpers({
   }
 });
 
-Template.exerciseItem.created = function () {
+Meteor.startup(function () {
+  allExercises = Exercises.find({}, { fields: {"name":1, "section":1} }).fetch();
+  for(i=0; i<allExercises.length; i++) {
+    allExercises[i].index = i;
+  }
+});
+
+function queryString(n) {
+  var query = "/exercises/" + allExercises[n].section + "/" + allExercises[n].name;
+  return query;
 }
 
 Template.exerciseItem.rendered = function () {
- // var allExercises = Exercises.find({}, { fields: {"name":1, "section":1} }).fetch();
- // var exerciseIndex = 0;
- //  for(i=0; i<allExercises.length; i++) {
- //    if( allExercises[i].name == FlowRouter.current().params.name ){
- //        exerciseIndex = i;
- //        return;
- //    }
- //  }
- //  function queryString(n) {
- //    console.log(n);
- //    var query = "/exercises/" + allExercises[n].section + "/" + allExercises[n].name;
- //    return query;
- //  }
- //
- //  Session.set('prevURL', queryString(exerciseIndex - 1) );
- //  Session.set('nextURL', queryString(exerciseIndex + 1) );
+  var currentExercise = _.find(allExercises, function(x) {
+    return x.name == FlowRouter.current().params.name;
+  });
+  var currentIndex = currentExercise.index;
+  currentIndex !== 0 ? Session.set('prevURL', queryString(currentIndex - 1)) : Session.set('prevURL', '/');
+  currentIndex !== 58 ? Session.set('nextURL', queryString(currentIndex + 1) ) : Session.set('nextURL', '/');
 
  Tracker.autorun(function(){
    session_set();
