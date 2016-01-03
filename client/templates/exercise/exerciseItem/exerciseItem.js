@@ -43,7 +43,7 @@ Template.exerciseItem.rendered = function () {
  //
  //  Session.set('prevURL', queryString(exerciseIndex - 1) );
  //  Session.set('nextURL', queryString(exerciseIndex + 1) );
- 
+
  Tracker.autorun(function(){
    session_set();
  });

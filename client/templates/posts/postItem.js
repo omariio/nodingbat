@@ -12,9 +12,6 @@ Template.postItem.helpers({
   currentUser: function() {
     return Meteor.user();
   },
-  user: function(){
-    return Meteor.users.findOne().username;
-  },
   getComments: function() {
     var routeName = FlowRouter.current().params.name;
     return Comments.find({exerciseName: routeName}, {sort: {votes: -1}});
@@ -27,7 +24,7 @@ Template.postItem.helpers({
     } else {
       return 'disabled';
     }
-  }  
+  }
 });
 
 Template.postItem.events({

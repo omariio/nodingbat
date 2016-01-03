@@ -1,19 +1,27 @@
 <template name="postItem">
 {{> Template.dynamic template=top}}
 <div class="container">
- <div class="row">
   <h5>Help forum for {{exerciseName}}</h5>
-   {{#each getComments}}
-   <blockquote class="blockquote comment-entry">
-     <p>{{body}}
-    <button class="{{upvotedClass}} btn">↑ {{votes}} votes</button>
-     </p>
-       <small>{{user}}<cite title="Source Title">      {{timestamp}}</cite></small>
-       <!-- <i class="icon-chevron-sign-up {{upvotedClass}}">Up</i> -->
-     </blockquote>
+  {{#each getComments}}
+  <div class="row">
+    <div class="col-xs-1" style="padding:5px;">
+      <img src="/bat-1.svg" alt=""/>
+    </div>
+    <div class="col-xs-9">
+      <blockquote class="blockquote comment-entry">
+        <p>{{body}}</p>
+        <small>{{username.username}}<cite title="Source Title">
+          {{timestamp}}</cite>
+        </small>
+      </blockquote>
+    </div>
+    <div class="col-xs-2">
+      <button class="{{upvotedClass}} btn"><i class="fa fa-arrow-up"></i>
+         {{votes}} votes</button>
+    </div>
+   </div>
    {{/each}}
-   <textarea class="form-control" rows="3"></textarea>
+   <textarea class="form-control" rows="2"></textarea>
    <button type="submit" class="btn btn-default" id="submit">Submit</button>
- </div>
 </div>
 </template>
