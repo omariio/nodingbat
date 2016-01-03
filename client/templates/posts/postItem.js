@@ -17,8 +17,17 @@ Template.postItem.helpers({
   },
   getComments: function() {
     var routeName = FlowRouter.current().params.name;
-    return Comments.find({exerciseName: routeName});
-  }
+    return Comments.find({exerciseName: routeName}, {sort: {votes: -1}});
+  },
+  upvotedClass: function() {
+    var userId = Meteor.userId();
+    // && !_.include(this.upvoters, userId)
+    if (userId) {
+      return 'btn-primary upvotable';
+    } else {
+      return 'disabled';
+    }
+  }  
 });
 
 Template.postItem.events({
@@ -40,6 +49,11 @@ Template.postItem.events({
     var text = $('textarea').val();
     Meteor.call('addComment', text,  Meteor.user(), FlowRouter.current().params.name);
     var text = $('textarea').val('');
+  },
+  'click .upvotable': function(e) {
+    e.preventDefault();
+    console.log(this._id);
+    Meteor.call('upvote', this._id);
   }
 });
 

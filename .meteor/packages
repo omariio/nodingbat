@@ -37,3 +37,4 @@ twbs:bootstrap
 useraccounts:bootstrap
 accounts-facebook
 blaze-html-templates
+momentjs:moment

@@ -35,9 +35,27 @@ Meteor.publish("allUserData", function() {
             body: comment,
             username: user,
             exerciseName: exerciseName,
-            timestamp:(new Date()).getTime()
+            timestamp:moment().format("dddd, MMMM Do YYYY, h:mm:ss a"),
+            upvoters: [],
+            votes: 0
           }
           Comments.insert(messageObject);
+        },
+
+        upvote: function(commentId) {
+          check(this.userId, String);
+          check(commentId, String);
+
+          var affected = Comments.update({
+            _id: commentId,
+            upvoters: {$ne: this.userId}
+          }, {
+            $addToSet: {upvoters: this.userId},
+            $inc: {votes: 1}
+          });
+
+          if (! affected)
+            throw new Meteor.Error('invalid', "You weren't able to upvote that post");
         }
       })
     });

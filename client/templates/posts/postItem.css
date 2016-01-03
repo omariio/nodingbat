@@ -1,0 +1,7 @@
+.disabled {
+  background: #ddd;
+}
+
+.comment-entry button {
+  float: right;
+}

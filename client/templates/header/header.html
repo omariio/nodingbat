@@ -8,7 +8,7 @@
           <li><a href="#modalLogin" class="modal-trigger"><i class="mdi-action-perm-identity"></i></a></li>
           <li><a href="/exercises">All Exercises</a></li>
           <li><a href="/forum">Forum</a></li>
-          <li><a href="/profile/{{username}}">Dashboard</a></li>
+          {{#if currentUser}}<li><a href="/profile/{{username}}">Dashboard</a></li>{{/if}}
           <li class="waves-purple">{{> atNavButton}}</li>
 
         </ul>
