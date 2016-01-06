@@ -1,7 +1,17 @@
+.achieved{
+  color: #FFF !important;
+}
+.notAchieved{
+  color: grey !important;
+}
+
+.portfolio-item {
+    margin-bottom: 25px;
+}
+
 th{
   font-weight: lighter;
 }
-
 
 form {
   margin-bottom: 0 !important;

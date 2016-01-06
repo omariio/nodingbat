@@ -4,19 +4,26 @@
 	<div class="container">
 		<div class="row">
     {{#with user}}
-      <h3><img src="/bat-1.svg" alt="" height="100px;" width="100px;"/>{{currentUser}}</h3>
+      <h3><img src="/bat-1.svg" alt="" height="50px;" width="50px;"/>{{currentUser}}</h3>
       <h4>Problems completed: <b>{{bats.length}}</b></h4>
-      {{#each usersBats}}
+      <!-- {{#each usersBats}}
       <div class="usersBats">
-        <a href="/{{section}}/{{name}}">{{name}}</a>
+        <a href="/{{section}}/{{name}}" class="notAchieved">{{name}}</a>
       </div>
-      {{/each}}
+      {{/each}} -->
 
-      {{#each batDiff}}
-        <div class="batDiff">
-          <a href="/{{section}}/{{name}}" style="color:grey !important;">{{name}}</a>
+      <div class="row">
+        {{#each allBats}}
+        <div class="col-md-3 portfolio-item">
+          <img src="/bat-{{@index}}.svg" alt="" height="50%" width="50%" class="img-responsive"/>
+          <div class="col-md-3">
+              <div class="notAchieved">
+                <a href="/{{section}}/{{name}}" class="notAchieved">{{name}}</a>
+              </div>
+          </div>
         </div>
-      {{/each}}
+        {{/each}}
+      </div>
 
     {{/with}}
   </div>

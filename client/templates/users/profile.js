@@ -2,13 +2,16 @@ BlazeLayout.setRoot('body');
 
 Template.profile.helpers({
   currentUser: function(){
-    var user = Meteor.user();
+    user = Meteor.user();
     return user.username;
   },
   usersBats: function(){
     var allExercises = Exercises.find().fetch();
-    var user = Meteor.user();
+    //var currentDiv = $("div.notAchieved:nth-child()".toggleClass( "notAchieved").html();
     return Meteor.user().bats;
+  },
+  allBats: function(){
+    return Exercises.find();
   },
   batDiff: function(){
     // var allExercises = Exercises.find().fetch();
@@ -24,3 +27,17 @@ Template.profile.helpers({
     return Meteor.user();
   }
 });
+
+Template.profile.rendered = function() {
+  var user = Meteor.user().bats;
+  var domExercises = $('a.notAchieved');
+  for(i=0; i<domExercises.length; i++){
+    var currentEl = $(domExercises[i]);
+    var html = currentEl.html();
+    user.forEach(function(x){
+      if(x == html){
+        $(currentEl).removeClass("notAchieved");
+        }
+    });
+  }
+}
