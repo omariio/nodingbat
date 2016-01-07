@@ -2,6 +2,7 @@
 
 Accounts.onCreateUser(function(options, user) {
   user.bats = [];
+  user.rank = 0;
   return user;
 });
 

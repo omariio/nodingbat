@@ -8,6 +8,7 @@ Template.profile.helpers({
   usersBats: function(){
     var allExercises = Exercises.find().fetch();
     //var currentDiv = $("div.notAchieved:nth-child()".toggleClass( "notAchieved").html();
+    console.log(user.rank);
     return Meteor.user().bats;
   },
   allBats: function(){
@@ -29,13 +30,18 @@ Template.profile.helpers({
 });
 
 Template.profile.rendered = function() {
+  profileRender();
+}
+
+function profileRender() {
   var user = Meteor.user().bats;
   var domExercises = $('a.notAchieved');
   for(i=0; i<domExercises.length; i++){
     var currentEl = $(domExercises[i]);
-    var html = currentEl.html();
+    var text = currentEl.text();
+    var textTrim = $.trim(text);
     user.forEach(function(x){
-      if(x == html){
+      if(x == textTrim){
         $(currentEl).removeClass("notAchieved");
         }
     });

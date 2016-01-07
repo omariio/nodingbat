@@ -1,3 +1,7 @@
+.undone{
+  display: none;
+}
+
 .achieved{
   color: #FFF !important;
 }
