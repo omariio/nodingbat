@@ -2,13 +2,14 @@
 
 Accounts.onCreateUser(function(options, user) {
   user.bats = [];
-  user.rank = 0;
+  user.rank = 1;
   return user;
 });
 
 Meteor.publish("allUserData", function() {
   return Meteor.users.find({}, {fields: {
-    'bats': 1
+    'bats': 1,
+    'rank': 1
   }});
 });
     Meteor.startup(function () {
