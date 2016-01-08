@@ -24,17 +24,9 @@ solutions.diff21 = function(n) {
 // Given an int n, return True if it is within 10 of 100 or 200.
 // Note: abs(num) computes the absolute value of a number.
 solutions.nearHundred = function(n) {
-	y = function(m,z){
-		return Math.abs(m-z);
-	}
-	a = y(100,n);
-	b = y(200,n);
-	j = (a <= n || b <= 10);
-		return j;
-}
-// console.log(nearHundred(93));
-// console.log(nearHundred(90));
-// console.log(nearHundred(89));
+	return ((Math.abs(100 - n) <= 10) ||
+	 (Math.abs(200 - n) <= 10));
+ }
 
 // Java > Warm-up1 > missingChar
 //Given a non-empty string and an int n, return a new string where the char at
