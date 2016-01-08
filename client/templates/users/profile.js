@@ -9,9 +9,8 @@ Template.profile.helpers({
     var user = Meteor.user();
     var batsLen = user.bats.length;
     var newRank = user.rank;
-    newRank = 1;
     if(user.bats.length < 10){
-      newRank =1;
+      newRank =0;
     }
     if((batsLen >= 10) && (batsLen < 25)){
       newRank = 10;

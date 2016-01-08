@@ -23,7 +23,7 @@ function exerciseRender() {
     var html = currentEl.html();
     user.forEach(function(x){
       if(x == html){
-        $(currentEl).removeClass("undone");
+        $(currentEl).removeClass("undone").empty();
         }
     });
   }
