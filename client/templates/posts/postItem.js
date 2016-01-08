@@ -1,5 +1,26 @@
 
 Template.postItem.helpers({
+  currentRank: function(){
+    var user = Meteor.user();
+    var batsLen = user.bats.length;
+    var newRank = user.rank;
+    if(user.bats.length < 10){
+      newRank =0;
+    }
+    if((batsLen >= 10) && (batsLen < 25)){
+      newRank = 10;
+    }
+    if((batsLen >= 25) && (batsLen < 50)){
+      newRank = 25;
+    }
+    if((batsLen >= 50) && (batsLen < 75)){
+      newRank = 50;
+    }
+    if((batsLen >= 75) && (batsLen < 100)){
+      newRank = 100;
+    }
+    return newRank;
+  },
   posts: function() {
     return Posts.find();
   },
@@ -28,20 +49,6 @@ Template.postItem.helpers({
 });
 
 Template.postItem.events({
-  "click #foo": function(event, template){
-
-  },
-  'click #commentBtn': function(){
-
-    // Session_set("modal", true);
-    // Meteor.call(CommentInser())
-  },
-  'click .close': function() {
-    $('#modal1').closeModal();
-  },
-  'click #comment-area': function() {
-    $('#modal1').openModal();
-  },
   'click #submit': function() {
     var text = $('textarea').val();
     Meteor.call('addComment', text,  Meteor.user(), FlowRouter.current().params.name);

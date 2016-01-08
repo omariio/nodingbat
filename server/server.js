@@ -707,7 +707,7 @@ Meteor.publish("allUserData", function() {
   });
   Exercises.insert({
   "section": "string-1",
-  "name": "withouEnd2",
+  "name": "withoutEnd2",
   "inputs": [
     "('Hello')",
     "('abc')",
@@ -717,7 +717,7 @@ Meteor.publish("allUserData", function() {
     "('coldy')",
     "('java code')"
   ],
-  "setup": setup.withouEnd2
+  "setup": setup.withoutEnd2
   });
   Exercises.insert({
   "section": "string-1",

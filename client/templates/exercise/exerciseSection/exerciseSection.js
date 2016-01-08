@@ -1,8 +1,32 @@
 Template.exerciseSection.helpers({
-  exercises: function() {
-  	return Exercises.find({section: FlowRouter.current().params.section});
+  currentUser: function() {
+    user = Meteor.user();
+    return user.username;
   },
-  item: function(){
-    return getExercise();
+  user: function() {
+    return Meteor().user;
+  },
+  exercises: function() {
+
+  	return Exercises.find({section: FlowRouter.current().params.section});
   }
 });
+
+Template.exerciseSection.rendered = function() {
+    //  exerciseRender();
+     console.log(Exercises.find({section: FlowRouter.current().params.section}));
+}
+
+// function exerciseRender() {
+//   var user = Meteor.user().bats;
+//   var domExercises = $('i.undone');
+//   for(i=0; i<domExercises.length; i++){
+//     var currentEl = $(domExercises[i]);
+//     var html = currentEl.html();
+//     user.forEach(function(x){
+//       if(x == html){
+//         $(currentEl).removeClass("undone").empty();
+//         }
+//     });
+//   }
+// }
