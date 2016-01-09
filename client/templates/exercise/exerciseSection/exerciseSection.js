@@ -7,8 +7,10 @@ Template.exerciseSection.helpers({
     return Meteor().user;
   },
   exercises: function() {
-
   	return Exercises.find({section: FlowRouter.current().params.section});
+  },
+  sectionCurrent: function() {
+    return Exercises.find({section: FlowRouter.current().params.section, limit:1});
   }
 });
 

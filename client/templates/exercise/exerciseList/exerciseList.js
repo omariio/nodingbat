@@ -1,7 +1,9 @@
 Template.exerciseList.helpers({
   currentUser: function() {
     user = Meteor.user();
-    return user.username;
+    if(user != null){
+      return user.username;
+    }
   },
   exercises: function() {
     return Exercises.find();
@@ -12,7 +14,9 @@ Template.exerciseList.helpers({
 });
 
 Template.exerciseList.rendered = function() {
-  exerciseRender();
+  if (user != null){
+    exerciseRender();
+  }
 }
 
 function exerciseRender() {

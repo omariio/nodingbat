@@ -7,8 +7,8 @@
 .CodeMirror {
   /* Set height, width, borders, and global font properties here */
   font-family: monospace;
-  height: auto+50px;
-  width: auto;
+  height: auto+20px;
+  width: 200px;
   color: black;
 }
 
