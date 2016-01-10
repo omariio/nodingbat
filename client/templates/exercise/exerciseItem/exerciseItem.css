@@ -1,3 +1,23 @@
+@media only screen and (min-width:960px){
+	.flexbox-container {
+		display: -ms-flex;
+		display: -webkit-flex;
+		display: flex;
+	}
+
+	.flexbox-container > .row1 {
+		width: 73%;
+		/*padding: 10px;*/
+	}
+	.flexbox-container > .row2 {
+		width: 27%;
+		/*padding: 10px;*/
+	}
+	.flexbox-container > .rowbow:first-child {
+		margin-right: 20px;
+	}
+}
+
 .forum-btn {
   border-bottom-right-radius: 0 !important;
   border-top-right-radius: 0 !important;

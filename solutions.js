@@ -460,8 +460,8 @@ solutions.max1020 = function(a,b){
 	}
 	if (a >=10 && a <= 20){
 		return b;
-	return 0;
 	}
+	return 0;
 }
 // console.log(max1020(11,19));
 // console.log(max1020(19,11));

@@ -2,7 +2,8 @@ Template.exerciseItem.helpers({
   editorOptions: function() {
       return {
         lineNumbers: true,
-        mode: "javascript"
+        mode: "javascript",
+        lineWrapping: true
       }
     },
   editorCode: function() {
@@ -12,7 +13,6 @@ Template.exerciseItem.helpers({
     return getExercise();
   },
   exercises: function() {
-    console.log(FlowRouter.current().params.name);
   	return Exercises.find({name: FlowRouter.current().params.name});
   },
   prevURL: function() {
@@ -77,7 +77,7 @@ var enclose = function(functionString){
 }
 
 var getExercise = function(){
-  return Exercises.findOne({name: FlowRouter.current().params.name})
+  return Exercises.findOne({name: FlowRouter.current().params.name});
 }
 
 var session_set = function(){

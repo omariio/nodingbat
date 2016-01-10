@@ -1,8 +1,45 @@
 <template name = "exerciseSection">
 {{> Template.dynamic template=top}}
-<!-- {{#if currentUser}} -->
+{{#if currentUser}}
   <div class="container">
     <div class="row">
+      <nav>
+        <ol class="breadcrumb">
+          <li><a href="/"><i class="fa fa-home">Home</i></a></li>
+          <li><a href="/exercises">All Exercises</a></li>
+          <li><a href="/exercises/{{sectionCurrent}}">{{sectionCurrent}}</a></li>
+        </ol>
+      </nav>
+      <div class="animated fadeIn" id="spoogScroll">
+       <table class="table table-striped table-hover">
+         <thead>
+          <tr>
+            <th>
+              Exercises to conquer...
+            </th>
+          </tr>
+         </thead>
+        {{#with user}}
+        {{#each exercises}}
+         <tbody>
+           <tr>
+             <th><a href="/exercises/{{section}}">{{section}}</a></th>
+             <th><a href="/exercises/{{section}}/{{name}}">{{name}}</a></th>
+             <th><a href="/exercises/{{section}}/{{name}}">
+             <i style="color: green;" class="fa fa-check fa-2x animated undone">{{exercises}}</i></a>
+             </th>
+           </tr>
+         </tbody>
+        {{/each}}
+        {{/with}}
+       </table>
+       </div>
+    </div>
+  </div>
+  {{else}}
+  <div class="container">
+    <div class="row">
+      <h5 class="text-center">Remember to Login!   {{> atNavButton}}</h5>
       <nav>
         <ol class="breadcrumb">
           <li><a href="/"><i class="fa fa-home">Home</i></a></li>
@@ -19,27 +56,22 @@
             </th>
           </tr>
          </thead>
-         <!-- {{#with user}} -->
-        {{#each exercises}}
-         <tbody>
-           <tr>
-             <th><a href="/exercises/{{section}}">{{section}}</a></th>
-             <th><a href="/exercises/{{section}}/{{name}}">{{name}}</a></th>
-             <th><a href="/exercises/{{section}}/{{name}}">
-             <i style="color: green;" class="fa fa-check fa-2x animated undone">{{exercises}}</i></a>
-             </th>
-           </tr>
-         </tbody>
-        {{/each}}
-        <!-- {{/with}} -->
-       </table>
-       </div>
+         {{#each exercises}}
+          <tbody>
+            <tr>
+              <th><a href="/exercises/{{section}}">{{section}}</a></th>
+              <th><a href="/exercises/{{section}}/{{name}}">{{name}}</a></th>
+              <th><a href="/exercises/{{section}}/{{name}}">
+              <i style="color: green;" class="fa fa-check fa-2x animated undone">{{exercises}}</i></a>
+              </th>
+            </tr>
+          </tbody>
+         {{/each}}
+         </table>
     </div>
   </div>
-  <!-- {{else}} -->
-  <h1>Login!</h1>
-  <!-- {{/if}} -->
-
+</div>
+  {{/if}}
       <!-- {{/with}} -->
     <div class="row">
       {{> Template.dynamic template=footer}}
