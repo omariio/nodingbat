@@ -5,11 +5,11 @@ Template.exerciseSection.helpers({
       return user.username;
     }
   },
-  user: function() {
-    return Meteor.user;
-  },
   exercises: function() {
-  	return Exercises.find({section: FlowRouter.current().params.section});
+    return Exercises.find();
+  },
+  user: function() {
+    return Meteor.user();
   },
   sectionCurrent: function() {
     return Exercises.findOne({section: FlowRouter.current().params.section}).section;
@@ -17,8 +17,8 @@ Template.exerciseSection.helpers({
 });
 
 Template.exerciseSection.rendered = function() {
-  if(user != null){
-   exerciseRender();
+  if (user != null){
+    exerciseRender();
   }
 }
 

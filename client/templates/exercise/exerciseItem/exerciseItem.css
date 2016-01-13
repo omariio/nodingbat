@@ -1,3 +1,19 @@
+.row2, .th{
+	background-color: #222 !important;
+	height: 433px;
+}
+
+.breadcrumb{
+	margin-bottom: 2px !important;
+}
+
+.btnsm{
+	width: 25%;
+}
+.btmd{
+	width: 50%;
+}
+
 @media only screen and (min-width:960px){
 	.flexbox-container {
 		display: -ms-flex;
@@ -11,7 +27,7 @@
 	}
 	.flexbox-container > .row2 {
 		width: 27%;
-		/*padding: 10px;*/
+		min-height: 100px !important;
 	}
 	.flexbox-container > .rowbow:first-child {
 		margin-right: 20px;
