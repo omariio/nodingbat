@@ -16,27 +16,17 @@ Template.exerciseItem.helpers({
   	return Exercises.find({name: FlowRouter.current().params.name});
   },
   prevURL: function() {
-    return Session.get('prevURL');
-    // var currentExercise = Exercises.findOne({name: FlowRouter.current().params.name});
-    // return Exercises.find({index: currentExercise.index - 1}).name;
+    var currentExercise = Exercises.findOne({name: FlowRouter.current().params.name});
+    return Exercises.findOne({index: currentExercise.index - 1}).name;
   },
   nextURL: function() {
-    return Session.get('nextURL');
-    // var currentExercise = Exercises.findOne({name: FlowRouter.current().params.name});
-    // return Exercises.findOne({index: currentExercise.index + 1}).name;
+    var currentExercise = Exercises.findOne({name: FlowRouter.current().params.name});
+    return Exercises.findOne({index: currentExercise.index + 1}).name;
   },
   getCurrentExercise: function() {
 
   }
 });
-
-// Meteor.startup(function () {
-//   window.allExercises = Exercises.find({}, { fields: {"name":1, "section":1} }).fetch();
-//   console.log(allExercises);
-//   for(i=0; i<allExercises.length; i++) {
-//     allExercises[i].index = i;
-//   }
-// });
 
 function queryString(n) {
   var allExercises = Exercises.find().fetch();
@@ -53,17 +43,9 @@ getURL = function getCurrentURL() {
 }
 
 Template.exerciseItem.rendered = function () {
-  // currentExercise = _.find(allExercises, function(x) {
-  //   return x.name == FlowRouter.current().params.name;
-  // });
-  // currentIndex = currentExercise.index;
-
- Tracker.autorun(function(){
-   var currentIndex = getURL().index;
-   currentIndex !== 0 ? Session.set('prevURL', queryString(currentIndex - 1)) : Session.set('prevURL', '/');
-   currentIndex !== 58 ? Session.set('nextURL', queryString(currentIndex + 1) ) : Session.set('nextURL', '/');
-   session_set();
- });
+  Tracker.autorun(function(){
+    session_set();
+  });
 }
 
 Template.exerciseItem.events({
@@ -81,31 +63,23 @@ Template.exerciseItem.events({
   'click #help': function(){
     Session.set("postList", this._id);
   },
-  'click .previous': function(event, tmpl){
-  //  event.preventDefault();
-    //  Tracker.autorun(function(){
-       session_set();
-    //  });
-
+  'click .previous': function(d){
+    // e.preventDefault();
+    //WHY IS THIS NECESSARY?? -TYLER
+    FlowRouter.go(d.currentTarget.href);
   },
-  'click .next': function(event, tmpl){
-    // event.preventDefault();
-
-        session_set();
-    // });
-
+  'click .next': function(d){
+    // e.preventDefault();
+    FlowRouter.go(d.currentTarget.href);
   }
-
 });
-
 
 var enclose = function(functionString){
   return eval(functionString);
 }
-
 var getExercise = function(){
-  return Exercises.findOne({name: FlowRouter.current().params.name});
-}
+    return Exercises.findOne({name: FlowRouter.current().params.name});
+  }
 
 var session_set = function(){
   Session.set('success', null);

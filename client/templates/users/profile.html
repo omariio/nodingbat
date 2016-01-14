@@ -8,14 +8,9 @@
       <span style="text-align:center">{{currentUser}}</span>
       <h4>Problems completed: <b>{{bats.length}}</b></h4>
       <h5>Rank: <b>{{rank}}</b></h5>
-      <!-- {{#each usersBats}}
-      <div class="usersBats">
-        <a href="/{{section}}/{{name}}" class="notAchieved">{{name}}</a>
-      </div>
-      {{/each}} -->
       <div class="row">
         {{#each allBats}}
-        <a href="/{{section}}/{{name}}" class="notAchieved">
+        <a href="/exercises/{{section}}/{{name}}" class="notAchieved">
         <div class="col-md-3 portfolio-item">
           <img src="/bat-{{@index}}.svg" href="/exercises/{{section}}/{{name}}" width="75px;"/>
           <p></p>
@@ -27,7 +22,6 @@
     {{/with}}
   </div>
 </div>
-
 {{else}}
   <h1 align="center">Login first! {{> atNavButton}}</h1>
   {{/if}}

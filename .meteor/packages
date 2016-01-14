@@ -4,7 +4,6 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-insecure
 mizzao:sharejs-codemirror
 perak:codemirror
 jquery
@@ -12,7 +11,6 @@ fourseven:scss
 fortawesome:fontawesome
 accounts-password
 sacha:spin
-autopublish
 natestrauser:animate-css
 coffeescript
 standard-minifiers

@@ -4,7 +4,6 @@ accounts-google@1.0.6
 accounts-meteor-developer@1.0.6
 accounts-oauth@1.1.8
 accounts-password@1.1.4
-autopublish@1.0.4
 autoupdate@1.2.4
 babel-compiler@5.8.24_1
 babel-runtime@0.1.4
@@ -43,7 +42,6 @@ html-tools@1.0.5
 htmljs@1.0.5
 http@1.1.1
 id-map@1.0.4
-insecure@1.0.4
 jquery@1.11.4
 kadira:blaze-layout@2.3.0
 kadira:flow-router@2.10.0
