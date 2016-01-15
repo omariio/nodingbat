@@ -1,6 +1,8 @@
 if (Meteor.isClient) {
 
 Meteor.subscribe('exercises');
+Meteor.subscribe('posts');
+Meteor.subscribe('comments');
 Meteor.subscribe('allUserData');
 
 Template.layout.helpers({

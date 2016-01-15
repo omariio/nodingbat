@@ -9,19 +9,19 @@ Template.profile.helpers({
     var user = Meteor.user();
     var batsLen = user.bats.length;
     var newRank = user.rank;
-    if(user.bats.length < 10){
-      newRank =0;
+    if((batsLen < 10) && (user.rank != 100)){
+      newRank = 0;
     }
-    if((batsLen >= 10) && (batsLen < 25)){
+    if((batsLen >= 10) && (batsLen <25)){
       newRank = 10;
     }
-    if((batsLen >= 25) && (batsLen < 50)){
+    if((batsLen >= 25) && (batsLen <50)){
       newRank = 25;
     }
-    if((batsLen >= 50) && (batsLen < 75)){
+    if((batsLen >= 50) && (batsLen <75)){
       newRank = 50;
     }
-    if((batsLen >= 75) && (batsLen < 100)){
+    if((batsLen >= 75) && (batsLen <= 100)){
       newRank = 100;
     }
     return newRank;
