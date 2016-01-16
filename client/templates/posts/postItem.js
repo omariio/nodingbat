@@ -1,8 +1,9 @@
 Template.postItem.helpers({
   userRank: function(){
-    var user = Meteor.user();
+    user = Meteor.users.findOne({username: this.username.username});
     var batsLen = user.bats.length;
     var newRank = user.rank;
+
     if((batsLen < 10) && (user.rank != 100)){
       newRank = 0;
     }
@@ -38,12 +39,12 @@ Template.postItem.helpers({
   },
   upvotedClass: function() {
     var userId = Meteor.userId();
-    // && !_.include(this.upvoters, userId)
-    if (userId) {
-      return 'btn-primary upvotable';
-    } else {
-      return 'disabled';
-    }
+    !_.include(this.upvoters, userId)
+      if (userId) {
+        return 'btn-primary upvotable';
+      } else {
+        return 'disabled';
+      }
   }
 });
 

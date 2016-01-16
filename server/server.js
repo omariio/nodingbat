@@ -998,6 +998,7 @@ Exercises.insert({
       ],
       "setup": setup.array667
       });
+      // start just adding indexes
       allExer = Exercises.find().fetch();
       for (var i = 0; i < allExer.length; i++) {
         Exercises.update(allExer[i]._id, {$set: {index: i}});
