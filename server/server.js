@@ -998,9 +998,25 @@ Exercises.insert({
       ],
       "setup": setup.array667
       });
-
       allExer = Exercises.find().fetch();
       for (var i = 0; i < allExer.length; i++) {
         Exercises.update(allExer[i]._id, {$set: {index: i}});
       }
+      Exercises.insert({
+        "section":"Interview Questions",
+        "name": "isHere",
+        "inputs": [
+          "('l', 'hello')",
+          "('L', 'hello')",
+          "('f', 'FooFiff')",
+          "('d', 'DavidBowied')",
+          "('A', 'AlanAackman')",
+          "('o', 'coolZOO')",
+          "('s', 'secksysocks')",
+          "('y', 'tylersmith')",
+          "('t', 'tatmatt')",
+        ],
+        "setup": setup.isHere,
+        "index": 60
+      });
 }

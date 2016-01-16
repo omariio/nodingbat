@@ -1029,3 +1029,20 @@ solutions.array667 = function(nums){
 // console.log(solutions.array667([6,6,2,6]));
 // console.log(solutions.array667([6,7,2,6]));
 // console.log(solutions.array667([6,6,2,7,6,7]));
+
+solutions.isHere = function(x, input){
+	x = x.toLowerCase();
+	input = input.toLowerCase();
+	output = "";
+	for (var i = 0; i < input.length; i++) {
+		if (input.charAt(i) == x){
+			output = output+"1";
+		}
+		else{
+			output = output + "0";
+		}
+	}
+	return output;
+}
+// console.log(solutions.isHere("l", "hello"));
+// console.log(solutions.isHere("I", "I am I and you are I"));
