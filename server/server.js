@@ -998,7 +998,7 @@ Exercises.insert({
       ],
       "setup": setup.array667
       });
-      // start just adding indexes
+      // start just adding indexes after this loop
       allExer = Exercises.find().fetch();
       for (var i = 0; i < allExer.length; i++) {
         Exercises.update(allExer[i]._id, {$set: {index: i}});
@@ -1020,4 +1020,35 @@ Exercises.insert({
         "setup": setup.isHere,
         "index": 60
       });
+      Exercises.insert({
+        "section":"Interview Questions",
+        "name": "biggestPre",
+        "inputs": [
+          "(['yes', 'yodel', 'yeah'])",
+          "(['we', 'were', 'when', 'weat'])",
+          "(['me', 'meat', 'meander', 'mexico'])",
+          "(['tyler', 'tyedye', 'tinder', 'texting'])",
+          "(['cameron', 'camera', 'cameleon', 'cameroon'])",
+          "(['asha', 'ash ketchum', 'acid', 'ass'])"
+        ],
+        "setup": setup.biggestPre,
+        "index": 61
+      });
+// end of if data base empty ( if exercise is already in cloud databse, don't add again!)
 }
+
+Exercises.insert({
+  "section":"string-1",
+  "name": "nTwice",
+  "inputs": [
+    "('hello', 2)",
+    "('Chocolate', 3)",
+    "('Chocolate', 1)",
+    "('Chocolate', 0)",
+    "('Hello', 4)",
+    "('Code', 4)",
+    "('Code', 2)"
+  ],
+  "setup": setup.nTwice,
+  "index": 62
+});

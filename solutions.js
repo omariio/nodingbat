@@ -701,9 +701,18 @@ solutions.endsLy = function(str){
 // Java > String-1 > nTwice
 // Given a string and an int n, return a string made of the first and last n chars
 // from the string. The string length will be at least n.
-// solutions.nTwice = function(str, n){
-//
-// }
+solutions.nTwice = function(str, n){
+	first = str.substring(0, n);
+	end = str.substring(str.length-n)
+	return first + end;
+}
+// console.log(solutions.nTwice("hello", 2));
+// console.log(solutions.nTwice("Chocolate", 3));
+// console.log(solutions.nTwice("Chocolate", 1));
+// console.log(solutions.nTwice("Chocolate", 0));
+// console.log(solutions.nTwice("Hello", 4));
+// console.log(solutions.nTwice("Code", 4));
+// console.log(solutions.nTwice("Code", 2));
 
 // Java > String-1 > twoChar
 // Given a string and an index, return a string length 2 starting at the given index.
@@ -1046,3 +1055,31 @@ solutions.isHere = function(x, input){
 }
 // console.log(solutions.isHere("l", "hello"));
 // console.log(solutions.isHere("I", "I am I and you are I"));
+
+// Given an array of strings, find the longest common prefix each string has.
+// i.e. a list of yes, yodel, yeah should output y.
+solutions.biggestPre = function(input){
+	var answer = "";
+	for (var i = 0; i < input[0].length; i++) {
+		var char = input[0].charAt(i);
+		console.log(char);
+		for (var x = 1; x < input.length; x++) {
+			if(i >= input[x].length || input[x].charAt(i) !== char)
+				return answer
+		}
+		answer = answer + char;
+	}
+	return answer;
+}
+// test = [
+// 	"we", "were", "me", "went", "why", "you"
+// ]
+// test2 = [
+// 	"we", "were", "we", "went", "why", "wou"
+// ]
+
+test3 = ['me', 'meat', 'meander', 'mexico'];
+//
+// console.log(solutions.biggestPre(test));
+// console.log(solutions.biggestPre(test2));
+// console.log(solutions.biggestPre(test3));
