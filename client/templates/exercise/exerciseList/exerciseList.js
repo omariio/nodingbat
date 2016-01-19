@@ -6,7 +6,7 @@ Template.exerciseList.helpers({
     }
   },
   exercises: function() {
-    return Exercises.find();
+    return Exercises.find({}, {sort:{ section: 1 }});
   },
   user: function() {
     return Meteor.user();
