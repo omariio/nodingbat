@@ -11,9 +11,8 @@
             <li><a href="/exercises/{{section}}">{{section}}</a></li>
           {{/each}}
           {{#each distinctSection}}
-            {{distinctSection}}{{@index}};
+            <li><a href="/exercises/{{this}}">{{this}}</a></li>
           {{/each}}
-          <!-- <li><a href="/exercises/{{distintSection}}[0]">Strings</a></li> -->
         </ol>
       </nav>
       <div class="animated fadeIn" id="spoogScroll">
