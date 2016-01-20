@@ -1034,21 +1034,21 @@ Exercises.insert({
         "setup": setup.biggestPre,
         "index": 61
       });
+      Exercises.insert({
+        "section":"string-1",
+        "name": "nTwice",
+        "inputs": [
+          "('hello', 2)",
+          "('Chocolate', 3)",
+          "('Chocolate', 1)",
+          "('Chocolate', 0)",
+          "('Hello', 4)",
+          "('Code', 4)",
+          "('Code', 2)"
+        ],
+        "setup": setup.nTwice,
+        "index": 62
+      });
+
 // end of if data base empty ( if exercise is already in cloud databse, don't add again!)
 }
-
-Exercises.insert({
-  "section":"string-1",
-  "name": "nTwice",
-  "inputs": [
-    "('hello', 2)",
-    "('Chocolate', 3)",
-    "('Chocolate', 1)",
-    "('Chocolate', 0)",
-    "('Hello', 4)",
-    "('Code', 4)",
-    "('Code', 2)"
-  ],
-  "setup": setup.nTwice,
-  "index": 62
-});

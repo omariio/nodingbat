@@ -6,13 +6,13 @@ Template.exerciseSection.helpers({
     }
   },
   exercises: function() {
-    return Exercises.find();
+    return Exercises.find({'section': FlowRouter.current().params.section});
   },
   user: function() {
     return Meteor.user();
   },
   sectionCurrent: function() {
-    return Exercises.findOne({section: FlowRouter.current().params.section}).section;
+    return Exercises.findOne({'section': FlowRouter.current().params.section}).section;
   }
 });
 

@@ -8,8 +8,12 @@
           <li><a href="/"><i class="fa fa-home">Home</i></a></li>
           <li><a href="/exercises">All Exercises</a></li>
           {{#each exerciseSection}}
-          <li><a href="/exercises/{{section}}">{{section}}</a></li>
+            <li><a href="/exercises/{{section}}">{{section}}</a></li>
           {{/each}}
+          {{#each distinctSection}}
+            {{distinctSection}}{{@index}};
+          {{/each}}
+          <!-- <li><a href="/exercises/{{distintSection}}[0]">Strings</a></li> -->
         </ol>
       </nav>
       <div class="animated fadeIn" id="spoogScroll">

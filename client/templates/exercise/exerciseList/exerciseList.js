@@ -6,10 +6,17 @@ Template.exerciseList.helpers({
     }
   },
   exercises: function() {
-    return Exercises.find({}, {sort:{ section: 1 }});
+    return Exercises.find({}, { sort:{ section: -1 }});
   },
   user: function() {
     return Meteor.user();
+  },
+  distinctSection: function() {
+    var distinctEntries = _.uniq(Exercises.find({}, { sort: {'section':1}, fields:{'section':1}}).fetch()
+    .map(function(x){
+      return x.section;
+    }), true);
+    return distinctEntries;
   }
 });
 
