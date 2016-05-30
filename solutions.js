@@ -346,9 +346,8 @@ solutions.makes10 = function(a,b){
 // Java > Warmup-1 > notString
 // Given a string, return a new string where "not " has been added to the front.
 // However, if the string already begins with "not", return the string unchanged.
-// Note: use .equals() to compare 2 strings.
 solutions.notString = function(str){
-	if (str.length <= 3 && str.substring(0,3).localeCompare("not")){
+	if (str === null || str === undefined || str.substring(0,3) === "not") {
 		return str;
 	}
 	return "not " + str;
