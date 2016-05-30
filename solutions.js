@@ -205,7 +205,7 @@ solutions.frontBack = function(str){
 	}
 	mid = str.substring(1, str.length-1);
 
-	return (str.length-1) + mid + str.charAt(0);
+	return (str.charAt(str.length-1)) + mid + str.charAt(0);
 }
 
 //console.log(solutions.frontBack("code"));
