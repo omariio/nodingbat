@@ -449,18 +449,17 @@ solutions.intMax = function(a,b,c){
 // Given 2 positive int values, return the larger value that is in the range 10..20
 // inclusive, or return 0 if neither is in that range.
 solutions.max1020 = function(a,b){
-	if (b > a) {
-		temp = a;
-		a = b;
-		b = temp;
+	var between1020 = function(num) {
+		return 10 <= num && num <= 20;
+	};
+	var result = 0;
+	if (between1020(a)) {
+		result = a;
 	}
-	if(a >=10 && a <= 20){
-		return a;
+	if (b > result && between1020(b)) {
+		result = b;
 	}
-	if (a >=10 && a <= 20){
-		return b;
-	}
-	return 0;
+	return result;
 }
 // console.log(max1020(11,19));
 // console.log(max1020(19,11));
