@@ -157,6 +157,14 @@ body{
   padding: 0px 20px 0px 20px;
 }
 
+.success {
+  background-color: #00b359;
+}
+
+.failure {
+  background-color: #ff704d;
+}
+
 .cm-s-sublime-text-like.CodeMirror {
   background-color: #242424;
   color: #fff;
