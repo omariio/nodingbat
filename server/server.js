@@ -224,10 +224,11 @@ Meteor.publish("allUserData", function() {
           "inputs":[
             "('Miracle', 2)",
             "('abcdefg', 2)",
+            "('abcdefg', 3)",
             "('Chocolate', 3)",
-            "('Chocolate', 3)",
-            "('Chocolate', 4)",
-            "('Chocolate', 100)"
+            "('Chocolates', 3)",
+            "('Chocolates', 4)",
+            "('Chocolates', 100)"
           ],
           "setup": setup.everyNth
         });
@@ -302,6 +303,32 @@ Meteor.publish("allUserData", function() {
         "(123)"
       ],
       "setup": setup.or35
+    });
+      Exercises.insert({
+      "section": "warmup-1",
+      "name": "posNeg",
+      "inputs": [
+        "(1, -1, false)",
+        "(-1, 1, false)",
+        "(-4, -5, true)",
+        "(-4, -5, false)",
+        "(-4, 5, false)",
+        "(-4, 5, true)",
+        "(1, 1, false)",
+        "(-1, -1, false)",
+        "(1, -1, true)",
+        "(-1, 1, true)",
+        "(1, 1, true)",
+        "(-1, -1, true)",
+        "(5, -5, false)",
+        "(-6, 6, false)",
+        "(-5, -6, false)",
+        "(-2, -1, false)",
+        "(1, 2, false)",
+        "(-5, 6, true)",
+        "(-5, -5, true)"
+      ],
+      "setup": setup.posNeg
     });
     Exercises.insert({
     "section": "warmup-1",

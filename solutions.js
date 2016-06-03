@@ -185,7 +185,7 @@ solutions.parrotTrouble = function(talking, hour) {
 //both are negative.
 solutions.posNeg = function(a, b, negative) {
   if (negative === true) {
-    return true;
+    return a < 0 && b < 0;
   }
   if ((a < 0 && b > 0) || a > 0 && b < 0) {
     return true;
@@ -332,12 +332,7 @@ solutions.sumDouble = function(a, b){
 // Java > Warmup-1 > makes10
 // Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
 solutions.makes10 = function(a,b){
-	if((a == 10 || b == 10) || (a + b == 10)){
-		return true;
-	}
-	else{
-		return false;
-	}
+	return ((a == 10 || b == 10) || (a + b == 10));
 }
 // console.log(makes10(9,10));
 // console.log(makes10(9,9));
