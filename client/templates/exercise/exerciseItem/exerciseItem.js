@@ -102,6 +102,7 @@ var run = function(self){
   var obj = eval(Session.get("varName"));
   var solutionIndex = 1;
   $(".rotate").toggleClass("down");
+  var parent = $("tbody.colors-container");
 
   var index = 0;
   for( ; index < self.inputs.length; ++index){
@@ -109,14 +110,11 @@ var run = function(self){
     var output = eval("solutions." + self.name + self.inputs[index]);
 
     if(output == userOutput){
-      var currentDiv = $("tr.colors:nth-child("+(index + 1)+")").css("background-color", "#00b359");
-
       solutionIndex++;
-      currentDiv.html("<td>"+self.name+self.inputs[index]+"</td><i class='fa fa-long-arrow-right'></i><td>"+ output +"</td><i class='fa fa-smile-o'></i><td>"+ userOutput + "</td>" );
+      parent.append("<tr class='success'><td>"+self.name+self.inputs[index]+"</td><i class='fa fa-long-arrow-right'></i><td>"+ output +"</td><i class='fa fa-smile-o'></i><td>"+ userOutput + "</td></tr>" );
     }
     else{
-      var currentDiv = $("tr.colors:nth-child("+(index+1)+")").css("background-color", "#ff704d");
-      currentDiv.html("<td>"+self.name+self.inputs[index]+"</td><i class='fa fa-long-arrow-right'></i><td>"+ output +"</td><i class='fa fa-smile-o'></i><td>"+ userOutput + "</td>" );
+      parent.append("<tr class='failure'><td>"+self.name+self.inputs[index]+"</td><i class='fa fa-long-arrow-right'></i><td>"+ output +"</td><i class='fa fa-smile-o'></i><td>"+ userOutput + "</td></tr>" );
       abiShake();
     }
   }
