@@ -69,6 +69,7 @@ npm-mongo@1.4.39_1
 oauth@1.1.6
 oauth2@1.1.5
 observe-sequence@1.0.7
+okgrow:analytics@1.0.6
 ordered-dict@1.0.4
 perak:codemirror@1.2.8
 pntbr:js-yaml-client@0.0.1
