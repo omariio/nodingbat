@@ -103,6 +103,7 @@ var run = function(self){
   var solutionIndex = 1;
   $(".rotate").toggleClass("down");
   var parent = $("tbody.colors-container");
+  parent.empty();
 
   var index = 0;
   for( ; index < self.inputs.length; ++index){
