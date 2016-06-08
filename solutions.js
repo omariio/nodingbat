@@ -402,22 +402,16 @@ solutions.in1020 = function(a,b){
 // Java > Warmup-1 > delDel
 // Given a string, if the string "del" appears starting at index 1, return a string where that "del"
 // has been deleted. Otherwise, return the string unchanged.
-// var delDel = function(str){
-// 	output = str.substring(1,4);
-// 	return output;
-	// front = str.substring(0);
-	// if(str.substring(1,4).localeCompare("del")){
-	// 	output = str.substring(0); //+ str.substring(4,str.length);
-	// 	return output;
-	// }
-	// else {
-	// 	return str;
-	// }
-	// if(str.substring(1,4).localeCompare("del")) {
-	// 	output = substring(4);
-	// 	return front + output;
-	// }
-//}
+solutions.delDel = function(str){
+	if (str.length < 4) {
+		return str;
+	}
+	var output = str;
+	if (str.substring(1, 4) == "del"){
+		output = str.substring(0, 1) + str.substring(4, str.length);
+	}
+	return output;
+}
 // console.log(delDel("adelbc"));
 // console.log(delDel("adelHello"));
 // console.log(delDel("adebc"));

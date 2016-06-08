@@ -503,6 +503,23 @@ Meteor.publish("allUserData", function() {
   });
   Exercises.insert({
   "section": "warmup-1",
+  "name": "delDel",
+  "inputs": [
+    "('adelbc')",
+    "('adelHello')",
+    "('abcdel')",
+    "('add')",
+    "('ad')",
+    "('a')",
+    "('')",
+    "('del')",
+    "('adel')",
+    "('aadelbb')"
+  ],
+  "setup": setup.delDel
+  });
+  Exercises.insert({
+  "section": "warmup-1",
   "name": "intMax",
   "inputs": [
     "(1, 2, 3)",
