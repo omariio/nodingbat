@@ -580,7 +580,7 @@ solutions.last2 = function(str) {
 
 // Java > Warmup-2 > array123
 // Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
-solutions.array123 = function(nums) { //TODO not added
+solutions.array123 = function(nums) {
   for (var x=0; nums.length >= 3 && x <= nums.length-2; x++){
   	if(nums[x] === 1 && nums[x+1] === 2 && nums[x+2] === 3){
   		return true;
@@ -711,13 +711,12 @@ solutions.countXX = function(str) {
 
 // Warm-Up2 > stringSplosion
 // Given a non-empty string like "Code" return a string like "CCoCodCode".
-solutions.stringSplosion = function(str) { //TODO not added
+solutions.stringSplosion = function(str) {
   result = "";
   for (x = 0; x < str.length - 1; x++) {
     result += str.slice(0, x + 1);
   }
   return result;
-  // return str.split('').reduce((s, e, i) => s + str.slice(0, i + 1), '');
 }
 // console.log(solutions.stringSplosion("Code"));
 // console.log(solutions.stringSplosion("abc"));
