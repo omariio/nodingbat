@@ -1108,6 +1108,45 @@ Exercises.insert({
         "setup": setup.makeTags,
         "index": 63
       });
+      Exercises.insert({
+        "section": "string-1",
+        "name": "twoChar",
+        "inputs": [
+          '("java", 0)',
+          '("java", 2)',
+          '("java", 3)',
+          '("java", 4)',
+          '("java", -1)',
+          '("Hello", 0)',
+          '("Hello", 1)',
+          '("Hello", 99)',
+          '("Hello", 3)',
+          '("Hello", 4)',
+          '("Hello", 5)',
+          '("Hello", -7)',
+          '("Hello", 6)',
+          '("Hello", -1)',
+          '("yay", 0)'
+        ],
+        "setup": setup.twoChar,
+        "index": 64
+      });
 
-// end of if data base empty ( if exercise is already in cloud databse, don't add again!)
+      Exercises.insert({
+        "section": "string-1",
+        "name": "middleThree",
+        "inputs": [
+          '("Candy")',
+          '("and")',
+          '("solving")',
+          '("Hi yet Hi")',
+          '("java yet java")',
+          '("Chocolate")',
+          '("XabcxyzabcX")'
+        ],
+        "setup": setup.middleThree,
+        "index": 65
+      });
+
+// end of if data base empty ( if exercise is already in cloud database, don't add again!)
 }

@@ -512,18 +512,21 @@ solutions.nTwice = function(str, n) {
 // console.log(solutions.nTwice("Code", 4));
 // console.log(solutions.nTwice("Code", 2));
 
-// Java > String-1 > twoChar //TODO not added
+// Java > String-1 > twoChar
 // Given a string and an index, return a string length 2 starting at the given index.
 // If the index is too big or too small to define a string length 2, use the first
 // 2 chars. The string length will be at least 2.
 solutions.twoChar = function(str, index){
+	if (index > str.length - 2) {
+		index = 0;
+	}
 	return str.substr(index, 2);
 }
 // console.log(solutions.twoChar("java", 0));
 // console.log(solutions.twoChar("java", 2));
 // console.log(solutions.twoChar("java", 3));
 
-// Java > String-1 > middleThree //TODO not added
+// Java > String-1 > middleThree
 // Given a string of odd length, return the string length 3 from its middle, so
 // "Candy" yields "and". The string length will be at least 3.
 solutions.middleThree = function(str){
