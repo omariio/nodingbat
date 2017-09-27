@@ -41,24 +41,24 @@ solutions.backAround = function(str) {
   var last = str.slice(-1);
   return last + str + last;
 }
-// console.log(backAround("cat"));
-// console.log(backAround("Hello"));
-// console.log(backAround("a"));
+// console.log(solutions.backAround("cat"));
+// console.log(solutions.backAround("Hello"));
+// console.log(solutions.backAround("a"));
 
 // Java > Warmup-1 > startHi
 // Given a string, return true if the string starts with "hi" and false otherwise.
 solutions.startHi = function(str) {
   return !str.indexOf('hi');
 }
-// console.log(startHi("hi there"));
-// console.log(startHi("hi"));
-// console.log(startHi("hello hi"));
+// console.log(solutions.startHi("hi there"));
+// console.log(solutions.startHi("hi"));
+// console.log(solutions.startHi("hello hi"));
 
 // Java > Warmup-1 > hasTeen
 // We'll say that a number is "teen" if it is in the range 13..19 inclusive.
 // Given 3 int values, return true if 1 or more of them are teen.
 solutions.hasTeen = function(a, b, c) {
-  return !![a, b, c].filter(function(n) {return n >= 13 && n <= 19}).length;
+  return !![a, b, c].filter(function(n) {return n>=13 && n<=19}).length;
 }
 // console.log(solutions.hasTeen(13, 20, 10));
 // console.log(solutions.hasTeen(20, 19, 10));
@@ -85,8 +85,9 @@ solutions.close10 = function(a, b) {
   if (bDiff < aDiff) return b;
   return 0;
 }
-// console.log(close10(8,13));
-// console.log(close10(13,8));
+// console.log(solutions.close10(8,13));
+// console.log(solutions.close10(13,8));
+// console.log(solutions.close10(13,7));
 
 // Java > Warmup-1 > stringE
 // Return true if the given string contains between 1 and 3 'e' chars.
@@ -94,9 +95,9 @@ solutions.stringE = function(str) {
   var eCount = str.replace(/[^e]/g, '').length;
   return (eCount >= 1 && eCount <= 3);
 }
-// console.log(stringE("Hello"));
-// console.log(stringE("Heelle"));
-// console.log(stringE("Heelele"));
+// console.log(solutions.stringE("Hello"));
+// console.log(solutions.stringE("Heelle"));
+// console.log(solutions.stringE("Heelele"));
 
 // Java > Warmup-1 > everyNth
 // Given a non-empty string and an int N, return the string made starting with char 0,
@@ -105,9 +106,9 @@ solutions.stringE = function(str) {
 solutions.everyNth = function(str, n) {
   return str.split('').filter(function(c, i) {return !(i % n)}).join('');
 }
-// console.log(everyNth("Miracle", 2));
-// console.log(everyNth("abcdefg", 2));
-// console.log(everyNth("abcdefg", 3));
+console.log(solutions.everyNth("Miracle", 2));
+console.log(solutions.everyNth("abcdefg", 2));
+console.log(solutions.everyNth("abcdefg", 3));
 
 // Java > Warmup-1 > monkeyTrouble
 // We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each
@@ -147,12 +148,12 @@ solutions.posNeg = function(a, b, negative) {
 // Given a string, return a new string where the first and last chars have been exchanged.
 solutions.frontBack = function(str) {
   if (str.length < 2) return str;
-  return str.slice(-1) + str.slice(0, -1) + str[0];
+  return str.slice(-1) + str.slice(1, -1) + str[0];
 }
 
-//console.log(solutions.frontBack("code"));
-//console.log(solutions.frontBack("a"));
-//console.log(solutions.frontBack("ab"));
+// console.log(solutions.frontBack("code"));
+// console.log(solutions.frontBack("a"));
+// console.log(solutions.frontBack("ab"));
 
 // Java > Warmup-1 > or35
 // Return true if the given non-negative number is a multiple of 3 or a multiple of 5.
@@ -181,23 +182,23 @@ solutions.loneTeen = function(a, b) {
   return isTeen(a) !== isTeen(b);
 }
 
-// console.log(loneTeen(13, 99));
-// console.log(loneTeen(21, 19));
-// console.log(loneTeen(13, 13));
+// console.log(solutions.loneTeen(13, 99));
+// console.log(solutions.loneTeen(21, 19));
+// console.log(solutions.loneTeen(13, 13));
 
 // Java > Warmup-1 > startOz
 // Given a string, return a string made of the first 2 chars (if present),
 // however include first char only if it is 'o' and include the second only if it is 'z',
 // so "ozymandias" yields "oz".
 solutions.startOz = function(str) {
-  result = '';
+  var result = '';
   if (str[0] === 'o') result += 'o';
   if (str[1] === 'z') result += 'z';
   return result;
 }
-// console.log(startOz("ozymandias"));
-// console.log(startOz("bzoo"));
-// console.log(startOz("oxx"));
+// console.log(solutions.startOz("ozymandias"));
+// console.log(solutions.startOz("bzoo"));
+// console.log(solutions.startOz("oxx"));
 
 // Java > Warmup-1 > in3050
 // Given 2 int values, return true if they are both in the range 30..40 inclusive,
@@ -206,9 +207,9 @@ solutions.in3050 = function(a, b) {
   var inRange = function(n) {return n >= 0 && n <= 10};
   return (inRange(a - 30) && inRange(b - 30)) || (inRange(a - 40) && inRange(b - 40));
 }
-// console.log(in3050(30, 31));
-// console.log(in3050(30, 41));
-// console.log(in3050(40, 50));
+// console.log(solutions.in3050(30, 31));
+// console.log(solutions.in3050(30, 41));
+// console.log(solutions.in3050(40, 50));
 
 // Java > Warmup-1 > lastDigit
 // Given two non-negative int values, return true if they have the same last digit,
@@ -216,9 +217,9 @@ solutions.in3050 = function(a, b) {
 solutions.lastDigit = function(a, b) {
   return a % 10 === b % 10;
 }
-// console.log(lastDigit(7,17));
-// console.log(lastDigit(6,17));
-// console.log(lastDigit(3,113));
+// console.log(solutions.lastDigit(7,17));
+// console.log(solutions.lastDigit(6,17));
+// console.log(solutions.lastDigit(3,113));
 
 // Java > Warmup-1 > sumDouble
 // Given two int values, return their sum. Unless the two values are the same,
@@ -233,7 +234,7 @@ solutions.sumDouble = function(a, b) {
 // Java > Warmup-1 > makes10
 // Given 2 ints, a and b, return true if one if them is 10 or if their sum is 10.
 solutions.makes10 = function(a, b) {
-  return (a == 10 || b == 10) || (a + b == 10);
+  return (a === 10 || b === 10) || (a + b === 10);
 }
 // console.log(makes10(9,10));
 // console.log(makes10(9,9));
@@ -258,9 +259,9 @@ solutions.front3 = function(str) {
   var front = str.substr(0, 3);
   return front + front + front;
 }
-// console.log(front3("Java"));
-// console.log(front3("Chocolate"));
-// console.log(front3("abc"));
+// console.log(solutions.front3("Java"));
+// console.log(solutions.front3("Chocolate"));
+// console.log(solutions.front3("abc"));
 
 // Java > Warmup-1 > front22
 // Given a string, take the first 2 chars and return the string with the 2 chars added at both the
@@ -270,19 +271,19 @@ solutions.front22 = function(str) {
   var front = str.substr(0, 2);
   return front + str + front;
 }
-// console.log(front22("kitten"));
-// console.log(front22("Ha"));
-// console.log(front22("abc"));
+// console.log(solutions.front22("kitten"));
+// console.log(solutions.front22("Ha"));
+// console.log(solutions.front22("abc"));
 
 // Java > Warmup-1 > in1020
 // Given 2 int values, return true if either of them is in the range 10..20 inclusive.
 solutions.in1020 = function(a, b) {
-  var inRange = function(n){return n >= 10 && n <= 20};
+  var inRange = function(n){return n >= 10 && n <= 20;};
   return inRange(a) || inRange(b);
 }
-// console.log(in1020(12,99));
-// console.log(in1020(21,12));
-// console.log(in1020(8,99));
+// console.log(solutions.in1020(12,99));
+// console.log(solutions.in1020(21,12));
+// console.log(solutions.in1020(8,99));
 
 // Java > Warmup-1 > delDel
 // Given a string, if the string "del" appears starting at index 1, return a string where that "del"
@@ -293,7 +294,7 @@ solutions.delDel = function(str) {
 
 // console.log(solutions.delDel("adelbc"));
 // console.log(solutions.delDel("adelHello"));
-// console.log(solutions.delDel("adebc"));
+// console.log(solutions.delDel("adedbc"));
 
 // Java > Warmup-1 > intMax
 // Given three int values, a b c, return the largest.
@@ -311,9 +312,9 @@ solutions.max1020 = function(a, b) {
   var between1020 = function(n){return (10 <= n && n <= 20) ? n : 0};
   return Math.max(between1020(a), between1020(b));
 }
-// console.log(max1020(11,19));
-// console.log(max1020(19,11));
-// console.log(max1020(11,9));
+// console.log(solutions.max1020(11,19));
+// console.log(solutions.max1020(19,11));
+// console.log(solutions.max1020(11,9));
 
 // Java > Warmup-1 > endUp
 // Given a string, return a new string where the last 3 chars are now in upper case.
@@ -322,9 +323,9 @@ solutions.max1020 = function(a, b) {
 solutions.endUp = function(str) {
   return str.slice(0, -3) + str.slice(-3).toUpperCase();
 }
-// console.log(endUp("Hello"));
-// console.log(endUp("hi there"));
-// console.log(endUp("hi"));
+// console.log(solutions.endUp("Hello"));
+// console.log(solutions.endUp("hi there"));
+// console.log(solutions.endUp("hi"));
 
 
 
@@ -713,7 +714,7 @@ solutions.countXX = function(str) {
 // Given a non-empty string like "Code" return a string like "CCoCodCode".
 solutions.stringSplosion = function(str) {
   result = "";
-  for (x = 0; x < str.length - 1; x++) {
+  for (x = 0; x < str.length; x++) {
     result += str.slice(0, x + 1);
   }
   return result;
