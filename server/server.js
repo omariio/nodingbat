@@ -64,7 +64,7 @@ Meteor.publish("allUserData", function() {
     // database of each coding bat exercise
       if (Exercises.find().count() === 0) {
         Exercises.insert({
-            "section":"warm-up1",
+            "section":"warmup-1",
           	"name":"sleepIn",
             "inputs":[
               "(true, true)",
@@ -75,7 +75,7 @@ Meteor.publish("allUserData", function() {
              "setup": setup.sleepIn
       });
         Exercises.insert({
-            "section":"warm-up1",
+            "section":"warmup-1",
           	"name":"diff21",
             "inputs":[
               "(19)",
@@ -94,7 +94,7 @@ Meteor.publish("allUserData", function() {
              "setup": setup.diff21
         });
         Exercises.insert({
-            "section":"warm-up1",
+            "section":"warmup-1",
             "name":"nearHundred",
             "inputs":[
               "(93)",
@@ -111,7 +111,7 @@ Meteor.publish("allUserData", function() {
             "setup": setup.nearHundred
         });
         Exercises.insert({
-            "section":"warm-up1",
+            "section":"warmup-1",
             "name":"missingChar",
             "inputs":[
               "('kitten', 1)",
@@ -128,7 +128,7 @@ Meteor.publish("allUserData", function() {
             "setup":setup.missingChar
         });
         Exercises.insert({
-            "section":"warm-up1",
+            "section":"warmup-1",
             "name":"backAround",
             "inputs":[
               "('cat')",
@@ -141,7 +141,7 @@ Meteor.publish("allUserData", function() {
             "setup": setup.backAround
         });
         Exercises.insert({
-            "section":"warm-up1",
+            "section":"warmup-1",
             "name":"startHi",
             "inputs":[
               "('hi there')",
@@ -156,7 +156,7 @@ Meteor.publish("allUserData", function() {
             "setup": setup.startHi
         });
         Exercises.insert({
-            "section":"warm-up1",
+            "section":"warmup-1",
             "name":"hasTeen",
               "inputs":[
                 "(13, 20, 10)",
@@ -174,7 +174,7 @@ Meteor.publish("allUserData", function() {
             "setup": setup.hasTeen
         });
         Exercises.insert({
-            "section":"warm-up1",
+            "section":"warmup-1",
             "name":"mixStart",
               "inputs":[
                 "('mix snacks')",
@@ -187,7 +187,7 @@ Meteor.publish("allUserData", function() {
             "setup": setup.mixStart
         });
         Exercises.insert({
-            "section":"warm-up1",
+            "section":"warmup-1",
             "name":"close10",
             "inputs":[
               "(8, 13)",
@@ -791,7 +791,7 @@ Meteor.publish("allUserData", function() {
   "setup": setup.endsLy
   });
   Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "stringTimes",
   "inputs": [
     "('Hi', 2)",
@@ -808,7 +808,7 @@ Meteor.publish("allUserData", function() {
   "setup": setup.stringTimes
 });
   Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "doubleX",
   "inputs": [
     "('axxbb')",
@@ -825,7 +825,7 @@ Meteor.publish("allUserData", function() {
   "setup": setup.doubleX
 });
     Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "last2",
   "inputs": [
     "('hixxhi')",
@@ -844,7 +844,7 @@ Meteor.publish("allUserData", function() {
   "setup": setup.last2
 });
 Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "altPairs",
   "inputs": [
     "('kitten')",
@@ -860,7 +860,7 @@ Exercises.insert({
 });
 
 Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "noTriples",
   "inputs": [
       "([1,1,2,2,1])",
@@ -878,7 +878,7 @@ Exercises.insert({
 
 
   Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "frontTimes",
   "inputs": [
     "('Chocolate', 2)",
@@ -892,7 +892,7 @@ Exercises.insert({
   "setup": setup.frontTimes
   });
   Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "stringBits",
   "inputs": [
     "('Hello')",
@@ -909,7 +909,7 @@ Exercises.insert({
   "setup": setup.stringBits
   });
   Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "arrayCount9",
   "inputs": [
     "([1,2,9])",
@@ -923,7 +923,7 @@ Exercises.insert({
   "setup": setup.arrayCount9
   });
   Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "stringMatch",
   "inputs": [
     "('xxcaazz', 'xxbaaz')",
@@ -939,7 +939,7 @@ Exercises.insert({
   "setup": setup.stringMatch
   });
   Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "stringYak",
   "inputs": [
     "('yakpak')",
@@ -953,7 +953,7 @@ Exercises.insert({
   "setup": setup.stringYak
   });
   Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "has271",
   "inputs": [
     "([1,2,7,1])",
@@ -973,7 +973,7 @@ Exercises.insert({
   "setup": setup.has271
   });
   Exercises.insert({
-  "section": "warm-up2",
+  "section": "warmup-2",
   "name": "countXX",
   "inputs": [
     "('abcxx')",
@@ -989,7 +989,7 @@ Exercises.insert({
   "setup": setup.countXX
   });
   Exercises.insert({
-    "section": "warm-up2",
+    "section": "warmup-2",
     "name": "arrayFront9",
     "inputs": [
     "([1,2,9,3,4])",
@@ -1008,7 +1008,7 @@ Exercises.insert({
     "setup": setup.arrayFront9
     });
   Exercises.insert({
-    "section": "warm-up2",
+    "section": "warmup-2",
     "name": "stringX",
     "inputs": [
     "('xxHxix')",
@@ -1023,7 +1023,7 @@ Exercises.insert({
     "setup": setup.stringX
     });
     Exercises.insert({
-      "section": "warm-up2",
+      "section": "warmup-2",
       "name": "array667",
       "inputs": [
       "([6,6,2])",
@@ -1092,6 +1092,21 @@ Exercises.insert({
         ],
         "setup": setup.nTwice,
         "index": 62
+      });
+      Exercises.insert({
+        "section": "string-1",
+        "name": "makeTags",
+        "inputs": [
+          "('i','Yay')",
+          "('i','Hello')",
+          "('cite','Yay')",
+          "('address','here')",
+          "('body','Heart')",
+          "('i','i')",
+          "('i','')"
+        ],
+        "setup": setup.makeTags,
+        "index": 63
       });
 
 // end of if data base empty ( if exercise is already in cloud databse, don't add again!)
