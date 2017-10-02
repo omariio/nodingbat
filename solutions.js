@@ -58,7 +58,9 @@ solutions.startHi = function(str) {
 // We'll say that a number is "teen" if it is in the range 13..19 inclusive.
 // Given 3 int values, return true if 1 or more of them are teen.
 solutions.hasTeen = function(a, b, c) {
-  return !![a, b, c].filter(function(n) {return n>=13 && n<=19}).length;
+  return [a, b, c].some(function(n) {
+    return n >= 13 && n <= 19
+  });
 }
 // console.log(solutions.hasTeen(13, 20, 10));
 // console.log(solutions.hasTeen(20, 19, 10));
@@ -104,11 +106,13 @@ solutions.stringE = function(str) {
 // and then every Nth char of the string. So if N is 3, use char 0, 3, 6, ... and so on.
 // N is 1 or more.
 solutions.everyNth = function(str, n) {
-  return str.split('').filter(function(c, i) {return !(i % n)}).join('');
+  return str.split('').filter(function(c, i) {
+    return !(i % n)
+  }).join('');
 }
-console.log(solutions.everyNth("Miracle", 2));
-console.log(solutions.everyNth("abcdefg", 2));
-console.log(solutions.everyNth("abcdefg", 3));
+// console.log(solutions.everyNth("Miracle", 2));
+// console.log(solutions.everyNth("abcdefg", 2));
+// console.log(solutions.everyNth("abcdefg", 3));
 
 // Java > Warmup-1 > monkeyTrouble
 // We have two monkeys, a and b, and the parameters aSmile and bSmile indicate if each
@@ -178,7 +182,9 @@ solutions.icyHot = function(temp1, temp2) {
 // We'll say that a number is "teen" if it is in the range 13..19 inclusive.
 // Given 2 int values, return true if one or the other is teen, but not both.
 solutions.loneTeen = function(a, b) {
-  var isTeen = function(n) {return n >= 13 && n <= 19};
+  var isTeen = function(n) {
+    return n >= 13 && n <= 19
+  };
   return isTeen(a) !== isTeen(b);
 }
 
@@ -204,7 +210,9 @@ solutions.startOz = function(str) {
 // Given 2 int values, return true if they are both in the range 30..40 inclusive,
 // or they are both in the range 40..50 inclusive.
 solutions.in3050 = function(a, b) {
-  var inRange = function(n) {return n >= 0 && n <= 10};
+  var inRange = function(n) {
+    return n >= 0 && n <= 10
+  };
   return (inRange(a - 30) && inRange(b - 30)) || (inRange(a - 40) && inRange(b - 40));
 }
 // console.log(solutions.in3050(30, 31));
@@ -278,7 +286,9 @@ solutions.front22 = function(str) {
 // Java > Warmup-1 > in1020
 // Given 2 int values, return true if either of them is in the range 10..20 inclusive.
 solutions.in1020 = function(a, b) {
-  var inRange = function(n){return n >= 10 && n <= 20;};
+  var inRange = function(n) {
+    return n >= 10 && n <= 20;
+  };
   return inRange(a) || inRange(b);
 }
 // console.log(solutions.in1020(12,99));
@@ -309,7 +319,9 @@ solutions.intMax = function(a, b, c) {
 // Given 2 positive int values, return the larger value that is in the range 10..20
 // inclusive, or return 0 if neither is in that range.
 solutions.max1020 = function(a, b) {
-  var between1020 = function(n){return (10 <= n && n <= 20) ? n : 0};
+  var between1020 = function(n) {
+    return (10 <= n && n <= 20) ? n : 0
+  };
   return Math.max(between1020(a), between1020(b));
 }
 // console.log(solutions.max1020(11,19));
@@ -517,11 +529,11 @@ solutions.nTwice = function(str, n) {
 // Given a string and an index, return a string length 2 starting at the given index.
 // If the index is too big or too small to define a string length 2, use the first
 // 2 chars. The string length will be at least 2.
-solutions.twoChar = function(str, index){
-	if (index > str.length - 2) {
-		index = 0;
-	}
-	return str.substr(index, 2);
+solutions.twoChar = function(str, index) {
+  if (index > str.length - 2) {
+    index = 0;
+  }
+  return str.substr(index, 2);
 }
 // console.log(solutions.twoChar("java", 0));
 // console.log(solutions.twoChar("java", 2));
@@ -530,8 +542,8 @@ solutions.twoChar = function(str, index){
 // Java > String-1 > middleThree
 // Given a string of odd length, return the string length 3 from its middle, so
 // "Candy" yields "and". The string length will be at least 3.
-solutions.middleThree = function(str){
-	return str.substr((str.length/2)-1, 3);
+solutions.middleThree = function(str) {
+  return str.substr((str.length / 2) - 1, 3);
 }
 // console.log(solutions.middleThree("Candy"));
 // console.log(solutions.middleThree("and"));
@@ -582,13 +594,14 @@ solutions.last2 = function(str) {
 // Java > Warmup-2 > array123
 // Given an array of ints, return true if .. 1, 2, 3, .. appears in the array somewhere.
 solutions.array123 = function(nums) {
-  for (var x=0; nums.length >= 3 && x <= nums.length-2; x++){
-  	if(nums[x] === 1 && nums[x+1] === 2 && nums[x+2] === 3){
-  		return true;
-  	}
-	}
-	return false;
+  for (var x = 0; nums.length >= 3 && x <= nums.length - 2; x++) {
+    if (nums[x] === 1 && nums[x + 1] === 2 && nums[x + 2] === 3) {
+      return true;
+    }
+  }
+  return false;
 }
+
 // console.log(solutions.array123([1,2,3]));
 // console.log(solutions.array123([1,1,2,3,1]));
 // console.log(solutions.array123([1,1,2,4,1]));
@@ -640,7 +653,9 @@ solutions.frontTimes = function(str, n) {
 // Given a string, return a new string made of every other char
 // starting with the first, so "Hello" yields "Hlo".
 solutions.stringBits = function(str) {
-  return str.split('').filter(function(c, i){return !(i % 2)}).join('');
+  return str.split('').filter(function(c, i) {
+    return !(i % 2)
+  }).join('');
 }
 // console.log(solutions.stringBits('Hello'));
 // console.log(solutions.stringBits('Hi'));
@@ -649,7 +664,9 @@ solutions.stringBits = function(str) {
 // Warmup-Up2 > arrayCount9
 // Given an array of ints, return the number of 9's in the array.
 solutions.arrayCount9 = function(nums) {
-  return nums.filter(function(n){return n === 9}).length;
+  return nums.filter(function(n) {
+    return n === 9
+  }).length;
 }
 // console.log(solutions.arrayCount9([1,2,9]));
 // console.log(solutions.arrayCount9([1,9,9]));
@@ -660,9 +677,9 @@ solutions.arrayCount9 = function(nums) {
 // the same length 2 substring. So "xxcaazz" and "xxbaaz" yields 3, since the "xx",
 // "aa", and "az" substrings appear in the same place in both strings.
 solutions.stringMatch = function(a, b) {
-	return a.reduce(function(s,e,i) {
-		return s + (a.substr(i, 2) === b.substr(i, 2));
-	}, 0);
+  return a.reduce(function(s, e, i) {
+    return s + (a.substr(i, 2) === b.substr(i, 2));
+  }, 0);
 }
 // console.log(solutions.stringMatch('xxcaazz', 'xxbaaz'));
 // console.log(solutions.stringMatch('abc', 'abc'));
@@ -783,7 +800,9 @@ solutions.array667 = function(nums) {
 solutions.isHere = function(x, input) {
   x = x.toLowerCase();
   input = input.toLowerCase();
-  return input.split('').map(function(c){return +(c === x)}).join('');
+  return input.split('').map(function(c) {
+    return +(c === x)
+  }).join('');
 }
 // console.log(solutions.isHere("l", "hello"));
 // console.log(solutions.isHere("I", "I am I and you are I"));
@@ -791,10 +810,10 @@ solutions.isHere = function(x, input) {
 // Given an array of strings, find the longest common prefix each string has.
 // i.e. a list of yes, yodel, yeah should output y.
 solutions.biggestPre = function(input) {
-	for (var i = 0; i < input[0].length; i++) {
+  for (var i = 0; i < input[0].length; i++) {
     for (var x = 1; x < input.length; x++) {
       if (i >= input[x].length || input[x][i] !== input[0][i])
-        return input[0].slice(0,i);
+        return input[0].slice(0, i);
     }
   }
   return input[0];
